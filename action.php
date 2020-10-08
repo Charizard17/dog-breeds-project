@@ -32,38 +32,74 @@
     // Search filter
     if (isset($_POST['submit'])) {
         for ($x = 0; $x < count($JSONarray); ++$x) {
-            if (!empty($_POST['minWeight']) && !empty($_POST['maxWeight'])) {
-                if ($_POST['minWeight'] > $_POST['maxWeight']) {
-                    echo "The minimum weight cannot be greater than the maximum weight.";
-                    break;
+            if (empty($_POST['minHeight']) && empty($_POST['maxHeight'])) {
+                if (!empty($_POST['minWeight']) && !empty($_POST['maxWeight'])) {
+                    if ($_POST['minWeight'] > $_POST['maxWeight']) {
+                        echo "The minimum weight cannot be greater than the maximum weight.";
+                        break;
+                    } elseif (($minWeight[$x] <= $_POST['minWeight'] && $maxWeight[$x] >= $_POST['minWeight']) || ($minWeight[$x] <= $_POST['maxWeight'] && $maxWeight[$x] >= $_POST['maxWeight'])) {
+                        // Create table rows after search
+                        echo    '<tr>
+                                    <th scope="row">'. $id[$x] .'</th>
+                                    <td>'. $name[$x] .'</td>
+                                    <td>'. $weight[$x] .'</td>
+                                    <td>'. $height[$x] .'</td>
+                                    <td>'. $origin[$x] .'</td>
+                                    <td>'. $life_span[$x] .'</td>
+                                    <td>'. $temperament[$x] .'</td>
+                                    <td>'. $breed_group[$x] .'</td>
+                                    <td>'. $bred_for[$x] .'</td>
+                                </tr>';
+                    }
                 } elseif (($minWeight[$x] <= $_POST['minWeight'] && $maxWeight[$x] >= $_POST['minWeight']) || ($minWeight[$x] <= $_POST['maxWeight'] && $maxWeight[$x] >= $_POST['maxWeight'])) {
-                    // Create table rows after search
-                    echo    '<tr>
-                                <th scope="row">'. $id[$x] .'</th>
-                                <td>'. $name[$x] .'</td>
-                                <td>'. $weight[$x] .'</td>
-                                <td>'. $height[$x] .'</td>
-                                <td>'. $origin[$x] .'</td>
-                                <td>'. $life_span[$x] .'</td>
-                                <td>'. $temperament[$x] .'</td>
-                                <td>'. $breed_group[$x] .'</td>
-                                <td>'. $bred_for[$x] .'</td>
-                            </tr>';
+                        // Create table rows after search
+                        echo    '<tr>
+                                    <th scope="row">'. $id[$x] .'</th>
+                                    <td>'. $name[$x] .'</td>
+                                    <td>'. $weight[$x] .'</td>
+                                    <td>'. $height[$x] .'</td>
+                                    <td>'. $origin[$x] .'</td>
+                                    <td>'. $life_span[$x] .'</td>
+                                    <td>'. $temperament[$x] .'</td>
+                                    <td>'. $breed_group[$x] .'</td>
+                                    <td>'. $bred_for[$x] .'</td>
+                                </tr>';
+                    
                 }
-            } elseif (($minWeight[$x] <= $_POST['minWeight'] && $maxWeight[$x] >= $_POST['minWeight']) || ($minWeight[$x] <= $_POST['maxWeight'] && $maxWeight[$x] >= $_POST['maxWeight'])) {
-                    // Create table rows after search
-                    echo    '<tr>
-                                <th scope="row">'. $id[$x] .'</th>
-                                <td>'. $name[$x] .'</td>
-                                <td>'. $weight[$x] .'</td>
-                                <td>'. $height[$x] .'</td>
-                                <td>'. $origin[$x] .'</td>
-                                <td>'. $life_span[$x] .'</td>
-                                <td>'. $temperament[$x] .'</td>
-                                <td>'. $breed_group[$x] .'</td>
-                                <td>'. $bred_for[$x] .'</td>
-                            </tr>';
-                
+            } elseif (empty($_POST['minWeight']) && empty($_POST['maxWeight'])) {
+                if (!empty($_POST['minHeight']) && !empty($_POST['maxHeight'])) {
+                    if ($_POST['minHeight'] > $_POST['maxHeight']) {
+                        echo "The minimum height cannot be greater than the maximum height.";
+                        break;
+                    } elseif (($minHeight[$x] <= $_POST['minHeight'] && $maxHeight[$x] >= $_POST['minHeight']) || ($minHeight[$x] <= $_POST['maxHeight'] && $maxHeight[$x] >= $_POST['maxHeight'])) {
+                        // Create table rows after search
+                        echo    '<tr>
+                                    <th scope="row">'. $id[$x] .'</th>
+                                    <td>'. $name[$x] .'</td>
+                                    <td>'. $weight[$x] .'</td>
+                                    <td>'. $height[$x] .'</td>
+                                    <td>'. $origin[$x] .'</td>
+                                    <td>'. $life_span[$x] .'</td>
+                                    <td>'. $temperament[$x] .'</td>
+                                    <td>'. $breed_group[$x] .'</td>
+                                    <td>'. $bred_for[$x] .'</td>
+                                </tr>';
+                    }
+                } elseif (($minHeight[$x] <= $_POST['minHeight'] && $maxHeight[$x] >= $_POST['minHeight']) || ($minHeight[$x] <= $_POST['maxHeight'] && $maxHeight[$x] >= $_POST['maxHeight'])) {
+                        // Create table rows after search
+                        echo    '<tr>
+                                    <th scope="row">'. $id[$x] .'</th>
+                                    <td>'. $name[$x] .'</td>
+                                    <td>'. $weight[$x] .'</td>
+                                    <td>'. $height[$x] .'</td>
+                                    <td>'. $origin[$x] .'</td>
+                                    <td>'. $life_span[$x] .'</td>
+                                    <td>'. $temperament[$x] .'</td>
+                                    <td>'. $breed_group[$x] .'</td>
+                                    <td>'. $bred_for[$x] .'</td>
+                                </tr>';
+                    
+                }
             }
         }
     }
