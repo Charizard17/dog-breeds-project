@@ -1,28 +1,11 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <!-- <form action="favourite.php" method="POST">
-        <input class="button" name="reset" type="submit" value="reset">
-    </form> -->
-    <script>
-        window.onload = function() {
-            if (!window.location.hash) {
-                window.location = window.location + '#loaded';
-                window.location.reload();
-            }
-        }
-        // function reset() {
-        //     if (readCookie("my-favourite") !== null) {
-        //     <?php
-        //             unset($_COOKIE['my-favourite']);
-        //             setcookie('my-favourite', '', time() - 3600, '/'); // empty value and old timestamp
-        //     ?>
-        //     }
-        // }
-    </script>
 </body>
 </html>
 <?php
+    include "../includes/php-functions.php";
+
     echo '<h2 class="text-center">My Favourite Dog Breeds</h2>';
 
     $myCookieString = $_COOKIE["my-favourite"];
@@ -37,13 +20,6 @@
             ++$index;
         }
     }
-
-    // function resett() {
-    //     if (isset($_POST['submit'])) {
-    //         setcookie('my-favourite', '');
-    //         //setcookie('my-favourite', '', time() - 3600, '/'); // empty value and old timestamp
-    //     }
-    // }
 
     // Create table
     if ($newArray) {
