@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.ico"/>
-    <title>Dog Breeds</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
-    <a href="/">home</a>
-    <a href="/favourite.php">favourite</a>
-    <br>
-    <?php
-
-        // check if JSON file exist, if not create new one
+<?php
+// check if JSON file exist, if not create new one
         if (file_exists("dog-breeds.JSON") !== true) {
             // Get CSV file content
             $content = file_get_contents("https://api.thedogapi.com/v1/breeds");
@@ -102,31 +88,3 @@
         }
 
         setcookie('my-favourite', '');
-    ?>
-    <script>
-        function readCookie(name) {
-            var nameEQ = name + "=";
-            var ca = document.cookie.split(';');
-            for(var i=0;i < ca.length;i++) {
-                var c = ca[i];
-                while (c.charAt(0)==' ') c = c.substring(1,c.length);
-                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-            }
-            return null;
-        }
-
-        let myClickedElementArray = readCookie('my-favourite');
-        myClickedElementArray = myClickedElementArray.split(",");
-
-        function saveClickedElement(clicked_element_id) {
-            if (myClickedElementArray.includes(clicked_element_id) == false) {
-                myClickedElementArray.push(clicked_element_id);
-
-                var date = new Date();
-                date.setTime(date.getTime() + 7 * 24 * 3600 * 1000);
-
-                document.cookie = "my-favourite=" + myClickedElementArray + "; path=/;expires = " + date.toGMTString();
-            }
-        }
-
-    </script>

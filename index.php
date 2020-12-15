@@ -1,4 +1,4 @@
-<?php include "header&footer/header.php" ?>
+<!-- <?php include "header&footer/header.php" ?>
 <?php
     echo '<form class="mt-2 mr-5 ml-5" action="index.php" method="POST">
             <h2 class="text-center">Find your dog!</h2>
@@ -77,4 +77,12 @@
         return $dataArray;
     }
 ?>
-<?php include "header&footer/footer.php" ?>
+<?php include "header&footer/footer.php" ?> -->
+
+<?php 
+// Init Smarty
+    include("includes/smarty.php");
+
+    $smarty->fetch("index.html");
+    $smarty->fetch("layout_main.html");
+    $smarty->display('layout_main.html');
