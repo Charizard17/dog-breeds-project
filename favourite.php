@@ -1,4 +1,3 @@
-<?php include "header&footer/header.php" ?>
 <!DOCTYPE html>
 <html>
 <body>
@@ -88,4 +87,3 @@
     }
     
 ?>
-<?php include "header&footer/footer.php" ?>
