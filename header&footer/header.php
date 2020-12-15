@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    <a href="http://localhost/My-Works/dog-breeds-project/">home</a>
-    <a href="http://localhost/My-Works/dog-breeds-project/index2.php">home2</a>
-    <a href="http://localhost/My-Works/dog-breeds-project/favourite.php">favourite</a>
+    <a href="/">home</a>
+    <a href="/favourite.php">favourite</a>
     <br>
     <?php
 
@@ -20,7 +19,7 @@
             $content = file_get_contents("https://api.thedogapi.com/v1/breeds");
 
             // Upload Directory
-            $upload_dir = "/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/";
+            $upload_dir = "/Documents/My-Works/dog-breeds-project/";
 
             // Create new file and write into
             $fp = fopen($upload_dir."dog-breeds.JSON", "w");
