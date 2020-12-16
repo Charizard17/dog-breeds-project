@@ -24,50 +24,6 @@
     for ($k = 0; $k < count($dogBreedArray); ++$k) {
         list($dogBreedArray[$k]["minHeight"], $dogBreedArray[$k]["maxHeight"]) = array_pad(explode(" - ", $dogBreedArray[$k]["height"]["metric"]), 2, null);
     }
-    
-    // Create a function for table
-    function tableRowCreator($data) {
-        if (is_array($data)) {
-            echo "<br><h class='ml-3'><b>". count($data) ."</b> dog breed found.</h5><br>";
-            echo '
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Bookmark</th>
-                            <th scope="col">ID</th>
-                            <th scope="col">Breed Name</th>
-                            <th scope="col">Picture</th>
-                            <th scope="col">Weight kg</th>
-                            <th scope="col">Height cm</th>
-                            <th scope="col">Origin</th>
-                            <th scope="col">Life Span</th>
-                            <th scope="col">Temperament</th>
-                            <th scope="col">Breed Group</th>
-                            <th scope="col">Bred For</th>
-                        </tr>
-                    </thead>
-                    <tbody>';
-            for ($index = 0; $index < count($data); ++$index) {
-                echo    '<tr>
-                            <th><img style="cursor: pointer;" id="'. $data[$index]["id"] .'" src="https://img.icons8.com/fluent/48/000000/star.png"/ onClick="saveClickedElement(this.id)"></th>
-                            <td scope="row">'. $data[$index]["id"] .'</td>
-                            <td>'. $data[$index]["breed_name"] .'</td>
-                            <td>'. $data[$index]["weight"]["metric"] .'</td>
-                            <td>'. $data[$index]["height"]["metric"] .'</td>
-                            <td>'. $data[$index]["origin"] .'</td>
-                            <td>'. $data[$index]["life_span"] .'</td>
-                            <td>'. $data[$index]["temperament"] .'</td>
-                            <td>'. $data[$index]["breed_group"] .'</td>
-                            <td>'. $data[$index]["bred_for"] .'</td>
-                        </tr>';
-            }
-            echo '
-                </tbody>
-            </table>';
-        } else {
-            echo "No dog breed found";
-        }
-    }
 
     setcookie('my-favourite', '');
 
