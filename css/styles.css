@@ -1,37 +1,68 @@
-.item1 { grid-area: item1; }
-.item2 { grid-area: item2; }
+/* grid arrangement */
+.item1 { 
+  grid-area: item1; 
+}
+.item2 { 
+  grid-area: item2;
+  overflow: scroll;
+}
 
 .qwerty {
-    display: grid;
-    grid-template-areas:
-      'item1 item2 item2 item2 item2 item2';
-    grid-gap: 40px;
-    padding: 20px 50px;
-  }
+  display: grid;
+  grid-template-areas:
+    'item1 item2 item2 item2 item2 item2';
+  grid-gap: 40px;
+  padding: 20px 50px;
+  height: 700px;
+}
 
-  .search-form-term, .search-form-button-container {
-      margin-bottom: 10px;
-  }
+/* table styling */
+.dog-breeds-table {
+  text-align: left;
+}
 
-  .search-form-span {
-      display: inline-block;
-      width: 100px;
-  }
+.dog-breeds-table-th {
+  background-color: rgb(48, 48, 48);
+  color: rgb(193, 193, 193);
+  font-weight: 400;
+  font-size: 20px;
+  position: sticky;
+  top: 0;
+  padding: 5px 10px;
+}
 
-  .search-form-input-word {
-      width: 302px;
-  }
+.dog-breeds-table-td {
+  padding: 5px 10px;
+}
 
-  .search-form-input-number {
-    width: 149px;
+.dog-breeds-table-tr {
+  border-top: 1px solid black;
+}
+
+/* search form styling */
+.search-form-term, .search-form-button-container {
+  margin-bottom: 10px;
+}
+
+.search-form-span {
+  display: inline-block;
+  width: 100px;
+}
+
+.search-form-input-word {
+  width: 302px;
+}
+
+.search-form-input-number {
+  width: 149px;
 }
 
 .search-form-button-container {
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .search-form-button {
-    padding: 0px 28px;
+  padding: 0px 28px;
 }
