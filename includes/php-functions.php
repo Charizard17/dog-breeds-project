@@ -6,6 +6,7 @@
     for ($i = 0; $i < count($JSONarray); ++$i) {
         if (!empty($JSONarray[$i]['id'])) {$dogBreedArray[$i]['id'] = $JSONarray[$i]['id'];} else {$dogBreedArray[$i]['id'] = "–";}
         if (!empty($JSONarray[$i]['name'])) {$dogBreedArray[$i]['breed_name'] = $JSONarray[$i]['name'];} else {$dogBreedArray[$i]['breed_name'] = "–";}
+        $dogBreedArray[$i]['img'] = "img/doge.png";
         if (!empty($JSONarray[$i]['weight']['metric'])) {$dogBreedArray[$i]['weight'] = $JSONarray[$i]['weight'];} else {$dogBreedArray[$i]['weight'] = "–";}
         if (!empty($JSONarray[$i]['height']['metric'])) {$dogBreedArray[$i]['height'] = $JSONarray[$i]['height'];} else {$dogBreedArray[$i]['height'] = "–";}
         if (!empty($JSONarray[$i]['origin'])) {$dogBreedArray[$i]['origin'] = $JSONarray[$i]['origin'];} else {$dogBreedArray[$i]['origin'] = "–";}
@@ -51,7 +52,6 @@
                             <th><img style="cursor: pointer;" id="'. $data[$index]["id"] .'" src="https://img.icons8.com/fluent/48/000000/star.png"/ onClick="saveClickedElement(this.id)"></th>
                             <td scope="row">'. $data[$index]["id"] .'</td>
                             <td>'. $data[$index]["breed_name"] .'</td>
-                            <td><img style="width: 64px; height: 64px;" src="https://i.imgflip.com/db5xf.jpg"></img></td>
                             <td>'. $data[$index]["weight"]["metric"] .'</td>
                             <td>'. $data[$index]["height"]["metric"] .'</td>
                             <td>'. $data[$index]["origin"] .'</td>

@@ -17,5 +17,3 @@
         // Create table
         tableRowCreator($dogBreedArray);
     }
-
-    

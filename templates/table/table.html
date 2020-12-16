@@ -1,17 +1,27 @@
 <table class="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Picture</th>
+        <th scope="col">Weight(kg)</th>
+        <th scope="col">Height(cm)</th>
+        <th scope="col">Temperament</th>
       </tr>
     </thead>
     <tbody>
         {foreach name=outer item=fooitem from=$foo}
             <tr>
             {foreach key=key item=item from=$fooitem}
-                <td>{$item}</td>
+                {if $key == 'id' || $key == 'breed_name' || $key == 'img' || $key == 'weight' || $key == 'height' || $key == 'temperament'}
+                  {if $key == 'img'}
+                    <td>{html_image file=$item width="64" height="64"}</td>
+                  {elseif $key == 'weight' || $key == 'height'}
+                    <td>{$item.metric}</td>
+                  {else}
+                    <td>{$item}</td>
+                  {/if}
+                {/if}
             {/foreach}
             </tr>
         {/foreach}
