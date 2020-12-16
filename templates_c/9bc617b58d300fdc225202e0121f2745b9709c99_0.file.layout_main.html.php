@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2020-12-16 10:24:14
+/* Smarty version 3.1.36, created on 2020-12-16 12:58:32
   from '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/layout_main.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_5fd9e04ebbcc68_11888507',
+  'unifunc' => 'content_5fda0478458d67_00258964',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9bc617b58d300fdc225202e0121f2745b9709c99' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/layout_main.html',
-      1 => 1608114254,
+      1 => 1608123511,
       2 => 'file',
     ),
   ),
@@ -22,10 +22,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:table/table.html' => 1,
   ),
 ),false)) {
-function content_5fd9e04ebbcc68_11888507 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/libs/plugins/function.html_table.php','function'=>'smarty_function_html_table',),));
-?>
-<!DOCTYPE html>
+function content_5fda0478458d67_00258964 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Dog Breeds</title>
@@ -49,13 +47,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Applications/XAMPP/xamppfil
               <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Test</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Test</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              <a class="nav-link" href="favourite">Favourite</a>
             </li>
           </ul>
         </div>
@@ -68,11 +60,6 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Applications/XAMPP/xamppfil
         <div class="item2"><?php $_smarty_tpl->_subTemplateRender("file:table/table.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?></div>
     </div>
-    
-    <br>
-    <!-- <?php echo smarty_function_html_table(array('loop'=>$_smarty_tpl->tpl_vars['foo']->value,'cols'=>10,'table_attr'=>'border="0"'),$_smarty_tpl);?>
- -->
-    
     
 
 

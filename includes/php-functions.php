@@ -1,23 +1,5 @@
 <?php
-    // check if JSON file exist, if not create new one
-    if (file_exists("dog-breeds.JSON") !== true) {
-        // Get CSV file content
-        $content = file_get_contents("https://api.thedogapi.com/v1/breeds");
-
-        // Upload Directory
-        $upload_dir = "/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/";
-
-        // Create new file and write into
-        $fp = fopen($upload_dir."dog-breeds.JSON", "w");
-        fwrite($fp, $content);
-        fclose($fp);
-    }
-
-    // Get data from JSON
-    $JSONcontent = file_get_contents("dog-breeds.JSON");
-    
-    // Turn JSON string to an array
-    $JSONarray = json_decode($JSONcontent, true);
+    include("config.php");
 
     $dogBreedArray = [];
     // // Define variables with checking if data missing or not
@@ -88,3 +70,39 @@
     }
 
     setcookie('my-favourite', '');
+
+
+
+    // we create 2 functions for filtering our array after search
+    function hasContainWords($postValue, $dataArray) {
+        if ($_POST[$postValue]) {
+            $dataArrayTemp = [];
+            $index = 0;
+            if (is_array($dataArray)){
+                for ($i = 0; $i < count($dataArray); ++$i) {
+                    if (strpos(strtolower($dataArray[$i][$postValue]), strtolower($_POST[$postValue])) !== false) {
+                        $dataArrayTemp[$index] = $dataArray[$i];
+                        ++$index;
+                    }
+                }
+            }
+            $dataArray = $dataArrayTemp;
+        }
+        return $dataArray;
+    }
+    function hasContainTerms($postValue, $dataArray, $dataArrayFirstIndex, $dataArraySecondIndex) {
+        if ($_POST[$postValue]) {
+            $dataArrayTemp = [];
+            $index = 0;
+            if (is_array($dataArray)){
+                for ($i = 0; $i < count($dataArray); ++$i) {
+                    if ($_POST[$postValue] >= $dataArray[$i][$dataArrayFirstIndex] && $_POST[$postValue] <= $dataArray[$i][$dataArraySecondIndex]) {
+                        $dataArrayTemp[$index] = $dataArray[$i];
+                        ++$index;
+                    }
+                }
+            }
+            $dataArray = $dataArrayTemp;
+        }
+        return $dataArray;
+    }
