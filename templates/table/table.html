@@ -1,0 +1,19 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+        {foreach name=outer item=fooitem from=$foo}
+            <tr>
+            {foreach key=key item=item from=$fooitem}
+                <td>{$item}</td>
+            {/foreach}
+            </tr>
+        {/foreach}
+    </tbody>
+</table>

@@ -1,0 +1,37 @@
+.item1 { grid-area: item1; }
+.item2 { grid-area: item2; }
+
+.qwerty {
+    display: grid;
+    grid-template-areas:
+      'item1 item2 item2 item2 item2 item2';
+    grid-gap: 20px;
+    padding: 20px 40px;
+  }
+
+  .search-form-term, .search-form-button-container {
+      margin-bottom: 10px;
+  }
+
+  .search-form-span {
+      display: inline-block;
+      width: 100px;
+  }
+
+  .search-form-input-word {
+      width: 302px;
+  }
+
+  .search-form-input-number {
+    width: 149px;
+}
+
+.search-form-button-container {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form-button {
+    padding: 0px 28px;
+}

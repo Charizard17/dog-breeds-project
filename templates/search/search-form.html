@@ -1,24 +1,24 @@
-<form class="mt-2 mr-5 ml-5" action="index.php" method="POST">
-    <h2 class="text-center">Find your dog!</h2>
-    <div class="input-group mb-3 ">
-        <div class="input-group-prepend">
-            <span class="input-group-text">Breed Name</span>
-        </div>
-        <input type="text" class="form-control mr-3" name="breed_name" id="breed_name">
-        <div class="input-group-prepend">
-            <span class="input-group-text">Weight (kg)</span>
-        </div>
-        <input type="text" class="form-control" name="minWeight" id="minWeight" placeholder="Min">
-        <input type="text" class="form-control mr-3" name="maxWeight" id="maxWeight" placeholder="Max">
-        <div class="input-group-prepend">
-            <span class="input-group-text">Height (cm)</span>
-        </div>
-        <input type="text" class="form-control" name="minHeight" id="minHeight" placeholder="Min">
-        <input type="text" class="form-control mr-3" name="maxHeight" id="maxHeight" placeholder="Max">
-        <div class="input-group-prepend">
-            <span class="input-group-text">Temperament</span>
-        </div>
-        <input type="text" class="form-control" name="temperament" id="temperament">
+<form action="index.php" method="POST">
+    <h4 class="text-center">Dog finder!</h4>
+    <div class="search-form-term">
+        <span class="search-form-span">Breed Name</span>
+        <input class="search-form-input-word" type="text" name="breed_name" id="breed_name">
     </div>
-    <input type="submit" name="submit" class="btn btn-primary btn-block" value="Search">
+    <div class="search-form-term">
+        <span class="search-form-span">Weight (kg)</span>
+        <input class="search-form-input-number" type="text" name="minWeight" id="minWeight" placeholder="Min">
+        <input class="search-form-input-number" type="text" name="maxWeight" id="maxWeight" placeholder="Max">
+    </div>
+    <div class="search-form-term">
+        <span class="search-form-span">Height (cm)</span>
+        <input class="search-form-input-number" type="text" name="minHeight" id="minHeight" placeholder="Min">
+        <input class="search-form-input-number" type="text" name="maxHeight" id="maxHeight" placeholder="Max">
+    </div>
+    <div class="search-form-term">
+        <span class="search-form-span">Temperament</span>
+        <input class="search-form-input-word" type="text" name="temperament" id="temperament">
+    </div>
+    <div class="search-form-button-container">
+        <input class="search-form-button" type="submit" name="submit" value="Search">
+    </div>
 </form>
