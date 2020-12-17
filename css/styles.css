@@ -39,6 +39,13 @@
   border-top: 1px solid black;
 }
 
+.dog-breeds-table-details {
+  cursor: pointer;
+  padding-left: 30px;
+  font-size: 25px;
+}
+
+
 /* search form styling */
 .search-form-term, .search-form-button-container {
   margin-bottom: 10px;

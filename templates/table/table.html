@@ -1,4 +1,4 @@
-<table class="dog-breeds-table">
+<table id="dog-breeds-table" class="dog-breeds-table">
     <thead>
       <tr>
         <th class="dog-breeds-table-th" scope="col">ID</th>
@@ -7,22 +7,28 @@
         <th class="dog-breeds-table-th" scope="col">Weight(kg)</th>
         <th class="dog-breeds-table-th" scope="col">Height(cm)</th>
         <th class="dog-breeds-table-th" scope="col">Temperament</th>
+        <th class="dog-breeds-table-th" scope="col">Details</th>
       </tr>
     </thead>
     <tbody>
         {foreach name=outer item=dogBreedsItem from=$dogBreeds}
             <tr class="dog-breeds-table-tr">
-            {foreach key=key item=item from=$dogBreedsItem}
-                {if $key == 'id' || $key == 'breed_name' || $key == 'img' || $key == 'weight' || $key == 'height' || $key == 'temperament'}
-                  {if $key == 'img'}
-                    <td class="dog-breeds-table-td">{html_image file=$item width="64" height="64"}</td>
-                  {elseif $key == 'weight' || $key == 'height'}
-                    <td class="dog-breeds-table-td">{$item.metric}</td>
-                  {else}
-                    <td class="dog-breeds-table-td">{$item}</td>
+                {foreach key=key item=item from=$dogBreedsItem}
+                    {if $key == 'id' || $key == 'breed_name' || $key == 'img' || $key == 'weight' || $key == 'height' || $key == 'temperament'}
+                      {if $key == 'img'}
+                        <td class="dog-breeds-table-td">{html_image file=$item width="64" height="64"}</td>
+                      {elseif $key == 'weight' || $key == 'height'}
+                        <td class="dog-breeds-table-td">{$item.metric}</td>
+                      {else}
+                        <td class="dog-breeds-table-td">{$item}</td>
+                      {/if}
+                    {/if}
+                {/foreach}
+                {foreach key=key item=item from=$dogBreedsItem}
+                  {if $key == 'id'}
+                      <td id="details-{$item}" class="dog-breeds-table-details">&#128269;</td>
                   {/if}
-                {/if}
-            {/foreach}
+                {/foreach}
             </tr>
         {/foreach}
     </tbody>

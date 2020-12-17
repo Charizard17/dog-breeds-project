@@ -5,6 +5,10 @@
     include("includes/search.php");
     include("includes/php-functions.php");
 
-    $smarty->assign('dogBreeds',$dogBreedArray);
+    if (empty($filtered)) {
+        $smarty->assign('dogBreeds',$dogBreedArray);
+    } else {
+        $smarty->assign('dogBreeds',$filtered);
+    }
 
     $smarty->display('layout_main.html');

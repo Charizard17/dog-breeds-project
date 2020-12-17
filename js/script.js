@@ -31,3 +31,8 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+$('#dog-breeds-table').on('click', '.dog-breeds-table-details', function(e) {
+  alert(e.target.id);
+});

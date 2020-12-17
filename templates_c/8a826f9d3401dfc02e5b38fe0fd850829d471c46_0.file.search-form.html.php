@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2020-12-17 10:47:55
+/* Smarty version 3.1.36, created on 2020-12-17 12:48:00
   from '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/search/search-form.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_5fdb375ba58348_84967057',
+  'unifunc' => 'content_5fdb5380342f01_78413854',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8a826f9d3401dfc02e5b38fe0fd850829d471c46' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/search/search-form.html',
-      1 => 1608202044,
+      1 => 1608209278,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5fdb375ba58348_84967057 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fdb5380342f01_78413854 (Smarty_Internal_Template $_smarty_tpl) {
 ?><form action="index.php" method="POST">
     <h4 class="text-center">Dog finder!</h4>
     <div class="search-form-term">
@@ -44,11 +44,5 @@ function content_5fdb375ba58348_84967057 (Smarty_Internal_Template $_smarty_tpl)
     <div class="search-form-button-container">
         <input class="search-form-button" type="submit" name="submit" value="Search">
     </div>
-</form>
-
-
-<br><br><br>
-
-<!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button><?php }
+</form><?php }
 }
