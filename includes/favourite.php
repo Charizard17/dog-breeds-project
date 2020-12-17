@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html>
-<body>
-</body>
-</html>
 <?php
-    include "../includes/php-functions.php";
+    include("php-functions.php");
 
     echo '<h2 class="text-center">My Favourite Dog Breeds</h2>';
 
