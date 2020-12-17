@@ -1,10 +1,29 @@
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<div id="table-row-detail-modal" class="modal-container">
 
     <!-- Modal content -->
     <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
+        <span class="modal-close">&times;</span>
+        <table class="modal-table">
+            {foreach name=outer item=dogBreedsItem from=$dogBreeds}
+                <tr class="modal-table-tr">
+                {foreach key=key item=item from=$dogBreedsItem}
+                    {if $key == 'id' || $key == 'breed_name' || $key == 'img' || $key == 'weight' || $key == 'height' || $key == 'origin' || $key == 'life_span' || $key == 'temperament'|| $key == 'breed_group'|| $key == 'bred_for'}
+                        {if $key == 'img'}
+                            <th>{$key}</th>
+                            <td>{html_image file=$item width="64" height="64"}</td>
+                        {elseif $key == 'weight' || $key == 'height'}
+                            <th>{$key}</th>
+                            <td class="modal-table-td">{$item.metric}</td>
+                        {else}
+                            <th>{$key}</th>
+                            <td class="modal-table-td">{$item}</td>
+                        {/if}
+                    {/if}
+                {/foreach}
+                </tr>
+            {/foreach}
+        </table>
     </div>
 
 </div>
