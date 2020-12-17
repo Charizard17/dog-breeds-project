@@ -33,6 +33,11 @@ window.onclick = function(event) {
 }
 
 
-$('#dog-breeds-table').on('click', '.dog-breeds-table-details', function(e) {
-  alert(e.target.id);
+// $(document).on('click', '.dog-breeds-table-details', function() {
+//   alert("test");
+// });
+
+$(document).on("click",".dog-breeds-table-details", function () {
+  var clickedBtnID = $(this).attr('id'); // or var clickedBtnID = this.id
+  alert('you clicked on button #' + clickedBtnID);
 });

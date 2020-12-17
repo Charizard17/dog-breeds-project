@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2020-12-17 10:46:50
+/* Smarty version 3.1.36, created on 2020-12-17 13:06:55
   from '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/layout_main.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_5fdb371a8fab97_23498783',
+  'unifunc' => 'content_5fdb57efd36836_44949017',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9bc617b58d300fdc225202e0121f2745b9709c99' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/layout_main.html',
-      1 => 1608202009,
+      1 => 1608210332,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:table/table-row-detail.html' => 1,
   ),
 ),false)) {
-function content_5fdb371a8fab97_23498783 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fdb57efd36836_44949017 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,7 +75,7 @@ function content_5fdb371a8fab97_23498783 (Smarty_Internal_Template $_smarty_tpl)
  src="js/cookie.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="https://code.jquery.com/jquery-3.2.1.slim.min.js"><?php echo '</script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/d3js/6.3.1/d3.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"><?php echo '</script'; ?>
