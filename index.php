@@ -9,6 +9,7 @@
         $smarty->assign('dogBreeds',$dogBreedArray);
     } else {
         $smarty->assign('dogBreeds',$filtered);
+        $smarty->assign('filteredCount', count($filtered));
     }
 
     $smarty->display('layout_main.html');

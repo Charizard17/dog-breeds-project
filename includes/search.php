@@ -12,6 +12,7 @@
         $filtered = hasContainTerms('minHeight', $filtered, 'minHeight', 'maxHeight');
         $filtered = hasContainTerms('maxHeight', $filtered, 'minHeight', 'maxHeight');
         $filtered = hasContainWords('temperament', $filtered);
+
     }
 
 
