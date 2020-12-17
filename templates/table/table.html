@@ -10,9 +10,9 @@
       </tr>
     </thead>
     <tbody>
-        {foreach name=outer item=fooitem from=$foo}
+        {foreach name=outer item=dogBreedsItem from=$dogBreeds}
             <tr class="dog-breeds-table-tr">
-            {foreach key=key item=item from=$fooitem}
+            {foreach key=key item=item from=$dogBreedsItem}
                 {if $key == 'id' || $key == 'breed_name' || $key == 'img' || $key == 'weight' || $key == 'height' || $key == 'temperament'}
                   {if $key == 'img'}
                     <td class="dog-breeds-table-td">{html_image file=$item width="64" height="64"}</td>
