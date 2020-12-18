@@ -16,8 +16,8 @@
             <tr class="dog-breeds-table-tr">
                 <td><img class="favourite-icon" src="img/star.svg" alt=""></td>
                 {foreach key=key item=item from=$dogBreedsItem}
-                    {if $key == 'id' || $key == 'breed_name' || $key == 'img' || $key == 'weight' || $key == 'height' || $key == 'temperament'}
-                      {if $key == 'img'}
+                    {if $key == 'id' || $key == 'breed_name' || $key == 'image' || $key == 'weight' || $key == 'height' || $key == 'temperament'}
+                      {if $key == 'image'}
                         <td class="dog-breeds-table-td">{html_image file=$item width="64" height="64"}</td>
                       {elseif $key == 'weight' || $key == 'height'}
                         <td class="dog-breeds-table-td">{$item.metric}</td>

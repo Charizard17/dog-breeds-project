@@ -37,14 +37,3 @@ window.onclick = function(event) {
 //   alert(element);
 //   modal.style.display = "block";
 // }
-$(document).ready(function(){
-  $(".abc").click(function(){
-    alert("ABC clicked.");
-  });
-  $(".testtt").click(function(){
-    alert("TESTTT clicked.");
-  });
-  $(".qwe").click(function(){
-    alert("QWE clicked.");
-  });
-});
