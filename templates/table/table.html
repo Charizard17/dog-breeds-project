@@ -28,7 +28,7 @@
                 {/foreach}
                 {foreach key=key item=item from=$dogBreedsItem}
                   {if $key == 'id'}
-                      <td id="details-{$item}" data-name="{$item}" class="dog-breeds-table-details"><span id="magnifying-glass" class="magnifying-glass">&#128269;</span></td>
+                      <td class="dog-breeds-table-details"><span class="magnifying-glass" id="{$item}" data-name="{$item}" onclick="myFunc(this)">&#128269;</span></td>
                   {/if}
                 {/foreach}
             </tr>

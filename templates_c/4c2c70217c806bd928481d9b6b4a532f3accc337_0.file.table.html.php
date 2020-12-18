@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2020-12-18 12:58:09
+/* Smarty version 3.1.36, created on 2020-12-18 13:43:55
   from '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/table/table.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_5fdca761a64880_84083490',
+  'unifunc' => 'content_5fdcb21b578a99_47585130',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4c2c70217c806bd928481d9b6b4a532f3accc337' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/table/table.html',
-      1 => 1608296288,
+      1 => 1608299034,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5fdca761a64880_84083490 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fdcb21b578a99_47585130 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/libs/plugins/function.html_image.php','function'=>'smarty_function_html_image',),));
 ?>
 <table id="dog-breeds-table" class="dog-breeds-table">
@@ -74,9 +74,9 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => 
 $_smarty_tpl->tpl_vars['item']->do_else = false;
 ?>
                   <?php if ($_smarty_tpl->tpl_vars['key']->value == 'id') {?>
-                      <td id="details-<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
+                      <td class="dog-breeds-table-details"><span class="magnifying-glass" id="<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
 " data-name="<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
-" class="dog-breeds-table-details"><span id="magnifying-glass" class="magnifying-glass">&#128269;</span></td>
+" onclick="myFunc(this)">&#128269;</span></td>
                   <?php }?>
                 <?php
 }

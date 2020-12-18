@@ -10,7 +10,7 @@ function readCookie(name) {
 }
 
 let myClickedElementArray = readCookie('my-favourite');
-myClickedElementArray = myClickedElementArray.split(",");
+// myClickedElementArray = myClickedElementArray.split(",");
 
 function saveClickedElement(clicked_element_id) {
     if (myClickedElementArray.includes(clicked_element_id) == false) {
