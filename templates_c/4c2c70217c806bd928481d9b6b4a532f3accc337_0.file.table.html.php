@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2020-12-17 13:03:00
+/* Smarty version 3.1.36, created on 2020-12-18 08:28:01
   from '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/table/table.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_5fdb5704959125_65601956',
+  'unifunc' => 'content_5fdc6811ca39b2_64905764',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4c2c70217c806bd928481d9b6b4a532f3accc337' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/table/table.html',
-      1 => 1608210085,
+      1 => 1608280073,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5fdb5704959125_65601956 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fdc6811ca39b2_64905764 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/libs/plugins/function.html_image.php','function'=>'smarty_function_html_image',),));
 ?>
 <table id="dog-breeds-table" class="dog-breeds-table">
     <thead>
       <tr>
+        <th class="dog-breeds-table-th" scope="col"></th>
         <th class="dog-breeds-table-th" scope="col">ID</th>
         <th class="dog-breeds-table-th" scope="col">Name</th>
         <th class="dog-breeds-table-th" scope="col">Picture</th>
@@ -44,6 +45,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['dogBreedsItem']-
 $_smarty_tpl->tpl_vars['dogBreedsItem']->do_else = false;
 ?>
             <tr class="dog-breeds-table-tr">
+                <td><img class="favourite-icon" src="img/star.svg" alt=""></td>
                 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['dogBreedsItem']->value, 'item', false, 'key');
 $_smarty_tpl->tpl_vars['item']->do_else = true;
@@ -73,7 +75,8 @@ $_smarty_tpl->tpl_vars['item']->do_else = false;
 ?>
                   <?php if ($_smarty_tpl->tpl_vars['key']->value == 'id') {?>
                       <td id="details-<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
-" class="dog-breeds-table-details">&#128269;</td>
+" data-name="<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
+" class="dog-breeds-table-details"><span class="magnifying-glass">&#128269;</span></td>
                   <?php }?>
                 <?php
 }

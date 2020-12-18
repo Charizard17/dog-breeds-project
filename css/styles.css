@@ -40,9 +40,18 @@
 }
 
 .dog-breeds-table-details {
-  cursor: pointer;
   padding-left: 30px;
   font-size: 25px;
+}
+
+.magnifying-glass {
+  cursor: pointer;
+}
+
+.favourite-icon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
 }
 
 

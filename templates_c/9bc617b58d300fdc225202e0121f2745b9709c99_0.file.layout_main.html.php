@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2020-12-17 17:12:42
+/* Smarty version 3.1.36, created on 2020-12-18 08:34:01
   from '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/layout_main.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_5fdb918a98a1e0_90052384',
+  'unifunc' => 'content_5fdc6979614369_52457170',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9bc617b58d300fdc225202e0121f2745b9709c99' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/layout_main.html',
-      1 => 1608225161,
+      1 => 1608280439,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:table/table-row-detail.html' => 1,
   ),
 ),false)) {
-function content_5fdb918a98a1e0_90052384 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fdc6979614369_52457170 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,7 +48,7 @@ function content_5fdb918a98a1e0_90052384 (Smarty_Internal_Template $_smarty_tpl)
               <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/favourite.html">Favourite</a>
+              <a class="nav-link" href="favourite">Favourite</a>
             </li>
           </ul>
         </div>
@@ -75,7 +75,7 @@ function content_5fdb918a98a1e0_90052384 (Smarty_Internal_Template $_smarty_tpl)
  src="js/cookie.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- src="https://ajax.googleapis.com/ajax/libs/d3js/6.3.1/d3.min.js"><?php echo '</script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"><?php echo '</script'; ?>

@@ -1,6 +1,7 @@
 <table id="dog-breeds-table" class="dog-breeds-table">
     <thead>
       <tr>
+        <th class="dog-breeds-table-th" scope="col"></th>
         <th class="dog-breeds-table-th" scope="col">ID</th>
         <th class="dog-breeds-table-th" scope="col">Name</th>
         <th class="dog-breeds-table-th" scope="col">Picture</th>
@@ -13,6 +14,7 @@
     <tbody>
         {foreach name=outer item=dogBreedsItem from=$dogBreeds}
             <tr class="dog-breeds-table-tr">
+                <td><img class="favourite-icon" src="img/star.svg" alt=""></td>
                 {foreach key=key item=item from=$dogBreedsItem}
                     {if $key == 'id' || $key == 'breed_name' || $key == 'img' || $key == 'weight' || $key == 'height' || $key == 'temperament'}
                       {if $key == 'img'}
@@ -26,7 +28,7 @@
                 {/foreach}
                 {foreach key=key item=item from=$dogBreedsItem}
                   {if $key == 'id'}
-                      <td id="details-{$item}" class="dog-breeds-table-details">&#128269;</td>
+                      <td id="details-{$item}" data-name="{$item}" class="dog-breeds-table-details"><span class="magnifying-glass">&#128269;</span></td>
                   {/if}
                 {/foreach}
             </tr>

@@ -1,16 +1,16 @@
-window.onload = function() {
-    if (!window.location.hash) {
-        window.location = window.location + '#loaded';
-        window.location.reload();
-    }
-}
+// $(function() {
+//     if (!window.location.hash) {
+//         window.location = window.location + '#loaded';
+//         window.location.reload();
+//     }
+// });
 
 
 // Get the modal
 var modal = document.getElementById("table-row-detail-modal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementsByClassName("dog-breeds-table-details");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("modal-close")[0];
@@ -32,12 +32,13 @@ window.onclick = function(event) {
   }
 }
 
-
-// $(document).on('click', '.dog-breeds-table-details', function() {
-//   alert("test");
-// });
-
-$(document).on("click",".dog-breeds-table-details", function () {
-  var clickedBtnID = $(this).attr('id'); // or var clickedBtnID = this.id
-  alert('you clicked on button #' + clickedBtnID);
+// function myFunc(element) {
+//   var modal = document.getElementById("table-row-detail-modal");
+//   alert(element);
+//   modal.style.display = "block";
+// }
+$(function() {
+  $(document).on("click", ".magnifying-glass", function() {
+    alert("test");
+  });
 });

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2020-12-17 16:34:22
+/* Smarty version 3.1.36, created on 2020-12-18 07:44:45
   from '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/search/search-form.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_5fdb888e05f9a5_48934279',
+  'unifunc' => 'content_5fdc5ded7355a3_38512791',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8a826f9d3401dfc02e5b38fe0fd850829d471c46' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/search/search-form.html',
-      1 => 1608222861,
+      1 => 1608277476,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5fdb888e05f9a5_48934279 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fdc5ded7355a3_38512791 (Smarty_Internal_Template $_smarty_tpl) {
 ?><form action="index.php" method="POST">
     <h4 class="text-center">Dog finder!</h4>
     <div class="search-form-term">
