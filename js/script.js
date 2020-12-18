@@ -10,7 +10,7 @@
 var modal = document.getElementById("table-row-detail-modal");
 
 // Get the button that opens the modal
-var btn = document.getElementsByClassName("dog-breeds-table-details");
+var btn = document.getElementById("open-modal");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("modal-close")[0];
@@ -37,8 +37,14 @@ window.onclick = function(event) {
 //   alert(element);
 //   modal.style.display = "block";
 // }
-$(function() {
-  $(document).on("click", ".magnifying-glass", function() {
-    alert("test");
+$(document).ready(function(){
+  $(".abc").click(function(){
+    alert("ABC clicked.");
+  });
+  $(".testtt").click(function(){
+    alert("TESTTT clicked.");
+  });
+  $(".qwe").click(function(){
+    alert("QWE clicked.");
   });
 });

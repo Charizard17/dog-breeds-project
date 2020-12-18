@@ -90,7 +90,7 @@
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding: 100px 400px;
+  padding: 100px 500px;
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -109,7 +109,7 @@
   width: 50%;
 }
 
-/* The Close Button */
+/* The Close Button of Modal*/
 .modal-close {
   color: #aaaaaa;
   position: absolute;
@@ -124,4 +124,8 @@
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.modal-table-th {
+  padding: 5px 50px 5px 20px;
 }
