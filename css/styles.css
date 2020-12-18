@@ -49,8 +49,13 @@
 }
 
 .favourite-icon {
-  width: 25px;
-  height: 25px;
+  cursor: pointer;
+  fill: rgba(254, 215, 143, 0.851);
+}
+
+.favourite-icon:hover,
+.favourite-icon:focus {
+  fill: rgb(255, 190, 27);
   cursor: pointer;
 }
 

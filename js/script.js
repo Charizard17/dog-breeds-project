@@ -10,7 +10,7 @@
 var modal = document.getElementById("table-row-detail-modal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("open-modal");
+var btn = document.getElementsByClassName("open-modal")[0];
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("modal-close")[0];
@@ -31,9 +31,12 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+$(function() {
 
-// function myFunc(element) {
-//   var modal = document.getElementById("table-row-detail-modal");
-//   alert(element);
-//   modal.style.display = "block";
-// }
+  $(document).on("click", ".dog-breeds-table-details", function() {
+    //Do whatever you want to do
+    var clickedSmiley = $(this);
+    alert(clickedSmiley);
+  });
+
+});
