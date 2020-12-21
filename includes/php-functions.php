@@ -28,18 +28,7 @@
     // setcookie('my-favourite', '');
 
 
-    // show details button function
-    if (isset($_POST['detailed-id'])) {
-        $index = "";
-        $index = $_POST['detailed-id'];
-        for ($i = 0; $i < count($dogBreedArray); ++$i) {
-            if ($dogBreedArray[$i]['id'] == $index) {
-                $dogBreedDetails = $dogBreedArray[$i];
-            }
-        }
-    }
-
-
+    // show details if cookie exist
     if ($_COOKIE['detailed-id']) {
         $index = "";
         $index = $_COOKIE['detailed-id'];
@@ -48,6 +37,4 @@
                 $dogBreedDetails = $dogBreedArray[$i];
             }
         }
-    } else {
-        echo "failed";
     }
