@@ -35,12 +35,6 @@
         for ($i = 0; $i < count($dogBreedArray); ++$i) {
             if ($dogBreedArray[$i]['id'] == $index) {
                 $dogBreedDetails = $dogBreedArray[$i];
-                echo '<script>
-                        var modal = document.getElementById("table-row-detail-modal");
-                        modal.style.display = "block";
-                    </script>';
             }
         }
-        $string = json_encode($dogBreedDetails);
-        //setcookie('detailed-id', $string);
     }

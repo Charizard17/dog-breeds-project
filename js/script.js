@@ -19,8 +19,3 @@ window.onclick = function(event) {
 function showDetails() {
   modal.style.display = "block";
 }
-
-function myFunc(element) {
-  document.cookie = "detailed-id="+element;
-  console.log(element);
-}
