@@ -48,7 +48,13 @@
   cursor: pointer;
   color: transparent;
   border: none;
-  background-color: dodgerblue;
+  background-image: url("../img/view-details.png");
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  width: 25px;
+  height: 25px;
 }
 
 .favourite-icon {
