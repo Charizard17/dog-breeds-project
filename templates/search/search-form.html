@@ -26,25 +26,3 @@
 {if $filteredCount != 0}
 <span>{$filteredCount} dog breeds found.</span>
 {/if}
-
-<div class="">
-    <span class="">&times;</span>
-    <table class="">
-        {foreach key=key item=item from=$dogBreedDetails}
-            <tr class="">
-                {if $key == 'id' || $key == 'breed_name' || $key == 'image' || $key == 'weight' || $key == 'height' || $key == 'origin' || $key == 'life_span' || $key == 'temperament'|| $key == 'breed_group'|| $key == 'bred_for'}
-                    {if $key == 'image'}
-                        <th class="">{$key|upper|replace:'_':' '}</th>
-                        <td class="">{html_image file=$item width="200" height="200"}</td>
-                    {elseif $key == 'weight' || $key == 'height'}
-                        <th class="">{$key|upper|replace:'_':' '}</th>
-                        <td class="">{$item.metric}</td>
-                    {else}
-                        <th class="">{$key|upper|replace:'_':' '}</th>
-                        <td class="">{$item}</td>
-                    {/if}
-                {/if}
-            </tr>
-        {/foreach}
-    </table>
-</div>

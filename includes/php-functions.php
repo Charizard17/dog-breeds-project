@@ -38,3 +38,16 @@
             }
         }
     }
+
+
+    if ($_COOKIE['detailed-id']) {
+        $index = "";
+        $index = $_COOKIE['detailed-id'];
+        for ($i = 0; $i < count($dogBreedArray); ++$i) {
+            if ($dogBreedArray[$i]['id'] == $index) {
+                $dogBreedDetails = $dogBreedArray[$i];
+            }
+        }
+    } else {
+        echo "failed";
+    }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2020-12-21 14:13:32
+/* Smarty version 3.1.36, created on 2020-12-21 14:51:15
   from '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/table/table.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_5fe0ad8c169172_34189430',
+  'unifunc' => 'content_5fe0b6637f39d2_00078801',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4c2c70217c806bd928481d9b6b4a532f3accc337' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/table/table.html',
-      1 => 1608560011,
+      1 => 1608562272,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5fe0ad8c169172_34189430 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fe0b6637f39d2_00078801 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/libs/plugins/function.html_image.php','function'=>'smarty_function_html_image',),));
 ?>
 <form action="index.php" method="post">
@@ -79,7 +79,7 @@ $_smarty_tpl->tpl_vars['item']->do_else = false;
                         <div name="showDetails">
                           <input type="submit" class="show-details" name="detailed-id" id="<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
 " data-name="&#128269;" value="<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
-" onclick="showDetails()">
+" onclick="myFunc(this.id)">
                         </div>
                       </td>
                   <?php }?>
