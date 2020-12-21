@@ -11,7 +11,8 @@
         $smarty->assign('dogBreeds',$filtered);
         $smarty->assign('filteredCount', count($filtered));
     }
-    $smarty->assign('testFirstElementOfDogBreedArray',$dogBreedArray[0]);
+    $smarty->assign('dogBreedDetails',$dogBreedDetails);
+
 
 
     $smarty->display('layout_main.html');

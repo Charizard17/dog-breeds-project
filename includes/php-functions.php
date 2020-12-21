@@ -26,3 +26,21 @@
     }
 
     // setcookie('my-favourite', '');
+
+
+    // show details button function
+    if (isset($_POST['detailed-id'])) {
+        $index = "";
+        $index = $_POST['detailed-id'];
+        for ($i = 0; $i < count($dogBreedArray); ++$i) {
+            if ($dogBreedArray[$i]['id'] == $index) {
+                $dogBreedDetails = $dogBreedArray[$i];
+                echo '<script>
+                        var modal = document.getElementById("table-row-detail-modal");
+                        modal.style.display = "block";
+                    </script>';
+            }
+        }
+        $string = json_encode($dogBreedDetails);
+        //setcookie('detailed-id', $string);
+    }

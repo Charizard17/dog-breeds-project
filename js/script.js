@@ -1,27 +1,11 @@
-// $(function() {
-//     if (!window.location.hash) {
-//         window.location = window.location + '#loaded';
-//         window.location.reload();
-//     }
-// });
-
-
 // Get the modal
 var modal = document.getElementById("table-row-detail-modal");
 
-// Get the button that opens the modal
-//var btn = document.getElementById("");
-
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("modal-close")[0];
-
-// When the user clicks the button, open the modal 
-// btn.onclick = function() {
-//   modal.style.display = "block";
-// }
+var modalClose = document.getElementsByClassName("modal-close")[0];
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+modalClose.onclick = function() {
   modal.style.display = "none";
 }
 
@@ -32,8 +16,11 @@ window.onclick = function(event) {
   }
 }
 
-
-function myFunc(elt) {
-  console.log(elt.id);
+function showDetails() {
   modal.style.display = "block";
+}
+
+function myFunc(element) {
+  document.cookie = "detailed-id="+element;
+  console.log(element);
 }
