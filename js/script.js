@@ -23,25 +23,20 @@ window.onclick = function(event) {
 function myFunc(element) {
   document.cookie = "detailed-id="+element+"; path=/;";
 }
-console.log(document.cookie.indexOf('detailed-id='));
 
-
+// open model after clicking view details
 var ifCookieExist = document.cookie.indexOf('detailed-id=')
-if (ifCookieExist == -1) {
-  console.log("cookie dont exist");
-} else {
+if (ifCookieExist == 0) {
   modal.style.display = "block";
 }
 
-// check if cookie exist
+// if cookie exist, fill html input values with cookie values
 function readCookie(cookieName, htmlElement) {
   var ifCookieExist = document.cookie.indexOf(cookieName);
-  if (ifCookieExist == -1) {
-    console.log("cookie dont exist");
-  } else {
-    console.log("cookie exist. Yuppiii!!");
+  if (ifCookieExist == 0) {
     let cookieValue = getCookie(cookieName);
     document.getElementById(htmlElement).value = cookieValue;
+    document.cookie = cookieName+"=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   }
 }
 
@@ -50,6 +45,7 @@ window.getCookie = function(cookieName) {
   var matchedCookie = document.cookie.match(new RegExp('(^| )' + cookieName + '=([^;]+)'));
   if (matchedCookie) return matchedCookie[2];
 }
+
 
 readCookie("saveBreedName", "breed_name");
 readCookie("saveMinWeight", "minWeight");
