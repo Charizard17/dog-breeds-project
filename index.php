@@ -12,6 +12,7 @@
         $smarty->assign('filteredCount', count($filtered));
     }
     $smarty->assign('dogBreedDetails',$dogBreedDetails);
+    $smarty->assign('userInput',$userInput);
 
 
 

@@ -32,3 +32,28 @@ if (ifCookieExist == -1) {
 } else {
   modal.style.display = "block";
 }
+
+// check if cookie exist
+function readCookie(cookieName, htmlElement) {
+  var ifCookieExist = document.cookie.indexOf(cookieName);
+  if (ifCookieExist == -1) {
+    console.log("cookie dont exist");
+  } else {
+    console.log("cookie exist. Yuppiii!!");
+    let cookieValue = getCookie(cookieName);
+    document.getElementById(htmlElement).value = cookieValue;
+  }
+}
+
+// get cookie by name
+window.getCookie = function(cookieName) {
+  var matchedCookie = document.cookie.match(new RegExp('(^| )' + cookieName + '=([^;]+)'));
+  if (matchedCookie) return matchedCookie[2];
+}
+
+readCookie("saveBreedName", "breed_name");
+readCookie("saveMinWeight", "minWeight");
+readCookie("saveMaxWeight", "maxWeight");
+readCookie("saveMinHeight", "minHeight");
+readCookie("saveMaxHeight", "maxHeight");
+readCookie("saveTemperament", "temperament");

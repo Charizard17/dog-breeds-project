@@ -13,8 +13,21 @@
         $filtered = hasContainTerms('maxHeight', $filtered, 'minHeight', 'maxHeight');
         $filtered = hasContainWords('temperament', $filtered);
 
+        ifUserInput('breed_name', 'saveBreedName');
+        ifUserInput('minWeight', 'saveMinWeight');
+        ifUserInput('maxWeight', 'saveMaxWeight');
+        ifUserInput('minHeight', 'saveMinHeight');
+        ifUserInput('maxHeight', 'saveMaxHeight');
+        ifUserInput('temperament', 'saveTemperament');
     }
 
+    // if user filled form, we return input value
+    function ifUserInput ($data, $cookieName) {
+        if ($_POST[$data]) {
+            $userInput = $_POST[$data];
+            setcookie($cookieName, $userInput);
+        }
+    }
 
     // we create 2 functions for filtering our array after search
     function hasContainWords($postValue, $dataArray) {

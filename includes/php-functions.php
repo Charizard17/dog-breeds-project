@@ -25,9 +25,6 @@
         list($dogBreedArray[$k]["minHeight"], $dogBreedArray[$k]["maxHeight"]) = array_pad(explode(" - ", $dogBreedArray[$k]["height"]["metric"]), 2, null);
     }
 
-    // setcookie('my-favourite', '');
-
-
     // show details if cookie exist
     if ($_COOKIE['detailed-id']) {
         $index = "";
