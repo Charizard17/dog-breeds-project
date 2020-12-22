@@ -25,7 +25,7 @@ function myFunc(element) {
 }
 
 // open model after clicking view details
-var ifCookieExist = document.cookie.indexOf('detailed-id=')
+var ifCookieExist = document.cookie.indexOf('detailed-id=');
 if (ifCookieExist == 0) {
   modal.style.display = "block";
 }
@@ -54,7 +54,29 @@ readCookie("saveMinHeight", "minHeight");
 readCookie("saveMaxHeight", "maxHeight");
 readCookie("saveTemperament", "temperament");
 
-// to bookmark clicked element - add id of it to cookie
+// for bookmark - create bookmark array if doesnt exist
+var ifBookmarksExist = document.cookie.indexOf('bookmarks=');
+if (ifBookmarksExist == -1) {
+  var bookmarks = new Array();
+} else {
+  var cookieBookmark = getCookie("bookmarks");
+  bookmarks = JSON.parse(cookieBookmark);
+}
+// for bookmark - clicked element add to bookmark array in cookies
 function myFavourite(element) {
-  console.log(element);
+  var ifInclude = bookmarks.includes(element);
+  if (ifInclude == true) {
+    const index = bookmarks.indexOf(element);
+    if (index > -1) {
+      bookmarks.splice(index, 1);
+    }
+  } else {
+    bookmarks.unshift(element);
+  }
+  bookmarks.sort(function(a, b){return a-b});
+  console.log(bookmarks);
+
+
+  cookieBookmark = JSON.stringify(bookmarks);
+  document.cookie = "bookmarks="+cookieBookmark+"; path=/;";
 }

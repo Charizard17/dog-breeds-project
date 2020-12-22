@@ -63,6 +63,7 @@
 }
 
 .favourite-star {
+  display: block;
   cursor: pointer;
   border: transparent;
   background-color: transparent;
@@ -72,14 +73,10 @@
   background-size: cover; 
   width: 25px;
   height: 25px;
-  color: red;
-  fill: red;
 }
 
-.favourite-star:hover,
-.favourite-star:focus {
+.favourite-star:hover {
   background-image: url("../img/star-filled.png");
-  fill: rgb(27, 255, 92);
   cursor: pointer;
 }
 
