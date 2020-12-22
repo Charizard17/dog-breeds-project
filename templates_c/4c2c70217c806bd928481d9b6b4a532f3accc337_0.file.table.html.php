@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2020-12-22 16:48:46
+/* Smarty version 3.1.36, created on 2020-12-22 17:21:30
   from '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/table/table.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_5fe2236ea929e3_91462272',
+  'unifunc' => 'content_5fe22b1a50a670_53514645',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4c2c70217c806bd928481d9b6b4a532f3accc337' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/table/table.html',
-      1 => 1608655724,
+      1 => 1608657665,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5fe2236ea929e3_91462272 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fe22b1a50a670_53514645 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/libs/plugins/function.html_image.php','function'=>'smarty_function_html_image',),));
 ?>
 <form action="index.php" method="post">
   <table id="dog-breeds-table" class="dog-breeds-table">
       <thead>
         <tr>
-          <th class="dog-breeds-table-th" scope="col"><img class="th-bookmark-icon" src="img/star-yellow.png" alt=""></th>
+          <th class="dog-breeds-table-th" scope="col"><img class="th-bookmark-icon" id="th-bookmark" src="img/star-yellow.png" onclick="showOnlyBookmarkedElements()"></th>
           <th class="dog-breeds-table-th" scope="col">ID</th>
           <th class="dog-breeds-table-th" scope="col">Name</th>
           <th class="dog-breeds-table-th" scope="col">Picture</th>

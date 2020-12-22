@@ -1,3 +1,9 @@
+// i tried too much about to using jquery functions
+// but i get everytime problems like this= 
+// "Uncaught ReferenceError: $ is not defined at script.js:XXX"
+// because of this error, i can't use jquery which start with $ dollar sign
+// i also tried to save jquery a local js file. but it didn't work also
+
 //--------------------------------------//
 // Get the modal
 var modal = document.getElementById("table-row-detail-modal");
@@ -86,4 +92,17 @@ function myFavourite(element) {
 // to bookmark - change background image if bookmark array include from the beginning
 for (var j = 0; j < bookmarks.length; ++j) {
   document.getElementById("star"+bookmarks[j]).classList.add("favourite-star-active");
+}
+
+if (document.cookie.indexOf('showBookmarks=') == -1) {
+  var empty = "false"
+  document.cookie = "showBookmarks="+empty+"; path=/;";
+}
+function showOnlyBookmarkedElements() {
+  let getcookie = getCookie("showBookmarks");
+  if (getcookie == "false") {
+  document.cookie = "showBookmarks=true; path=/;";
+  } else {
+  document.cookie = "showBookmarks=false; path=/;";
+  }
 }
