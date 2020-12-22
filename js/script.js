@@ -15,7 +15,7 @@ var modalClose = document.getElementsByClassName("modal-close")[0];
 modalClose.onclick = function() {
   modal.style.display = "none";
   document.cookie = "detailed-id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-  window.location.reload()
+  window.location.reload();
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -23,25 +23,23 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
     document.cookie = "detailed-id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    window.location.reload()
+    window.location.reload();
   }
 }
 
+// open model after clicking view details
 function myFunc(element) {
   document.cookie = "detailed-id="+element+"; path=/;";
 }
-
-// open model after clicking view details
-var ifCookieExist = document.cookie.indexOf('detailed-id=');
-if (ifCookieExist == 0) {
+if (document.cookie.indexOf('detailed-id=') !== -1) {
   modal.style.display = "block";
 }
 
 //--------------------------------------//
 // if cookie exist, fill html input values with cookie values
-function readCookie(cookieName, htmlElement) {
-  var ifCookieExist = document.cookie.indexOf(cookieName);
-  if (ifCookieExist == 0) {
+function fillInput(cookieName, htmlElement) {
+  var ifSearchInput = document.cookie.indexOf(cookieName);
+  if (ifSearchInput == 0) {
     let cookieValue = getCookie(cookieName);
     document.getElementById(htmlElement).value = cookieValue;
     document.cookie = cookieName+"=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
@@ -55,12 +53,12 @@ window.getCookie = function(cookieName) {
 }
 
 //--------------------------------------//
-readCookie("saveBreedName", "breed_name");
-readCookie("saveMinWeight", "minWeight");
-readCookie("saveMaxWeight", "maxWeight");
-readCookie("saveMinHeight", "minHeight");
-readCookie("saveMaxHeight", "maxHeight");
-readCookie("saveTemperament", "temperament");
+fillInput("saveBreedName", "breed_name");
+fillInput("saveMinWeight", "minWeight");
+fillInput("saveMaxWeight", "maxWeight");
+fillInput("saveMinHeight", "minHeight");
+fillInput("saveMaxHeight", "maxHeight");
+fillInput("saveTemperament", "temperament");
 
 //--------------------------------------//
 // for bookmark - create bookmark array if doesnt exist
@@ -72,18 +70,18 @@ if (ifBookmarksExist == -1) {
   bookmarks = JSON.parse(cookieBookmark);
 }
 // for bookmark - clicked element add to bookmark array in cookies
-function myFavourite(element) {
-  let myID = element.id.replace("star", "");
+function myFavourite(elem) {
+  let myID = elem.id.replace("star", "");
   let ifInclude = bookmarks.includes(myID);
   if (ifInclude == true) {
     const index = bookmarks.indexOf(myID);
     if (index > -1) {
       bookmarks.splice(index, 1);
-    element.classList.remove("favourite-star-active");
+    elem.classList.remove("favourite-star-active");
     }
   } else {
     bookmarks.unshift(myID);
-    element.classList.add("favourite-star-active");
+    elem.classList.add("favourite-star-active");
   }
   bookmarks.sort(function(a, b){return a-b});
   cookieBookmark = JSON.stringify(bookmarks);
