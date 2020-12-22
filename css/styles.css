@@ -77,7 +77,10 @@
 
 .favourite-star:hover {
   background-image: url("../img/star-filled.png");
-  cursor: pointer;
+}
+
+.favourite-star-active {
+  background-image: url("../img/star-filled.png");
 }
 
 

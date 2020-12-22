@@ -1,3 +1,4 @@
+//--------------------------------------//
 // Get the modal
 var modal = document.getElementById("table-row-detail-modal");
 
@@ -30,6 +31,7 @@ if (ifCookieExist == 0) {
   modal.style.display = "block";
 }
 
+//--------------------------------------//
 // if cookie exist, fill html input values with cookie values
 function readCookie(cookieName, htmlElement) {
   var ifCookieExist = document.cookie.indexOf(cookieName);
@@ -46,7 +48,7 @@ window.getCookie = function(cookieName) {
   if (matchedCookie) return matchedCookie[2];
 }
 
-
+//--------------------------------------//
 readCookie("saveBreedName", "breed_name");
 readCookie("saveMinWeight", "minWeight");
 readCookie("saveMaxWeight", "maxWeight");
@@ -54,6 +56,7 @@ readCookie("saveMinHeight", "minHeight");
 readCookie("saveMaxHeight", "maxHeight");
 readCookie("saveTemperament", "temperament");
 
+//--------------------------------------//
 // for bookmark - create bookmark array if doesnt exist
 var ifBookmarksExist = document.cookie.indexOf('bookmarks=');
 if (ifBookmarksExist == -1) {
@@ -64,19 +67,23 @@ if (ifBookmarksExist == -1) {
 }
 // for bookmark - clicked element add to bookmark array in cookies
 function myFavourite(element) {
-  var ifInclude = bookmarks.includes(element);
+  let myID = element.id.replace("star", "");
+  let ifInclude = bookmarks.includes(myID);
   if (ifInclude == true) {
-    const index = bookmarks.indexOf(element);
+    const index = bookmarks.indexOf(myID);
     if (index > -1) {
       bookmarks.splice(index, 1);
+    element.classList.remove("favourite-star-active");
     }
   } else {
-    bookmarks.unshift(element);
+    bookmarks.unshift(myID);
+    element.classList.add("favourite-star-active");
   }
   bookmarks.sort(function(a, b){return a-b});
-  console.log(bookmarks);
-
-
   cookieBookmark = JSON.stringify(bookmarks);
   document.cookie = "bookmarks="+cookieBookmark+"; path=/;";
+}
+// to bookmark - change background image if bookmark array include from the beginning
+for (var j = 0; j < bookmarks.length; ++j) {
+  document.getElementById("star"+bookmarks[j]).classList.add("favourite-star-active");
 }

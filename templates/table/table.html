@@ -18,7 +18,7 @@
                 {foreach key=key item=item from=$dogBreedsItem}
                   {if $key == 'id'}
                     <td class="dog-breeds-table-td">
-                      <span value="{$item}" id="{$item}" class="favourite-star" onclick="myFavourite(this.id)"></span>
+                      <span value="{$item}" id="star{$item}" class="favourite-star" onclick="myFavourite(this)"></span>
                     </td>
                   {/if}
                 {/foreach}
