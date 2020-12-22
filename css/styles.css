@@ -31,6 +31,11 @@
   padding: 5px 10px;
 }
 
+.th-bookmark-icon {
+  width: 30px;
+  height: 30px;
+}
+
 .dog-breeds-table-td {
   padding: 5px 10px;
 }
@@ -57,14 +62,24 @@
   height: 25px;
 }
 
-.favourite-icon {
+.favourite-star {
   cursor: pointer;
-  fill: rgba(254, 215, 143, 0.851);
+  border: transparent;
+  background-color: transparent;
+  background-image: url("../img/star.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  width: 25px;
+  height: 25px;
+  color: red;
+  fill: red;
 }
 
-.favourite-icon:hover,
-.favourite-icon:focus {
-  fill: rgb(255, 190, 27);
+.favourite-star:hover,
+.favourite-star:focus {
+  background-image: url("../img/star-filled.png");
+  fill: rgb(27, 255, 92);
   cursor: pointer;
 }
 

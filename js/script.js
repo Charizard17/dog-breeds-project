@@ -53,3 +53,8 @@ readCookie("saveMaxWeight", "maxWeight");
 readCookie("saveMinHeight", "minHeight");
 readCookie("saveMaxHeight", "maxHeight");
 readCookie("saveTemperament", "temperament");
+
+// to bookmark clicked element - add id of it to cookie
+function myFavourite(element) {
+  console.log(element);
+}
