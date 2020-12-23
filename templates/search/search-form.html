@@ -23,6 +23,10 @@
     </div>
 </form>
 
-{if $filteredCount != 0}
-<span>{$filteredCount} dog breeds found.</span>
+{if $filteredCount}
+    {if $filteredCount != $dogBreedArrayCount}
+        <span>{$filteredCount} dog breeds found.</span>
+    {elseif $filteredCount = $dogBreedArrayCount}
+        <span>{$filteredCount} dog breeds found. Please review your search conditions.</span>
+    {/if}
 {/if}

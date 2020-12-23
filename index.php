@@ -5,6 +5,7 @@
     include("includes/search.php");
     include("includes/php-functions.php");
 
+    $smarty->assign('dogBreedArrayCount', count($dogBreedArray));
     if (empty($filtered)) {
         $smarty->assign('dogBreeds',$dogBreedArray);
     } else {

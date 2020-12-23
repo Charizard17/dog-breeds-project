@@ -18,11 +18,19 @@
     
     // Split min and max weight
     for ($j = 0; $j < count($dogBreedArray); ++$j) {
-        list($dogBreedArray[$j]["minWeight"], $dogBreedArray[$j]["maxWeight"]) = array_pad(explode(" - ", $dogBreedArray[$j]["weight"]["metric"]), 2, null);
+        if (strpos($dogBreedArray[$j]["weight"]["metric"], "-")) {
+            list($dogBreedArray[$j]["minWeight"], $dogBreedArray[$j]["maxWeight"]) = array_pad(explode(" - ", $dogBreedArray[$j]["weight"]["metric"]), 2, null);
+        } else {
+            $dogBreedArray[$j]["maxWeight"] = $dogBreedArray[$j]["weight"]["metric"];
+        }
     }
     // Split min and max height
     for ($k = 0; $k < count($dogBreedArray); ++$k) {
-        list($dogBreedArray[$k]["minHeight"], $dogBreedArray[$k]["maxHeight"]) = array_pad(explode(" - ", $dogBreedArray[$k]["height"]["metric"]), 2, null);
+        if (strpos($dogBreedArray[$k]["height"]["metric"], "-")) {
+            list($dogBreedArray[$k]["minHeight"], $dogBreedArray[$k]["maxHeight"]) = array_pad(explode(" - ", $dogBreedArray[$k]["height"]["metric"]), 2, null);
+        } else {
+            $dogBreedArray[$k]["maxHeight"] = $dogBreedArray[$k]["height"]["metric"];
+        }
     }
 
     // show details if cookie exist
