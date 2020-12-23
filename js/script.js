@@ -4,20 +4,26 @@
 // because of this error, i can't use jquery which start with $ dollar sign
 // i also tried to save jquery a local js file. but it didn't work also
 
+
+//--------------------------------------//
+// get cookie by name
+window.getCookie = function(cookieName) {
+  var matchedCookie = document.cookie.match(new RegExp('(^| )' + cookieName + '=([^;]+)'));
+  if (matchedCookie) return matchedCookie[2];
+}
+
+
 //--------------------------------------//
 // Get the modal
 var modal = document.getElementById("table-row-detail-modal");
-
 // Get the <span> element that closes the modal
 var modalClose = document.getElementsByClassName("modal-close")[0];
-
 // When the user clicks on <span> (x), close the modal
 modalClose.onclick = function() {
   modal.style.display = "none";
   document.cookie = "detailed-id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   window.location.reload();
 }
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
@@ -26,7 +32,6 @@ window.onclick = function(event) {
     window.location.reload();
   }
 }
-
 // open model after clicking view details
 function myFunc(element) {
   document.cookie = "detailed-id="+element+"; path=/;";
@@ -35,30 +40,25 @@ if (document.cookie.indexOf('detailed-id=') !== -1) {
   modal.style.display = "block";
 }
 
+
 //--------------------------------------//
 // if cookie exist, fill html input values with cookie values
-function fillInput(cookieName, htmlElement) {
-  var ifSearchInput = document.cookie.indexOf(cookieName);
-  if (ifSearchInput == 0) {
-    let cookieValue = getCookie(cookieName);
-    document.getElementById(htmlElement).value = cookieValue;
-    document.cookie = cookieName+"=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+var searchInputArray = [
+  ["saveBreedName", "breed_name"],
+  ["saveMinWeight", "minWeight"],
+  ["saveMaxWeight", "maxWeight"],
+  ["saveMinHeight", "minHeight"],
+  ["saveMaxHeight", "maxHeight"],
+  ["saveTemperament", "temperament"]
+]
+for (var k = 0; k < searchInputArray.length; ++k) {
+  if (document.cookie.indexOf(searchInputArray[k][0]) !== -1) {
+    let cookieValue = getCookie(searchInputArray[k][0]);
+    document.getElementById(searchInputArray[k][1]).value = cookieValue;
+    document.cookie = searchInputArray[k][0]+"=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   }
 }
 
-// get cookie by name
-window.getCookie = function(cookieName) {
-  var matchedCookie = document.cookie.match(new RegExp('(^| )' + cookieName + '=([^;]+)'));
-  if (matchedCookie) return matchedCookie[2];
-}
-
-//--------------------------------------//
-fillInput("saveBreedName", "breed_name");
-fillInput("saveMinWeight", "minWeight");
-fillInput("saveMaxWeight", "maxWeight");
-fillInput("saveMinHeight", "minHeight");
-fillInput("saveMaxHeight", "maxHeight");
-fillInput("saveTemperament", "temperament");
 
 //--------------------------------------//
 // for bookmark - create bookmark array if doesnt exist
