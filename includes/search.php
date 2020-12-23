@@ -6,31 +6,17 @@
 
         $filtered = $dogBreedArray;
         
-        $filtered = hasContainWords('breed_name', $filtered);
-        $filtered = hasContainTerms('minWeight', $filtered, 'minWeight', 'maxWeight');
-        $filtered = hasContainTerms('maxWeight', $filtered, 'minWeight', 'maxWeight');
-        $filtered = hasContainTerms('minHeight', $filtered, 'minHeight', 'maxHeight');
-        $filtered = hasContainTerms('maxHeight', $filtered, 'minHeight', 'maxHeight');
-        $filtered = hasContainWords('temperament', $filtered);
+        $filtered = hasContainWords('breed_name', $filtered, 'saveBreedName');
+        $filtered = hasContainTerms('minWeight', $filtered, 'minWeight', 'maxWeight', 'saveMinWeight');
+        $filtered = hasContainTerms('maxWeight', $filtered, 'minWeight', 'maxWeight', 'saveMaxWeight');
+        $filtered = hasContainTerms('minHeight', $filtered, 'minHeight', 'maxHeight', 'saveMinHeight');
+        $filtered = hasContainTerms('maxHeight', $filtered, 'minHeight', 'maxHeight', 'saveMaxHeight');
+        $filtered = hasContainWords('temperament', $filtered, 'saveTemperament');
 
-        ifUserInput('breed_name', 'saveBreedName');
-        ifUserInput('minWeight', 'saveMinWeight');
-        ifUserInput('maxWeight', 'saveMaxWeight');
-        ifUserInput('minHeight', 'saveMinHeight');
-        ifUserInput('maxHeight', 'saveMaxHeight');
-        ifUserInput('temperament', 'saveTemperament');
-    }
-
-    // if user filled form, we return input value
-    function ifUserInput ($data, $cookieName) {
-        if ($_POST[$data]) {
-            $userInput = $_POST[$data];
-            setcookie($cookieName, $userInput);
-        }
     }
 
     // we create 2 functions for filtering our array after search
-    function hasContainWords($postValue, $dataArray) {
+    function hasContainWords($postValue, $dataArray, $cookieName) {
         if ($_POST[$postValue]) {
             $dataArrayTemp = [];
             $index = 0;
@@ -43,10 +29,11 @@
                 }
             }
             $dataArray = $dataArrayTemp;
+            setcookie($cookieName, $_POST[$postValue]);
         }
         return $dataArray;
     }
-    function hasContainTerms($postValue, $dataArray, $dataArrayFirstIndex, $dataArraySecondIndex) {
+    function hasContainTerms($postValue, $dataArray, $dataArrayFirstIndex, $dataArraySecondIndex, $cookieName) {
         if ($_POST[$postValue]) {
             $dataArrayTemp = [];
             $index = 0;
@@ -59,6 +46,7 @@
                 }
             }
             $dataArray = $dataArrayTemp;
+            setcookie($cookieName, $_POST[$postValue]);
         }
         return $dataArray;
     }
