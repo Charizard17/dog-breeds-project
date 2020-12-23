@@ -91,7 +91,6 @@ function myFavourite(elem) {
 for (var j = 0; j < bookmarks.length; ++j) {
   if (document.getElementById("star"+bookmarks[j])) {
     document.getElementById("star"+bookmarks[j]).classList.add("favourite-star-active");
-    console.log("test");
   }
 }
 
