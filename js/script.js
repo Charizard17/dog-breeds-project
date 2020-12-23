@@ -89,7 +89,10 @@ function myFavourite(elem) {
 }
 // to bookmark - change background image if bookmark array include from the beginning
 for (var j = 0; j < bookmarks.length; ++j) {
-  document.getElementById("star"+bookmarks[j]).classList.add("favourite-star-active");
+  if (document.getElementById("star"+bookmarks[j])) {
+    document.getElementById("star"+bookmarks[j]).classList.add("favourite-star-active");
+    console.log("test");
+  }
 }
 
 if (document.cookie.indexOf('showBookmarks=') == -1) {
