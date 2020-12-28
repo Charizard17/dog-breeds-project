@@ -37,6 +37,11 @@
   height: 30px;
 }
 
+.th-bookmark-active {
+  -webkit-filter: drop-shadow(1px 1px 7px white);
+  filter: drop-shadow(1px 1px 7px white);
+}
+
 .dog-breeds-table-td {
   padding: 5px 10px;
 }

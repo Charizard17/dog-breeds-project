@@ -101,8 +101,13 @@ if (document.cookie.indexOf('showBookmarks=') == -1) {
 function showOnlyBookmarkedElements() {
   let getcookie = getCookie("showBookmarks");
   if (getcookie == "false") {
-  document.cookie = "showBookmarks=true; path=/;";
+    document.cookie = "showBookmarks=true; path=/;";
   } else {
-  document.cookie = "showBookmarks=false; path=/;";
+    document.cookie = "showBookmarks=false; path=/;";
   }
+  window.location.reload();
+}
+
+if (getCookie("showBookmarks") == "true") {
+  document.getElementById("th-bookmark").classList.add("th-bookmark-active");
 }
