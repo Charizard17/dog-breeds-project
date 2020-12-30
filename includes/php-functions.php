@@ -46,9 +46,7 @@
 
     // only show bookmarked elements
     if ($_COOKIE['showBookmarks'] == 'true') {
-        if ($_COOKIE['bookmarks'] == '[]' || $_COOKIE['bookmarks'] == '') {
-            var_dump("test");
-        } else {
+        if ($_COOKIE['bookmarks'] !== '[]' && $_COOKIE['bookmarks'] !== '') {
             $index = 0;
             $bookmarkedIDs = json_decode($_COOKIE['bookmarks'], true);
             for ($j = 0; $j < count($bookmarkedIDs); ++$j) {
@@ -61,5 +59,4 @@
             }
             $dogBreedArray = $testArray;
         }
-        //var_dump(count($dogBreedArray));
     }
