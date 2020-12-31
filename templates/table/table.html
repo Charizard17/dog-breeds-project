@@ -13,37 +13,45 @@
         </tr>
       </thead>
       <tbody>
-          {foreach name=outer item=dogBreedsItem from=$dogBreeds}
-              <tr class="dog-breeds-table-tr">
-                {foreach key=key item=item from=$dogBreedsItem}
-                  {if $key == 'id'}
-                    <td class="dog-breeds-table-td">
-                      <span value="{$item}" id="star{$item}" class="favourite-star" onclick="myFavourite(this)"></span>
-                    </td>
-                  {/if}
-                {/foreach}
-                {foreach key=key item=item from=$dogBreedsItem}
-                  {if $key == 'id' || $key == 'breed_name' || $key == 'image' || $key == 'weight' || $key == 'height' || $key == 'temperament'}
-                    {if $key == 'image'}
-                      <td class="dog-breeds-table-td">{html_image file=$item width="64" height="64"}</td>
-                    {elseif $key == 'weight' || $key == 'height'}
-                      <td class="dog-breeds-table-td">{$item.metric}</td>
-                    {else}
-                      <td class="dog-breeds-table-td">{$item}</td>
-                    {/if}
-                  {/if}
-                {/foreach}
-                {foreach key=key item=item from=$dogBreedsItem}
-                  {if $key == 'id'}
-                    <td class="dog-breeds-table-details">
-                      <div name="showDetails">
-                        <input type="submit" class="show-details" name="detailed-id" id="{$item}" value="{$item}" onclick="myFunc(this.id)">
-                      </div>
-                    </td>
-                  {/if}
-                {/foreach}
+          {if $dogBreeds == []}
+              <tr>
+                <td>
+                  <span>Favourites are empty.</span>
+                </td>
               </tr>
-          {/foreach}
+          {else}
+              {foreach name=outer item=dogBreedsItem from=$dogBreeds}
+                  <tr class="dog-breeds-table-tr">
+                    {foreach key=key item=item from=$dogBreedsItem}
+                      {if $key == 'id'}
+                        <td class="dog-breeds-table-td">
+                          <span value="{$item}" id="star{$item}" class="favourite-star" onclick="myFavourite(this)"></span>
+                        </td>
+                      {/if}
+                    {/foreach}
+                    {foreach key=key item=item from=$dogBreedsItem}
+                      {if $key == 'id' || $key == 'breed_name' || $key == 'image' || $key == 'weight' || $key == 'height' || $key == 'temperament'}
+                        {if $key == 'image'}
+                          <td class="dog-breeds-table-td">{html_image file=$item width="50" height="50"}</td>
+                        {elseif $key == 'weight' || $key == 'height'}
+                          <td class="dog-breeds-table-td">{$item.metric}</td>
+                        {else}
+                          <td class="dog-breeds-table-td">{$item}</td>
+                        {/if}
+                      {/if}
+                    {/foreach}
+                    {foreach key=key item=item from=$dogBreedsItem}
+                      {if $key == 'id'}
+                        <td class="dog-breeds-table-details">
+                          <div name="showDetails">
+                            <input type="submit" class="show-details" name="detailed-id" id="{$item}" value="{$item}" onclick="myFunc(this.id)">
+                          </div>
+                        </td>
+                      {/if}
+                    {/foreach}
+                  </tr>
+              {/foreach}
+          {/if}
       </tbody>
   </table>
 </form>

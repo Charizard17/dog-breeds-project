@@ -58,5 +58,7 @@
                 }
             }
             $dogBreedArray = $testArray;
+        } else {
+            $dogBreedArray = [];
         }
     }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2020-12-22 17:21:30
+/* Smarty version 3.1.36, created on 2020-12-31 16:43:24
   from '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/table/table.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_5fe22b1a50a670_53514645',
+  'unifunc' => 'content_5fedffac02cab4_39382733',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4c2c70217c806bd928481d9b6b4a532f3accc337' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/table/table.html',
-      1 => 1608657665,
+      1 => 1609433001,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5fe22b1a50a670_53514645 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fedffac02cab4_39382733 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/libs/plugins/function.html_image.php','function'=>'smarty_function_html_image',),));
 ?>
 <form action="index.php" method="post">
@@ -38,73 +38,81 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Applications/XAMPP/xamppfil
         </tr>
       </thead>
       <tbody>
-          <?php
+          <?php if ($_smarty_tpl->tpl_vars['dogBreeds']->value == array()) {?>
+              <tr>
+                <td>
+                  <span>Favourites are empty.</span>
+                </td>
+              </tr>
+          <?php } else { ?>
+              <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['dogBreeds']->value, 'dogBreedsItem', false, NULL, 'outer', array (
 ));
 $_smarty_tpl->tpl_vars['dogBreedsItem']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['dogBreedsItem']->value) {
 $_smarty_tpl->tpl_vars['dogBreedsItem']->do_else = false;
 ?>
-              <tr class="dog-breeds-table-tr">
-                <?php
+                  <tr class="dog-breeds-table-tr">
+                    <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['dogBreedsItem']->value, 'item', false, 'key');
 $_smarty_tpl->tpl_vars['item']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['item']->value) {
 $_smarty_tpl->tpl_vars['item']->do_else = false;
 ?>
-                  <?php if ($_smarty_tpl->tpl_vars['key']->value == 'id') {?>
-                    <td class="dog-breeds-table-td">
-                      <span value="<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
+                      <?php if ($_smarty_tpl->tpl_vars['key']->value == 'id') {?>
+                        <td class="dog-breeds-table-td">
+                          <span value="<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
 " id="star<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
 " class="favourite-star" onclick="myFavourite(this)"></span>
-                    </td>
-                  <?php }?>
-                <?php
+                        </td>
+                      <?php }?>
+                    <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                <?php
+                    <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['dogBreedsItem']->value, 'item', false, 'key');
 $_smarty_tpl->tpl_vars['item']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['item']->value) {
 $_smarty_tpl->tpl_vars['item']->do_else = false;
 ?>
-                  <?php if ($_smarty_tpl->tpl_vars['key']->value == 'id' || $_smarty_tpl->tpl_vars['key']->value == 'breed_name' || $_smarty_tpl->tpl_vars['key']->value == 'image' || $_smarty_tpl->tpl_vars['key']->value == 'weight' || $_smarty_tpl->tpl_vars['key']->value == 'height' || $_smarty_tpl->tpl_vars['key']->value == 'temperament') {?>
-                    <?php if ($_smarty_tpl->tpl_vars['key']->value == 'image') {?>
-                      <td class="dog-breeds-table-td"><?php echo smarty_function_html_image(array('file'=>$_smarty_tpl->tpl_vars['item']->value,'width'=>"64",'height'=>"64"),$_smarty_tpl);?>
+                      <?php if ($_smarty_tpl->tpl_vars['key']->value == 'id' || $_smarty_tpl->tpl_vars['key']->value == 'breed_name' || $_smarty_tpl->tpl_vars['key']->value == 'image' || $_smarty_tpl->tpl_vars['key']->value == 'weight' || $_smarty_tpl->tpl_vars['key']->value == 'height' || $_smarty_tpl->tpl_vars['key']->value == 'temperament') {?>
+                        <?php if ($_smarty_tpl->tpl_vars['key']->value == 'image') {?>
+                          <td class="dog-breeds-table-td"><?php echo smarty_function_html_image(array('file'=>$_smarty_tpl->tpl_vars['item']->value,'width'=>"50",'height'=>"50"),$_smarty_tpl);?>
 </td>
-                    <?php } elseif ($_smarty_tpl->tpl_vars['key']->value == 'weight' || $_smarty_tpl->tpl_vars['key']->value == 'height') {?>
-                      <td class="dog-breeds-table-td"><?php echo $_smarty_tpl->tpl_vars['item']->value['metric'];?>
+                        <?php } elseif ($_smarty_tpl->tpl_vars['key']->value == 'weight' || $_smarty_tpl->tpl_vars['key']->value == 'height') {?>
+                          <td class="dog-breeds-table-td"><?php echo $_smarty_tpl->tpl_vars['item']->value['metric'];?>
 </td>
-                    <?php } else { ?>
-                      <td class="dog-breeds-table-td"><?php echo $_smarty_tpl->tpl_vars['item']->value;?>
+                        <?php } else { ?>
+                          <td class="dog-breeds-table-td"><?php echo $_smarty_tpl->tpl_vars['item']->value;?>
 </td>
-                    <?php }?>
-                  <?php }?>
-                <?php
+                        <?php }?>
+                      <?php }?>
+                    <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                <?php
+                    <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['dogBreedsItem']->value, 'item', false, 'key');
 $_smarty_tpl->tpl_vars['item']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['item']->value) {
 $_smarty_tpl->tpl_vars['item']->do_else = false;
 ?>
-                  <?php if ($_smarty_tpl->tpl_vars['key']->value == 'id') {?>
-                    <td class="dog-breeds-table-details">
-                      <div name="showDetails">
-                        <input type="submit" class="show-details" name="detailed-id" id="<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
+                      <?php if ($_smarty_tpl->tpl_vars['key']->value == 'id') {?>
+                        <td class="dog-breeds-table-details">
+                          <div name="showDetails">
+                            <input type="submit" class="show-details" name="detailed-id" id="<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
 " value="<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
 " onclick="myFunc(this.id)">
-                      </div>
-                    </td>
-                  <?php }?>
-                <?php
+                          </div>
+                        </td>
+                      <?php }?>
+                    <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-              </tr>
-          <?php
+                  </tr>
+              <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+          <?php }?>
       </tbody>
   </table>
 </form>
