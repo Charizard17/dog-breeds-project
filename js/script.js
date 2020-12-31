@@ -78,10 +78,12 @@ function myFavourite(elem) {
     if (index > -1) {
       bookmarks.splice(index, 1);
     elem.classList.remove("favourite-star-active");
+    alertify.error('Dog breed removed from favourite.');
     }
   } else {
     bookmarks.unshift(myID);
     elem.classList.add("favourite-star-active");
+    alertify.success('Dog breed added to favourite.');
   }
   bookmarks.sort(function(a, b){return a-b});
   cookieBookmark = JSON.stringify(bookmarks);

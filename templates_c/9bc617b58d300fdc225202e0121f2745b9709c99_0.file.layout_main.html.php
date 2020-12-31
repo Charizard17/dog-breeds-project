@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2020-12-23 10:53:40
+/* Smarty version 3.1.36, created on 2020-12-31 15:09:35
   from '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/layout_main.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_5fe321b47ede94_60724103',
+  'unifunc' => 'content_5fede9afb8c368_84329633',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9bc617b58d300fdc225202e0121f2745b9709c99' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/layout_main.html',
-      1 => 1608720819,
+      1 => 1609427374,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:table/table-row-detail.html' => 1,
   ),
 ),false)) {
-function content_5fe321b47ede94_60724103 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fede9afb8c368_84329633 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,6 +33,7 @@ function content_5fe321b47ede94_60724103 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="icon" href="favicon.ico"/>
     
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/alertify.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 </head>
@@ -74,6 +75,9 @@ function content_5fe321b47ede94_60724103 (Smarty_Internal_Template $_smarty_tpl)
 >
     <?php echo '<script'; ?>
  src="js/cookie.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="js/alertify.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"><?php echo '</script'; ?>
