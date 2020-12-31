@@ -96,20 +96,35 @@ for (var j = 0; j < bookmarks.length; ++j) {
   }
 }
 
-if (document.cookie.indexOf('showBookmarks=') == -1) {
-  var empty = "false"
-  document.cookie = "showBookmarks="+empty+"; path=/;";
-}
-function showOnlyBookmarkedElements() {
-  let getcookie = getCookie("showBookmarks");
-  if (getcookie == "false") {
-    document.cookie = "showBookmarks=true; path=/;";
-  } else {
-    document.cookie = "showBookmarks=false; path=/;";
-  }
-  window.location.reload();
-}
-
+// create showBookmarks cookie, if not exist
 if (getCookie("showBookmarks") == "true") {
   document.getElementById("th-bookmark").classList.add("th-bookmark-active");
+}
+
+// select table head elements by id
+var thBookmark = document.getElementById("th-bookmark");
+var thID = document.getElementById("th-id");
+var thWeight = document.getElementById("th-weight");
+var thHeight = document.getElementById("th-height");
+
+// append onclick function to table head elements
+thBookmark.onclick = createAndUpdateCookie;
+thID.onclick = createAndUpdateCookie;
+thWeight.onclick = createAndUpdateCookie;
+thHeight.onclick = createAndUpdateCookie;
+
+// create and update cookie by clicked element
+function createAndUpdateCookie(element) {
+  elementID = element.path[0].id;
+  if (document.cookie.indexOf(elementID) == -1) {
+    var empty = "false"
+    document.cookie = elementID+"="+empty+"; path=/;";
+  }
+  let getcookie = getCookie(elementID);
+  if (getcookie == "false") {
+    document.cookie = elementID+"=true; path=/;";
+  } else {
+    document.cookie = elementID+"=false; path=/;";
+  }
+  window.location.reload();
 }

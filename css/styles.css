@@ -7,7 +7,7 @@
   overflow: scroll;
 }
 
-.qwerty {
+.main-container {
   display: grid;
   grid-template-areas:
     'item1 item2 item2 item2 item2 item2';
@@ -31,8 +31,11 @@
   padding: 5px 10px;
 }
 
-.th-bookmark-icon {
+.c-pointer {
   cursor: pointer;
+}
+
+.th-bookmark-icon {
   width: 30px;
   height: 30px;
 }

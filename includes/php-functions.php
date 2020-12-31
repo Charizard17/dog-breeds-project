@@ -45,7 +45,7 @@
     }
 
     // only show bookmarked elements
-    if ($_COOKIE['showBookmarks'] == 'true') {
+    if ($_COOKIE['th-bookmark'] == 'true') {
         if ($_COOKIE['bookmarks'] !== '[]' && $_COOKIE['bookmarks'] !== '') {
             $index = 0;
             $bookmarkedIDs = json_decode($_COOKIE['bookmarks'], true);
@@ -62,3 +62,26 @@
             $dogBreedArray = [];
         }
     }
+
+    // sort by ID value low->high / high->low
+    if ($_COOKIE['th-id'] == 'true') {
+        $index = 0;
+        for ($m = count($dogBreedArray); $m > 0; --$m) {
+            $dogBreedArray[$index] = $dogBreedArray[$m];
+            ++$index;
+        }
+    }
+
+    // sort by weight value low->high / high->low
+    // if ($_COOKIE['th-weight'] == 'true') {
+
+    //     for ($t = 0; $t < count($dogBreedArray); ++$t) {
+    //         $weightArray;
+    //     }
+
+    //     // $index = 0;
+    //     // for ($m = count($dogBreedArray); $m > 0; --$m) {
+    //     //     $dogBreedArray[$index] = $dogBreedArray[$m];
+    //     //     ++$index;
+    //     // }
+    // }
