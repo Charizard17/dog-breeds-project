@@ -165,9 +165,3 @@
 .modal-table-th {
   padding: 5px 50px 5px 20px;
 }
-
-/* alertify message and text */
-.alertify-notifier .ajs-message.ajs-success,
-.alertify-notifier .ajs-message.ajs-error {
-  
-}
