@@ -9,12 +9,12 @@ $middle-font: 17px;
 $small-font: 14px;
 
 
-
+/* ################### */
 /* main page style */
 * {
     background-color: $main-bg-color;
 }
-
+/* ################### */
 /* custom navbar style */
 .navbar-custom {
     background-color: $dark-color;
@@ -31,6 +31,15 @@ $small-font: 14px;
     }
 }
 
+/* ################### */
+/* general class settings */
+.item-center {
+    text-align: center;
+    justify-content: center;
+}
+
+
+/* ################### */
 /* grid arrangement */
 .main-container {
     display: grid;
@@ -48,7 +57,9 @@ $small-font: 14px;
     grid-area: item2;
     overflow: scroll;
 }
-  
+
+
+/* ################### */
 /* our main table styling */
 .table-row-container {
     display: grid;
@@ -67,24 +78,21 @@ $small-font: 14px;
 .table-col5 { grid-area: table-col5; }
 .table-col6 { grid-area: table-col6; }
 .table-col7 { grid-area: table-col7; }
-.table-col8 { grid-area: table-col8; }  
+.table-col8 { grid-area: table-col8; }
 
-.dog-breeds-table {
-    text-align: left;
-}
-  
-.dog-breeds-table-th {
+.table-head {
     background-color: $dark-color;
-    color: $light-color;
-    font-weight: 400;
+}
+
+.table-head-cell {
+    background-color: $dark-color;
     font-size: $middle-font;
-    position: sticky;
-    top: 0;
-    padding: 5px 10px;
+    color: $light-color;
 }
 
 .c-pointer {
     cursor: pointer;
+    background-color: transparent;
 }
 
 .th-bookmark-icon {
@@ -97,19 +105,10 @@ $small-font: 14px;
     filter: drop-shadow(1px 1px 7px white);
 }
 
-.dog-breeds-table-td {
-    padding: 5px 10px;
-}
-
 .dog-breeds-table-td-image img {
     width: 50px;
     height: 50px;
     border-radius: 10px;
-}
-
-.dog-breeds-table-tr {
-    border-top: 1px solid black;
-    font-size: $small-font;
 }
 
 .dog-breeds-table-details {
@@ -152,6 +151,7 @@ $small-font: 14px;
 }
 
 
+/* ################### */
 /* search form styling */
 .search-form-container {
     display: grid;
@@ -183,7 +183,7 @@ $small-font: 14px;
 }
     
   
-  
+/* ################### */
 /* The Modal (background) */
 .modal-container {
     display: none; /* Hidden by default */
@@ -198,7 +198,8 @@ $small-font: 14px;
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-  
+
+/* ################### */
 /* Modal Content */
 .modal-content {
     background-color: #fefefe;
@@ -224,7 +225,6 @@ $small-font: 14px;
     text-decoration: none;
     cursor: pointer;
 }
-  
 
 .modal-table-th {
     padding: 5px 50px 5px 20px;

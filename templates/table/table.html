@@ -1,19 +1,18 @@
-<div class="table-row-container">
-  <div class="table-col1"><img class="th-bookmark-icon c-pointer" id="th-bookmark" src="img/star-yellow.png"></div>
-  <div class="table-col2"><span class="c-pointer" id="th-id">ID</span></div>
-  <div class="table-col3">Name</div>
-  <div class="table-col4">Picture</div>
-  <div class="table-col5" id="th-weight"><span class="c-pointer">Weight(kg)</span></div>
-  <div class="table-col6" id="th-height"><span class="c-pointer">Height(cm)</span></div>
-  <div class="table-col7">Temperament</div>
-  <div class="table-col8">Details</div>
+<div class="table-row-container table-head">
+  <div class="table-col1 item-center table-head-cell"><img class="th-bookmark-icon c-pointer" id="th-bookmark" src="img/star-yellow.png"></div>
+  <div class="table-col2 item-center table-head-cell"><span class="c-pointer" id="th-id">ID</span></div>
+  <div class="table-col3 item-center table-head-cell">Name</div>
+  <div class="table-col4 item-center table-head-cell">Picture</div>
+  <div class="table-col5 item-center table-head-cell" id="th-weight"><span class="c-pointer">Weight(kg)</span></div>
+  <div class="table-col6 item-center table-head-cell" id="th-height"><span class="c-pointer">Height(cm)</span></div>
+  <div class="table-col7 item-center table-head-cell">Temperament</div>
+  <div class="table-col8 item-center table-head-cell">Details</div>
 </div>
-
 {foreach name=outer item=dogBreedsItem from=$dogBreeds}
     <div class="table-row-container">
       {foreach key=key item=item from=$dogBreedsItem}
         {if $key == 'id'}
-          <div class="table-col1">
+          <div class="table-col1 item-center">
             <span value="{$item}" id="star{$item}" class="favourite-star" onclick="myFavourite(this)"></span>
           </div>
         {/if}
@@ -21,23 +20,23 @@
       {foreach key=key item=item from=$dogBreedsItem}
         {if $key == 'id' || $key == 'breed_name' || $key == 'image' || $key == 'weight' || $key == 'height' || $key == 'temperament'}
           {if $key == 'id'}
-            <div class="table-col2">{$item}</div>
+            <div class="table-col2 item-center">{$item}</div>
           {elseif $key == 'breed_name'}
-            <div class="table-col3">{$item}</div>
+            <div class="table-col3 item-center">{$item}</div>
           {elseif $key == 'image'}
-            <div class="table-col4 dog-breeds-table-td-image">{html_image file=$item}</div>
+            <div class="table-col4 item-center dog-breeds-table-td-image">{html_image file=$item}</div>
           {elseif $key == 'weight'}
-            <div class="table-col5">{$item.metric}</div>
+            <div class="table-col5 item-center">{$item.metric}</div>
           {elseif $key == 'height'}
-            <div class="table-col6">{$item.metric}</div>
+            <div class="table-col6 item-center">{$item.metric}</div>
           {elseif $key == 'temperament'}
-            <div class="table-col7">{$item}</div>
+            <div class="table-col7 item-center">{$item}</div>
           {/if}
         {/if}
       {/foreach}
       {foreach key=key item=item from=$dogBreedsItem}
         {if $key == 'id'}
-          <div class="table-col8 dog-breeds-table-details">
+          <div class="table-col8 item-center dog-breeds-table-details">
             <div name="showDetails">
               <input type="submit" class="show-details" name="detailed-id" id="{$item}" value="{$item}" onclick="myFunc(this.id)">
             </div>

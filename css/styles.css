@@ -1,10 +1,12 @@
 /* colors */
 /* font sizes */
+/* ################### */
 /* main page style */
 * {
   background-color: #FFFAE3;
 }
 
+/* ################### */
 /* custom navbar style */
 .navbar-custom {
   background-color: #272D2D;
@@ -20,6 +22,14 @@
   color: #2df9f4;
 }
 
+/* ################### */
+/* general class settings */
+.item-center {
+  text-align: center;
+  justify-content: center;
+}
+
+/* ################### */
 /* grid arrangement */
 .main-container {
   display: grid;
@@ -38,6 +48,7 @@
   overflow: scroll;
 }
 
+/* ################### */
 /* our main table styling */
 .table-row-container {
   display: grid;
@@ -80,22 +91,19 @@
   grid-area: table-col8;
 }
 
-.dog-breeds-table {
-  text-align: left;
+.table-head {
+  background-color: #272D2D;
 }
 
-.dog-breeds-table-th {
+.table-head-cell {
   background-color: #272D2D;
-  color: #90FCF9;
-  font-weight: 400;
   font-size: 17px;
-  position: sticky;
-  top: 0;
-  padding: 5px 10px;
+  color: #90FCF9;
 }
 
 .c-pointer {
   cursor: pointer;
+  background-color: transparent;
 }
 
 .th-bookmark-icon {
@@ -108,19 +116,10 @@
   filter: drop-shadow(1px 1px 7px white);
 }
 
-.dog-breeds-table-td {
-  padding: 5px 10px;
-}
-
 .dog-breeds-table-td-image img {
   width: 50px;
   height: 50px;
   border-radius: 10px;
-}
-
-.dog-breeds-table-tr {
-  border-top: 1px solid black;
-  font-size: 14px;
 }
 
 .dog-breeds-table-details {
@@ -162,6 +161,7 @@
   background-image: url("../img/star-filled.png");
 }
 
+/* ################### */
 /* search form styling */
 .search-form-container {
   display: grid;
@@ -220,6 +220,7 @@
   font-size: 17px;
 }
 
+/* ################### */
 /* The Modal (background) */
 .modal-container {
   display: none;
@@ -243,6 +244,7 @@
   /* Black w/ opacity */
 }
 
+/* ################### */
 /* Modal Content */
 .modal-content {
   background-color: #fefefe;
