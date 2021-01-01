@@ -1,47 +1,92 @@
-<div class="table-row-container table-head">
-  <div class="table-col1 item-center table-head-cell"><img class="th-bookmark-icon c-pointer" id="th-bookmark" src="img/star-yellow.png"></div>
-  <div class="table-col2 item-center table-head-cell"><span class="c-pointer" id="th-id">ID</span></div>
-  <div class="table-col3 item-center table-head-cell">Name</div>
-  <div class="table-col4 item-center table-head-cell">Picture</div>
-  <div class="table-col5 item-center table-head-cell" id="th-weight"><span class="c-pointer">Weight(kg)</span></div>
-  <div class="table-col6 item-center table-head-cell" id="th-height"><span class="c-pointer">Height(cm)</span></div>
-  <div class="table-col7 item-center table-head-cell">Temperament</div>
-  <div class="table-col8 item-center table-head-cell">Details</div>
-</div>
-{foreach name=outer item=dogBreedsItem from=$dogBreeds}
-    <div class="table-row-container">
-      {foreach key=key item=item from=$dogBreedsItem}
-        {if $key == 'id'}
-          <div class="table-col1 item-center">
-            <span value="{$item}" id="star{$item}" class="favourite-star" onclick="myFavourite(this)"></span>
-          </div>
-        {/if}
-      {/foreach}
-      {foreach key=key item=item from=$dogBreedsItem}
-        {if $key == 'id' || $key == 'breed_name' || $key == 'image' || $key == 'weight' || $key == 'height' || $key == 'temperament'}
-          {if $key == 'id'}
-            <div class="table-col2 item-center">{$item}</div>
-          {elseif $key == 'breed_name'}
-            <div class="table-col3 item-center">{$item}</div>
-          {elseif $key == 'image'}
-            <div class="table-col4 item-center dog-breeds-table-td-image">{html_image file=$item}</div>
-          {elseif $key == 'weight'}
-            <div class="table-col5 item-center">{$item.metric}</div>
-          {elseif $key == 'height'}
-            <div class="table-col6 item-center">{$item.metric}</div>
-          {elseif $key == 'temperament'}
-            <div class="table-col7 item-center">{$item}</div>
-          {/if}
-        {/if}
-      {/foreach}
-      {foreach key=key item=item from=$dogBreedsItem}
-        {if $key == 'id'}
-          <div class="table-col8 item-center dog-breeds-table-details">
-            <div name="showDetails">
-              <input type="submit" class="show-details" name="detailed-id" id="{$item}" value="{$item}" onclick="myFunc(this.id)">
-            </div>
-          </div>
-        {/if}
-      {/foreach}
+<form action="index.php" method="post">
+  
+    <div class="table-row-container table-head">
+      <div class="table-col1 item-center table-head-cell"><img class="th-bookmark-icon c-pointer no-self-bg" id="th-bookmark" src="img/star-yellow.png"></div>
+      <div class="table-col2 item-center table-head-cell"><span class="c-pointer no-self-bg" id="th-id">ID</span></div>
+      <div class="table-col3 item-center table-head-cell">Name</div>
+      <div class="table-col4 item-center table-head-cell">Picture</div>
+      <div class="table-col5 item-center table-head-cell" id="th-weight"><span class="c-pointer no-self-bg">Weight(kg)</span></div>
+      <div class="table-col6 item-center table-head-cell" id="th-height"><span class="c-pointer no-self-bg">Height(cm)</span></div>
+      <div class="table-col7 item-center table-head-cell">Temperament</div>
+      <div class="table-col8 item-center table-head-cell">Details</div>
     </div>
-{/foreach}
+
+    {if $dogBreeds != []}
+        {foreach name=outer item=dogBreedsItem from=$dogBreeds}
+        <div class="table-row-container">
+          {foreach key=key item=item from=$dogBreedsItem}
+            {if $key == 'id'}
+              <div class="table-col1 item-center">
+                <span value="{$item}" id="star{$item}" class="favourite-star" onclick="myFavourite(this)"></span>
+              </div>
+            {/if}
+          {/foreach}
+          {foreach key=key item=item from=$dogBreedsItem}
+            {if $key == 'id' || $key == 'breed_name' || $key == 'image' || $key == 'weight' || $key == 'height' || $key == 'temperament'}
+              {if $key == 'id'}
+                <div class="table-col2 item-center">{$item}</div>
+              {elseif $key == 'breed_name'}
+                <div class="table-col3 item-center">{$item}</div>
+              {elseif $key == 'image'}
+                <div class="table-col4 item-center dog-breed-image">{html_image file=$item}</div>
+              {elseif $key == 'weight'}
+                <div class="table-col5 item-center">{$item.metric}</div>
+              {elseif $key == 'height'}
+                <div class="table-col6 item-center">{$item.metric}</div>
+              {elseif $key == 'temperament'}
+                <div class="table-col7 item-center">{$item}</div>
+              {/if}
+            {/if}
+          {/foreach}
+          {foreach key=key item=item from=$dogBreedsItem}
+            {if $key == 'id'}
+              <div class="table-col8 item-center">
+                <div name="showDetails">
+                  <input type="submit" class="show-details" name="detailed-id" id="{$item}" value="{$item}" onclick="myFunc(this.id)">
+                </div>
+              </div>
+            {/if}
+          {/foreach}
+        </div>
+        {/foreach}
+    {else}
+      <span>Dog breed couldn't found in favorites.</span>
+      <!-- this row will not be visible. if there is no element in "favourite",
+      this row will visible as invisible. we need that just for protect our grid-areas -->
+        <div class="table-row-container invisible">
+          {foreach key=key item=item from=$invisibleDogBreed}
+            {if $key == 'id'}
+              <div class="invisible table-col1">
+                <span value="{$item}" class="invisible favourite-star" ></span>
+              </div>
+            {/if}
+          {/foreach}
+          {foreach key=key item=item from=$invisibleDogBreed}
+            {if $key == 'id' || $key == 'breed_name' || $key == 'image' || $key == 'weight' || $key == 'height' || $key == 'temperament'}
+              {if $key == 'id'}
+                <div class="invisible table-col2">{$item}</div>
+              {elseif $key == 'breed_name'}
+                <div class="invisible table-col3">{$item}</div>
+              {elseif $key == 'image'}
+                <div class="invisible table-col4">{html_image file=$item}</div>
+              {elseif $key == 'weight'}
+                <div class="invisible table-col5">{$item.metric}</div>
+              {elseif $key == 'height'}
+                <div class="invisible table-col6">{$item.metric}</div>
+              {elseif $key == 'temperament'}
+                <div class="invisible table-col7">{$item}</div>
+              {/if}
+            {/if}
+          {/foreach}
+          {foreach key=key item=item from=$invisibleDogBreed}
+            {if $key == 'id'}
+              <div class="invisible table-col8">
+                <div class="invisible">
+                  <input type="submit" class="invisible" name="detailed-id" value="{$item}">
+                </div>
+              </div>
+            {/if}
+          {/foreach}
+        </div>
+    {/if}
+</form>

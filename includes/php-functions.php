@@ -15,6 +15,10 @@
         if (!empty($JSONarray[$i]['breed_group'])) {$dogBreedArray[$i]['breed_group'] = $JSONarray[$i]['breed_group'];} else {$dogBreedArray[$i]['breed_group'] = "–";}
         if (!empty($JSONarray[$i]['bred_for'])) {$dogBreedArray[$i]['bred_for'] = $JSONarray[$i]['bred_for'];} else {$dogBreedArray[$i]['bred_for'] = "–";}
     }
+
+    // first element of dog breed array for putting table as invisible, 
+    //if clicked favourite and there is no favourite element
+    $invisibleDogBreed = $dogBreedArray[0];
     
     // Split min and max weight
     for ($j = 0; $j < count($dogBreedArray); ++$j) {

@@ -29,6 +29,18 @@
   justify-content: center;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.no-self-bg {
+  background: transparent;
+}
+
 /* ################### */
 /* grid arrangement */
 .main-container {
@@ -101,11 +113,6 @@
   color: #90FCF9;
 }
 
-.c-pointer {
-  cursor: pointer;
-  background-color: transparent;
-}
-
 .th-bookmark-icon {
   width: 30px;
   height: 30px;
@@ -116,15 +123,10 @@
   filter: drop-shadow(1px 1px 7px white);
 }
 
-.dog-breeds-table-td-image img {
+.dog-breed-image img {
   width: 50px;
   height: 50px;
   border-radius: 10px;
-}
-
-.dog-breeds-table-details {
-  padding-left: 30px;
-  font-size: 25px;
 }
 
 .show-details {
@@ -132,7 +134,7 @@
   color: transparent;
   border: none;
   background-image: url("../img/view-details.png");
-  background-color: white;
+  background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

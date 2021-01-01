@@ -13,6 +13,7 @@
         $smarty->assign('filteredCount', count($filtered));
     }
     $smarty->assign('dogBreedDetails',$dogBreedDetails);
+    $smarty->assign('invisibleDogBreed', $invisibleDogBreed);
     $smarty->assign('userInput',$userInput);
 
 
