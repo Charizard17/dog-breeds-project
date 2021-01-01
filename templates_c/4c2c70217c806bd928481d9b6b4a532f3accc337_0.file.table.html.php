@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-01 22:59:41
+/* Smarty version 3.1.36, created on 2021-01-01 23:14:57
   from '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/table/table.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_5fefa95d0b5876_12938734',
+  'unifunc' => 'content_5fefacf16444c1_56214878',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4c2c70217c806bd928481d9b6b4a532f3accc337' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/table/table.html',
-      1 => 1609541978,
+      1 => 1609542896,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5fefa95d0b5876_12938734 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fefacf16444c1_56214878 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/libs/plugins/function.html_image.php','function'=>'smarty_function_html_image',),));
 ?>
 <form action="index.php" method="post">
-  
+
     <div class="table-row-container table-head">
       <div class="table-col1 item-center table-head-cell"><img class="th-bookmark-icon c-pointer no-self-bg" id="th-bookmark" src="img/star-yellow.png"></div>
       <div class="table-col2 item-center table-head-cell"><span class="c-pointer no-self-bg" id="th-id">ID</span></div>
@@ -53,9 +53,9 @@ $_smarty_tpl->tpl_vars['item']->do_else = false;
 ?>
             <?php if ($_smarty_tpl->tpl_vars['key']->value == 'id') {?>
               <div class="table-col1 item-center">
-                <span value="<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
-" id="star<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
-" class="favourite-star" onclick="myFavourite(this)"></span>
+                <input type="button" class="table-row-input-style favourite-star" name="detailed-id" id="star<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
+" value="<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
+" onclick="myFavourite(this)">
               </div>
             <?php }?>
           <?php
@@ -72,7 +72,7 @@ $_smarty_tpl->tpl_vars['item']->do_else = false;
                 <div class="table-col2 item-center"><?php echo $_smarty_tpl->tpl_vars['item']->value;?>
 </div>
               <?php } elseif ($_smarty_tpl->tpl_vars['key']->value == 'breed_name') {?>
-                <div class="table-col3 item-center"><?php echo $_smarty_tpl->tpl_vars['item']->value;?>
+                <div class="table-col3 item-left"><?php echo $_smarty_tpl->tpl_vars['item']->value;?>
 </div>
               <?php } elseif ($_smarty_tpl->tpl_vars['key']->value == 'image') {?>
                 <div class="table-col4 item-center dog-breed-image"><?php echo smarty_function_html_image(array('file'=>$_smarty_tpl->tpl_vars['item']->value),$_smarty_tpl);?>
@@ -84,7 +84,7 @@ $_smarty_tpl->tpl_vars['item']->do_else = false;
                 <div class="table-col6 item-center"><?php echo $_smarty_tpl->tpl_vars['item']->value['metric'];?>
 </div>
               <?php } elseif ($_smarty_tpl->tpl_vars['key']->value == 'temperament') {?>
-                <div class="table-col7 item-center"><?php echo $_smarty_tpl->tpl_vars['item']->value;?>
+                <div class="table-col7 item-left"><?php echo $_smarty_tpl->tpl_vars['item']->value;?>
 </div>
               <?php }?>
             <?php }?>
@@ -100,7 +100,7 @@ $_smarty_tpl->tpl_vars['item']->do_else = false;
             <?php if ($_smarty_tpl->tpl_vars['key']->value == 'id') {?>
               <div class="table-col8 item-center">
                 <div name="showDetails">
-                  <input type="submit" class="show-details" name="detailed-id" id="<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
+                  <input type="submit" class="table-row-input-style show-details" name="detailed-id" id="<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
 " value="<?php echo $_smarty_tpl->tpl_vars['item']->value;?>
 " onclick="myFunc(this.id)">
                 </div>

@@ -1,5 +1,5 @@
 <form action="index.php" method="post">
-  
+
     <div class="table-row-container table-head">
       <div class="table-col1 item-center table-head-cell"><img class="th-bookmark-icon c-pointer no-self-bg" id="th-bookmark" src="img/star-yellow.png"></div>
       <div class="table-col2 item-center table-head-cell"><span class="c-pointer no-self-bg" id="th-id">ID</span></div>
@@ -17,7 +17,7 @@
           {foreach key=key item=item from=$dogBreedsItem}
             {if $key == 'id'}
               <div class="table-col1 item-center">
-                <span value="{$item}" id="star{$item}" class="favourite-star" onclick="myFavourite(this)"></span>
+                <input type="button" class="table-row-input-style favourite-star" name="detailed-id" id="star{$item}" value="{$item}" onclick="myFavourite(this)">
               </div>
             {/if}
           {/foreach}
@@ -26,7 +26,7 @@
               {if $key == 'id'}
                 <div class="table-col2 item-center">{$item}</div>
               {elseif $key == 'breed_name'}
-                <div class="table-col3 item-center">{$item}</div>
+                <div class="table-col3 item-left">{$item}</div>
               {elseif $key == 'image'}
                 <div class="table-col4 item-center dog-breed-image">{html_image file=$item}</div>
               {elseif $key == 'weight'}
@@ -34,7 +34,7 @@
               {elseif $key == 'height'}
                 <div class="table-col6 item-center">{$item.metric}</div>
               {elseif $key == 'temperament'}
-                <div class="table-col7 item-center">{$item}</div>
+                <div class="table-col7 item-left">{$item}</div>
               {/if}
             {/if}
           {/foreach}
@@ -42,7 +42,7 @@
             {if $key == 'id'}
               <div class="table-col8 item-center">
                 <div name="showDetails">
-                  <input type="submit" class="show-details" name="detailed-id" id="{$item}" value="{$item}" onclick="myFunc(this.id)">
+                  <input type="submit" class="table-row-input-style show-details" name="detailed-id" id="{$item}" value="{$item}" onclick="myFunc(this.id)">
                 </div>
               </div>
             {/if}
