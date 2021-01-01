@@ -1,6 +1,23 @@
 /* colors */
+/* font sizes */
+/* main page style */
 * {
   background-color: #FFFAE3;
+}
+
+/* custom navbar style */
+.navbar-custom {
+  background-color: #272D2D;
+}
+
+.navbar-link {
+  color: #90FCF9;
+  text-decoration: none;
+  font-size: 25px;
+}
+.navbar-link:hover {
+  text-decoration: none;
+  color: #2df9f4;
 }
 
 /* grid arrangement */
@@ -22,13 +39,54 @@
 }
 
 /* our main table styling */
+.table-row-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1.5fr 1.5fr 5fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "table-col1 table-col2 table-col3 table-col4 table-col5 table-col6 table-col7 table-col8";
+  padding: 5px 0px;
+}
+
+.table-col1 {
+  grid-area: table-col1;
+}
+
+.table-col2 {
+  grid-area: table-col2;
+}
+
+.table-col3 {
+  grid-area: table-col3;
+}
+
+.table-col4 {
+  grid-area: table-col4;
+}
+
+.table-col5 {
+  grid-area: table-col5;
+}
+
+.table-col6 {
+  grid-area: table-col6;
+}
+
+.table-col7 {
+  grid-area: table-col7;
+}
+
+.table-col8 {
+  grid-area: table-col8;
+}
+
 .dog-breeds-table {
   text-align: left;
 }
 
 .dog-breeds-table-th {
-  background-color: #4C4C4C;
-  color: #c1c1c1;
+  background-color: #272D2D;
+  color: #90FCF9;
   font-weight: 400;
   font-size: 17px;
   position: sticky;
@@ -159,7 +217,7 @@
 
 .grid-element {
   width: 100%;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 /* The Modal (background) */
@@ -200,7 +258,7 @@
   position: absolute;
   right: 15px;
   top: 0px;
-  font-size: 28px;
+  font-size: 25px;
   font-weight: bold;
 }
 

@@ -1,79 +1,123 @@
 /* colors */
-$dark-color: #4C4C4C;
+$dark-color: #272D2D;
+$light-color: #90FCF9;
 $main-bg-color: #FFFAE3;
 
+/* font sizes */
+$big-font: 25px;
+$middle-font: 17px;
+$small-font: 14px;
+
+
+
+/* main page style */
 * {
     background-color: $main-bg-color;
+}
+
+/* custom navbar style */
+.navbar-custom {
+    background-color: $dark-color;
+}
+
+.navbar-link {
+    color: $light-color;
+    text-decoration: none;
+    font-size: $big-font;
+
+    &:hover {
+        text-decoration: none;
+        color: darken($light-color, 20%);
+    }
 }
 
 /* grid arrangement */
 .main-container {
     display: grid;
     grid-template-areas:
-      'item1 item1 item2 item2 item2 item2 item2';
+        'item1 item1 item2 item2 item2 item2 item2';
     grid-gap: 40px;
     padding: 20px 30px;
     height: 700px;
-  }
-  
-  .item1 { 
+}
+
+.item1 { 
     grid-area: item1; 
-  }
-  .item2 { 
+}
+.item2 { 
     grid-area: item2;
     overflow: scroll;
-  }
+}
   
-  /* our main table styling */
-  .dog-breeds-table {
+/* our main table styling */
+.table-row-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1.5fr 1.5fr 5fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "table-col1 table-col2 table-col3 table-col4 table-col5 table-col6 table-col7 table-col8";
+    padding: 5px 0px;
+}
+  
+.table-col1 { grid-area: table-col1; }
+.table-col2 { grid-area: table-col2; }
+.table-col3 { grid-area: table-col3; }
+.table-col4 { grid-area: table-col4; }
+.table-col5 { grid-area: table-col5; }
+.table-col6 { grid-area: table-col6; }
+.table-col7 { grid-area: table-col7; }
+.table-col8 { grid-area: table-col8; }  
+
+.dog-breeds-table {
     text-align: left;
-  }
+}
   
-  .dog-breeds-table-th {
+.dog-breeds-table-th {
     background-color: $dark-color;
-    color: rgb(193, 193, 193);
+    color: $light-color;
     font-weight: 400;
-    font-size: 17px;
+    font-size: $middle-font;
     position: sticky;
     top: 0;
     padding: 5px 10px;
-  }
-  
-  .c-pointer {
+}
+
+.c-pointer {
     cursor: pointer;
-  }
-  
-  .th-bookmark-icon {
+}
+
+.th-bookmark-icon {
     width: 30px;
     height: 30px;
-  }
-  
-  .th-bookmark-active {
+}
+
+.th-bookmark-active {
     -webkit-filter: drop-shadow(1px 1px 7px white);
     filter: drop-shadow(1px 1px 7px white);
-  }
-  
-  .dog-breeds-table-td {
+}
+
+.dog-breeds-table-td {
     padding: 5px 10px;
-  }
-  
-  .dog-breeds-table-td-image img {
+}
+
+.dog-breeds-table-td-image img {
     width: 50px;
     height: 50px;
     border-radius: 10px;
-  }
-  
-  .dog-breeds-table-tr {
+}
+
+.dog-breeds-table-tr {
     border-top: 1px solid black;
-    font-size: 14px;
-  }
-  
-  .dog-breeds-table-details {
+    font-size: $small-font;
+}
+
+.dog-breeds-table-details {
     padding-left: 30px;
-    font-size: 25px;
-  }
-  
-  .show-details {
+    font-size: $big-font;
+}
+
+.show-details {
     cursor: pointer;
     color: transparent;
     border: none;
@@ -84,9 +128,9 @@ $main-bg-color: #FFFAE3;
     background-size: cover; 
     width: 25px;
     height: 25px;
-  }
-  
-  .favourite-star {
+}
+
+.favourite-star {
     display: block;
     cursor: pointer;
     border: transparent;
@@ -97,19 +141,19 @@ $main-bg-color: #FFFAE3;
     background-size: cover; 
     width: 25px;
     height: 25px;
-  }
-  
-  .favourite-star:hover {
+}
+
+.favourite-star:hover {
     background-image: url("../img/star-filled.png");
-  }
-  
-  .favourite-star-active {
+}
+
+.favourite-star-active {
     background-image: url("../img/star-filled.png");
-  }
-  
-  
-  /* search form styling */
-  .search-form-container {
+}
+
+
+/* search form styling */
+.search-form-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -120,39 +164,28 @@ $main-bg-color: #FFFAE3;
       "div6 div6 div7 div7 div8 div8"
       "div9 div9 div10 div10 div10 div10"
       ". . div11 div11 . .";
-  }
+}
   
-  .div1 { grid-area: div1; }
-  
-  .div2 { grid-area: div2; }
-  
-  .div3 { grid-area: div3; }
-  
-  .div4 { grid-area: div4; }
-  
-  .div5 { grid-area: div5; }
-  
-  .div6 { grid-area: div6; }
-  
-  .div7 { grid-area: div7; }
-  
-  .div8 { grid-area: div8; }
-  
-  .div9 { grid-area: div9; }
-  
-  .div10 { grid-area: div10; }
-  
-  .div11 { grid-area: div11; }
-  
-  .grid-element { 
+.div1 { grid-area: div1; }  
+.div2 { grid-area: div2; }  
+.div3 { grid-area: div3; }  
+.div4 { grid-area: div4; }  
+.div5 { grid-area: div5; }  
+.div6 { grid-area: div6; }  
+.div7 { grid-area: div7; }  
+.div8 { grid-area: div8; }  
+.div9 { grid-area: div9; }  
+.div10 { grid-area: div10; }  
+.div11 { grid-area: div11; }  
+.grid-element { 
     width: 100%;
-    font-size: 16px;
-  }
+    font-size: $middle-font;
+}
     
   
   
-  /* The Modal (background) */
-  .modal-container {
+/* The Modal (background) */
+.modal-container {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -164,34 +197,35 @@ $main-bg-color: #FFFAE3;
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
+}
   
-  /* Modal Content */
-  .modal-content {
+/* Modal Content */
+.modal-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px 50px;
     border: 1px solid #888;
     width: 100px;
-  }
-  
-  /* The Close Button of Modal*/
-  .modal-close {
+}
+
+/* The Close Button of Modal*/
+.modal-close {
     color: #aaaaaa;
     position: absolute;
     right: 15px;
     top: 0px;
-    font-size: 28px;
+    font-size: $big-font;
     font-weight: bold;
-  }
-  
-  .modal-close:hover,
-  .modal-close:focus {
+}
+
+.modal-close:hover,
+.modal-close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-  }
+}
   
-  .modal-table-th {
+
+.modal-table-th {
     padding: 5px 50px 5px 20px;
-  }
+}
