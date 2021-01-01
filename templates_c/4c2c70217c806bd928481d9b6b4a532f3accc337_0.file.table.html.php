@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-01 23:14:57
+/* Smarty version 3.1.36, created on 2021-01-01 23:50:42
   from '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/table/table.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_5fefacf16444c1_56214878',
+  'unifunc' => 'content_5fefb5524d32f4_71313754',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4c2c70217c806bd928481d9b6b4a532f3accc337' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/table/table.html',
-      1 => 1609542896,
+      1 => 1609545040,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5fefacf16444c1_56214878 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fefb5524d32f4_71313754 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/libs/plugins/function.html_image.php','function'=>'smarty_function_html_image',),));
 ?>
 <form action="index.php" method="post">
@@ -114,7 +114,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     <?php } else { ?>
-      <span>Dog breed couldn't found in favorites.</span>
+      <span>No dog breed found in favorites.</span>
       <!-- this row will not be visible. if there is no element in "favourite",
       this row will visible as invisible. we need that just for protect our grid-areas -->
         <div class="table-row-container invisible">
