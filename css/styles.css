@@ -10,9 +10,9 @@
 .main-container {
   display: grid;
   grid-template-areas:
-    'item1 item2 item2 item2 item2 item2';
+    'item1 item1 item2 item2 item2 item2 item2';
   grid-gap: 40px;
-  padding: 20px 50px;
+  padding: 20px 30px;
   height: 700px;
 }
 
@@ -47,6 +47,12 @@
 
 .dog-breeds-table-td {
   padding: 5px 10px;
+}
+
+.dog-breeds-table-td-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
 }
 
 .dog-breeds-table-tr {
@@ -95,33 +101,46 @@
 
 
 /* search form styling */
-.search-form-term, .search-form-button-container {
-  margin-bottom: 10px;
+.search-form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 5px 5px;
+  grid-template-areas:
+    "div1 div1 div2 div2 div2 div2"
+    "div3 div3 div4 div4 div5 div5"
+    "div6 div6 div7 div7 div8 div8"
+    "div9 div9 div10 div10 div10 div10"
+    ". . div11 div11 . .";
 }
 
-.search-form-span {
-  display: inline-block;
-  width: 100px;
-}
+.div1 { grid-area: div1; }
 
-.search-form-input-word {
-  width: 302px;
-}
+.div2 { grid-area: div2; }
 
-.search-form-input-number {
-  width: 149px;
-}
+.div3 { grid-area: div3; }
 
-.search-form-button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.div4 { grid-area: div4; }
 
-.search-form-button {
-  padding: 0px 28px;
-  cursor: pointer;
+.div5 { grid-area: div5; }
+
+.div6 { grid-area: div6; }
+
+.div7 { grid-area: div7; }
+
+.div8 { grid-area: div8; }
+
+.div9 { grid-area: div9; }
+
+.div10 { grid-area: div10; }
+
+.div11 { grid-area: div11; }
+
+.grid-element { 
+  width: 100%;
+  font-size: 16px;
 }
+  
 
 
 /* The Modal (background) */

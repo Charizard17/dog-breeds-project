@@ -73,15 +73,19 @@
     }
 
     // sort by weight value low->high / high->low
+    // $weightArray = array();
+    // for ($t = 0; $t < count($dogBreedArray); ++$t) {
+    //     //if ($dogBreedArray[$t]['minWeight']) {
+    //         $weightArray[] = array($dogBreedArray[$t]['id'] => $dogBreedArray[$t]['minWeight']);
+    //     // } else {
+    //     //     $weightArray[] = array($dogBreedArray[$t]['id'] => $dogBreedArray[$t]['maxWeight']);
+    //     // }
+    // }
+
     // if ($_COOKIE['th-weight'] == 'true') {
 
-    //     for ($t = 0; $t < count($dogBreedArray); ++$t) {
-    //         $weightArray;
-    //     }
-
-    //     // $index = 0;
-    //     // for ($m = count($dogBreedArray); $m > 0; --$m) {
-    //     //     $dogBreedArray[$index] = $dogBreedArray[$m];
-    //     //     ++$index;
-    //     // }
+    //     // usort($dogBreedArray, function($first,$second){
+    //     //     return $first->number < $second->number;
+    //     // });
+    //     //var_dump($weightArray[0]);
     // }

@@ -32,7 +32,7 @@
                     {foreach key=key item=item from=$dogBreedsItem}
                       {if $key == 'id' || $key == 'breed_name' || $key == 'image' || $key == 'weight' || $key == 'height' || $key == 'temperament'}
                         {if $key == 'image'}
-                          <td class="dog-breeds-table-td">{html_image file=$item width="50" height="50"}</td>
+                          <td class="dog-breeds-table-td dog-breeds-table-td-image">{html_image file=$item}</td>
                         {elseif $key == 'weight' || $key == 'height'}
                           <td class="dog-breeds-table-td">{$item.metric}</td>
                         {else}

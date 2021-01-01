@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2020-12-31 18:09:07
+/* Smarty version 3.1.36, created on 2020-12-31 22:02:21
   from '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/table/table.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_5fee13c3b966c2_04291619',
+  'unifunc' => 'content_5fee4a6d11b231_05693610',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4c2c70217c806bd928481d9b6b4a532f3accc337' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/table/table.html',
-      1 => 1609438129,
+      1 => 1609452139,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5fee13c3b966c2_04291619 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5fee4a6d11b231_05693610 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/libs/plugins/function.html_image.php','function'=>'smarty_function_html_image',),));
 ?>
 <form action="index.php" method="post">
@@ -77,7 +77,7 @@ $_smarty_tpl->tpl_vars['item']->do_else = false;
 ?>
                       <?php if ($_smarty_tpl->tpl_vars['key']->value == 'id' || $_smarty_tpl->tpl_vars['key']->value == 'breed_name' || $_smarty_tpl->tpl_vars['key']->value == 'image' || $_smarty_tpl->tpl_vars['key']->value == 'weight' || $_smarty_tpl->tpl_vars['key']->value == 'height' || $_smarty_tpl->tpl_vars['key']->value == 'temperament') {?>
                         <?php if ($_smarty_tpl->tpl_vars['key']->value == 'image') {?>
-                          <td class="dog-breeds-table-td"><?php echo smarty_function_html_image(array('file'=>$_smarty_tpl->tpl_vars['item']->value,'width'=>"50",'height'=>"50"),$_smarty_tpl);?>
+                          <td class="dog-breeds-table-td dog-breeds-table-td-image"><?php echo smarty_function_html_image(array('file'=>$_smarty_tpl->tpl_vars['item']->value),$_smarty_tpl);?>
 </td>
                         <?php } elseif ($_smarty_tpl->tpl_vars['key']->value == 'weight' || $_smarty_tpl->tpl_vars['key']->value == 'height') {?>
                           <td class="dog-breeds-table-td"><?php echo $_smarty_tpl->tpl_vars['item']->value['metric'];?>
