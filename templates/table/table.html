@@ -17,7 +17,7 @@
           {foreach key=key item=item from=$dogBreedsItem}
             {if $key == 'id'}
               <div class="table-col1 item-center">
-                <input type="button" class="table-row-input-style favourite-star" name="detailed-id" id="star{$item}" value="{$item}" onclick="myFavourite(this)">
+                <input type="button" class="table-row-input-style c-pointer favourite-star" name="detailed-id" id="star{$item}" value="{$item}" onclick="myFavourite(this)">
               </div>
             {/if}
           {/foreach}
@@ -42,7 +42,7 @@
             {if $key == 'id'}
               <div class="table-col8 item-center">
                 <div name="showDetails">
-                  <input type="submit" class="table-row-input-style show-details" name="detailed-id" id="{$item}" value="{$item}" onclick="myFunc(this.id)">
+                  <input type="submit" class="table-row-input-style c-pointer show-details" name="detailed-id" id="{$item}" value="{$item}" onclick="myFunc(this.id)">
                 </div>
               </div>
             {/if}

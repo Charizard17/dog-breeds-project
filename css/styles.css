@@ -137,7 +137,6 @@
 /* ################### */
 /* table row image style */
 .table-row-input-style {
-  cursor: pointer;
   color: transparent;
   border: none;
   width: 25px;
@@ -252,41 +251,57 @@
   /* Full height */
   overflow: auto;
   /* Enable scroll if needed */
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   /* Black w/ opacity */
 }
 
 /* ################### */
 /* Modal Content */
-.modal-content {
-  background-color: #df2727;
-  margin: auto;
-  padding: 20px 50px;
-  border: 1px solid #888;
-  width: 100px;
+.testtt {
+  padding: 10px;
+  border-radius: 10px;
 }
 
 /* The Close Button of Modal*/
 .modal-close {
-  color: #aaaaaa;
-  position: absolute;
-  right: 15px;
-  top: 0px;
+  display: inline;
+  background: transparent;
+  color: #272D2D;
   font-size: 25px;
   font-weight: bold;
+  right: 0px;
+  top: 0px;
 }
 
 .modal-close:hover,
 .modal-close:focus {
-  color: #000;
+  color: #048986;
   text-decoration: none;
-  cursor: pointer;
 }
 
-.modal-table-th {
-  padding: 5px 50px 5px 20px;
+/* modal lines grid areas */
+.modal-line-container {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "modal-line-left modal-line-right";
+}
+
+.modal-line-right {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". . ." ". . .";
+  grid-area: modal-line-right;
+  font-size: 17px;
+}
+
+.modal-line-left {
+  grid-area: modal-line-left;
+  font-weight: 600;
+  font-size: 17px;
 }
 
 /*# sourceMappingURL=styles.css.map */

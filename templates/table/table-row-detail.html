@@ -1,27 +1,26 @@
 <!-- The Modal -->
-<div id="table-row-detail-modal" class="modal-container">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <table class="modal-table">
-            {foreach key=key item=item from=$dogBreedDetails}
-                <tr class="modal-table-tr">
-                    {if $key == 'id' || $key == 'breed_name' || $key == 'image' || $key == 'weight' || $key == 'height' || $key == 'origin' || $key == 'life_span' || $key == 'temperament'|| $key == 'breed_group'|| $key == 'bred_for'}
-                        {if $key == 'image'}
-                            <th class="modal-table-th">{$key|upper|replace:'_':' '}</th>
-                            <td class="modal-table-td">{html_image file=$item width="200" height="200"}</td>
-                        {elseif $key == 'weight' || $key == 'height'}
-                            <th class="modal-table-th">{$key|upper|replace:'_':' '}</th>
-                            <td class="modal-table-td">{$item.metric}</td>
-                        {else}
-                            <th class="modal-table-th">{$key|upper|replace:'_':' '}</th>
-                            <td class="modal-table-td">{$item}</td>
-                        {/if}
-                    {/if}
-                </tr>
-            {/foreach}
-        </table>
+<div class="modal-container" id="table-row-detail-modal">
+    <div class="testtt">
+        <span class="modal-close c-pointer">&times;</span>
+        {foreach key=key item=item from=$dogBreedDetails}
+            {if $key == 'id' || $key == 'breed_name' || $key == 'image' || $key == 'weight' || $key == 'height' || $key == 'origin' || $key == 'life_span' || $key == 'temperament'|| $key == 'breed_group'|| $key == 'bred_for'}
+                {if $key == 'image'}
+                    <div class="modal-line-container">
+                        <div class="modal-line-left">{$key|upper|replace:'_':' '}</div>
+                        <div class="modal-line-right">{html_image file=$item width="200" height="200"}</div>
+                    </div>
+                {elseif $key == 'weight' || $key == 'height'}
+                    <div class="modal-line-container">
+                        <div class="modal-line-left">{$key|upper|replace:'_':' '}</div>
+                        <div class="modal-line-right">{$item.metric}</div>
+                    </div>
+                {else}
+                    <div class="modal-line-container">
+                        <div class="modal-line-left">{$key|upper|replace:'_':' '}</div>
+                        <div class="modal-line-right">{$item}</div>
+                    </div>
+                {/if}
+            {/if}
+        {/foreach}
     </div>
-
 </div>
