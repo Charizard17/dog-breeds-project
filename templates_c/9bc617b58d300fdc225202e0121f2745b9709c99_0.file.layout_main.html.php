@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-01 23:56:35
+/* Smarty version 3.1.36, created on 2021-01-05 09:53:12
   from '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/layout_main.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_5fefb6b316b8b0_98315979',
+  'unifunc' => 'content_5ff43708379427_25565019',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9bc617b58d300fdc225202e0121f2745b9709c99' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/layout_main.html',
-      1 => 1609545332,
+      1 => 1609840391,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:table/table-row-detail.html' => 1,
   ),
 ),false)) {
-function content_5fefb6b316b8b0_98315979 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ff43708379427_25565019 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +37,7 @@ function content_5fefb6b316b8b0_98315979 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 </head>
-<body>
+<body class="body">
 
     <nav class="navbar navbar-expand-lg navbar-custom">
         <a class="navbar-link" href="/">Dog Breeds</a>

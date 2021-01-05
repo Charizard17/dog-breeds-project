@@ -13,10 +13,10 @@
 
     {if $dogBreeds != []}
         {foreach name=outer item=dogBreedsItem from=$dogBreeds}
-        <div class="table-row-container">
+        <div class="table-row-container table-body">
           {foreach key=key item=item from=$dogBreedsItem}
             {if $key == 'id'}
-              <div class="table-col1 item-center">
+              <div class="table-col1 table-col-cell item-center">
                 <input type="button" class="table-row-input-style c-pointer favourite-star" name="detailed-id" id="star{$item}" value="{$item}" onclick="myFavourite(this)">
               </div>
             {/if}
@@ -24,23 +24,23 @@
           {foreach key=key item=item from=$dogBreedsItem}
             {if $key == 'id' || $key == 'breed_name' || $key == 'image' || $key == 'weight' || $key == 'height' || $key == 'temperament'}
               {if $key == 'id'}
-                <div class="table-col2 item-center">{$item}</div>
+                <div class="table-col2 table-col-cell item-center">{$item}</div>
               {elseif $key == 'breed_name'}
-                <div class="table-col3 item-left">{$item}</div>
+                <div class="table-col3 table-col-cell item-left">{$item}</div>
               {elseif $key == 'image'}
-                <div class="table-col4 item-center dog-breed-image">{html_image file=$item}</div>
+                <div class="table-col4 table-col-cell item-center dog-breed-image">{html_image file=$item}</div>
               {elseif $key == 'weight'}
-                <div class="table-col5 item-center">{$item.metric}</div>
+                <div class="table-col5 table-col-cell item-center">{$item.metric}</div>
               {elseif $key == 'height'}
-                <div class="table-col6 item-center">{$item.metric}</div>
+                <div class="table-col6 table-col-cell item-center">{$item.metric}</div>
               {elseif $key == 'temperament'}
-                <div class="table-col7 item-left">{$item}</div>
+                <div class="table-col7 table-col-cell item-left">{$item}</div>
               {/if}
             {/if}
           {/foreach}
           {foreach key=key item=item from=$dogBreedsItem}
             {if $key == 'id'}
-              <div class="table-col8 item-center">
+              <div class="table-col8 table-col-cell item-center">
                 <div name="showDetails">
                   <input type="submit" class="table-row-input-style c-pointer show-details" name="detailed-id" id="{$item}" value="{$item}" onclick="myFunc(this.id)">
                 </div>
