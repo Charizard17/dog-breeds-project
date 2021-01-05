@@ -26,8 +26,6 @@
 /* general class settings */
 .item-center {
   text-align: center;
-  justify-content: center;
-  vertical-align: middle;
 }
 
 .item-left {
@@ -108,9 +106,14 @@ v .table-col8 {
   grid-area: table-col8;
 }
 
-.table-col-cell {
-  padding: 0px 10px;
+.table-body:nth-child(n) {
+  padding: 5px 10px;
   font-size: 14px;
+}
+
+.table-body:nth-child(n) > * {
+  display: flex;
+  align-items: center;
 }
 
 /* ################### */
@@ -125,7 +128,7 @@ v .table-col8 {
   border-radius: 5x 5px 0px 0px;
 }
 
-.table-head-cell {
+.table-head:nth-child(n) {
   background-color: #272D2D;
   font-size: 17px;
   color: #90FCF9;

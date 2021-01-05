@@ -39,8 +39,6 @@ $small-font: 14px;
 /* general class settings */
 .item-center {
     text-align: center;
-    justify-content: center;
-    vertical-align: middle;
 }
 
 .item-left {
@@ -100,9 +98,14 @@ $small-font: 14px;
 .table-col7 { grid-area: table-col7; }v
 .table-col8 { grid-area: table-col8; }
 
-.table-col-cell {
-    padding: 0px 10px;
+.table-body:nth-child(n) {
+    padding: 5px 10px;
     font-size: $small-font;
+}
+
+.table-body:nth-child(n) > * {
+    display: flex;
+    align-items: center;
 }
 
 
@@ -118,7 +121,7 @@ $small-font: 14px;
     border-radius: 5x 5px 0px 0px;
 }
 
-.table-head-cell {
+.table-head:nth-child(n) {
     background-color: $dark-color;
     font-size: $middle-font;
     color: $light-color;

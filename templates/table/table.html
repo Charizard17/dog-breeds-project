@@ -1,14 +1,14 @@
 <form action="index.php" method="post">
 
     <div class="table-row-container table-head">
-      <div class="table-col1 item-center table-head-cell"><img class="th-bookmark-icon c-pointer no-self-bg" id="th-bookmark" src="img/star-yellow.png"></div>
-      <div class="table-col2 item-center table-head-cell"><span class="c-pointer no-self-bg" id="th-id">ID</span></div>
-      <div class="table-col3 item-center table-head-cell">Name</div>
-      <div class="table-col4 item-center table-head-cell">Picture</div>
-      <div class="table-col5 item-center table-head-cell" id="th-weight"><span class="c-pointer no-self-bg">Weight(kg)</span></div>
-      <div class="table-col6 item-center table-head-cell" id="th-height"><span class="c-pointer no-self-bg">Height(cm)</span></div>
-      <div class="table-col7 item-center table-head-cell">Temperament</div>
-      <div class="table-col8 item-center table-head-cell">Details</div>
+      <div class="table-col1 item-center"><img class="th-bookmark-icon c-pointer no-self-bg" id="th-bookmark" src="img/star-yellow.png"></div>
+      <div class="table-col2 item-center"><span class="c-pointer no-self-bg" id="th-id">ID</span></div>
+      <div class="table-col3 item-center">Name</div>
+      <div class="table-col4 item-center">Picture</div>
+      <div class="table-col5 item-center" id="th-weight"><span class="c-pointer no-self-bg">Weight(kg)</span></div>
+      <div class="table-col6 item-center" id="th-height"><span class="c-pointer no-self-bg">Height(cm)</span></div>
+      <div class="table-col7 item-center">Temperament</div>
+      <div class="table-col8 item-center">Details</div>
     </div>
 
     {if $dogBreeds != []}
@@ -16,7 +16,7 @@
         <div class="table-row-container table-body">
           {foreach key=key item=item from=$dogBreedsItem}
             {if $key == 'id'}
-              <div class="table-col1 table-col-cell item-center">
+              <div class="table-col1 item-center">
                 <input type="button" class="table-row-input-style c-pointer favourite-star" name="detailed-id" id="star{$item}" value="{$item}" onclick="myFavourite(this)">
               </div>
             {/if}
@@ -24,23 +24,23 @@
           {foreach key=key item=item from=$dogBreedsItem}
             {if $key == 'id' || $key == 'breed_name' || $key == 'image' || $key == 'weight' || $key == 'height' || $key == 'temperament'}
               {if $key == 'id'}
-                <div class="table-col2 table-col-cell item-center">{$item}</div>
+                <div class="table-col2 item-center">{$item}</div>
               {elseif $key == 'breed_name'}
-                <div class="table-col3 table-col-cell item-left">{$item}</div>
+                <div class="table-col3 item-left">{$item}</div>
               {elseif $key == 'image'}
-                <div class="table-col4 table-col-cell item-center dog-breed-image">{html_image file=$item}</div>
+                <div class="table-col4 item-center dog-breed-image">{html_image file=$item}</div>
               {elseif $key == 'weight'}
-                <div class="table-col5 table-col-cell item-center">{$item.metric}</div>
+                <div class="table-col5 item-center">{$item.metric}</div>
               {elseif $key == 'height'}
-                <div class="table-col6 table-col-cell item-center">{$item.metric}</div>
+                <div class="table-col6 item-center">{$item.metric}</div>
               {elseif $key == 'temperament'}
-                <div class="table-col7 table-col-cell item-left">{$item}</div>
+                <div class="table-col7 item-left">{$item}</div>
               {/if}
             {/if}
           {/foreach}
           {foreach key=key item=item from=$dogBreedsItem}
             {if $key == 'id'}
-              <div class="table-col8 table-col-cell item-center">
+              <div class="table-col8 item-center">
                 <div name="showDetails">
                   <input type="submit" class="table-row-input-style c-pointer show-details" name="detailed-id" id="{$item}" value="{$item}" onclick="openModal(this.id)">
                 </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-02 11:59:08
+/* Smarty version 3.1.36, created on 2021-01-05 11:05:03
   from '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/search/search-form.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_5ff0600c014763_92111524',
+  'unifunc' => 'content_5ff447dfd67871_84904633',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8a826f9d3401dfc02e5b38fe0fd850829d471c46' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/search/search-form.html',
-      1 => 1609588745,
+      1 => 1609844702,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ff0600c014763_92111524 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ff447dfd67871_84904633 (Smarty_Internal_Template $_smarty_tpl) {
 ?><form action="index.php" method="POST">
     <h5 class="text-center">Dog finder!</h5>
     <div class="search-form-container">
@@ -47,7 +47,7 @@ $_prefixVariable1 = $_smarty_tpl->tpl_vars['dogBreedArrayCount']->value;
 $_smarty_tpl->_assignInScope('filteredCount', $_prefixVariable1);
 if ($_prefixVariable1) {?>
         <span><?php echo $_smarty_tpl->tpl_vars['filteredCount']->value;?>
- dog breeds found. Please review your search conditions.</span>
+ dog breeds found.</span>
     <?php }}
 }
 }
