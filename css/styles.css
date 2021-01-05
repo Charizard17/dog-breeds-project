@@ -278,7 +278,10 @@ v .table-col8 {
 
 /* ################### */
 /* Modal Content */
-.testtt {
+/* modal content class name is modal-content2,
+idk why but when it changed as modal-contant its not working.. */
+.modal-content2 {
+  background-color: #EDF5FC;
   padding: 30px;
   border-radius: 5px;
   width: 500px;

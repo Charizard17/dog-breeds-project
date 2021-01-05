@@ -33,7 +33,7 @@ window.onclick = function(event) {
   }
 }
 // open model after clicking view details
-function myFunc(element) {
+function openModal(element) {
   document.cookie = "detailed-id="+element+"; path=/;";
 }
 if (document.cookie.indexOf('detailed-id=') !== -1) {
