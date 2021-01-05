@@ -97,7 +97,7 @@ for (var j = 0; j < bookmarks.length; ++j) {
 }
 
 // create showBookmarks cookie, if not exist
-if (getCookie("showBookmarks") == "true") {
+if (getCookie("th-bookmark") == "true") {
   document.getElementById("th-bookmark").classList.add("th-bookmark-active");
 }
 

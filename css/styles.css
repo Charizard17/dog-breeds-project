@@ -227,8 +227,8 @@ v .table-col8 {
 }
 
 .th-bookmark-active {
-  -webkit-filter: drop-shadow(1px 1px 7px white);
-  filter: drop-shadow(1px 1px 7px white);
+  -webkit-filter: drop-shadow(2px 2px 10px white);
+  filter: drop-shadow(2px 2px 10px white);
 }
 
 .table-body:nth-child(n):hover {
