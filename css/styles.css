@@ -15,20 +15,41 @@
 .navbar-link {
   color: #90FCF9;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 30px;
 }
 .navbar-link:hover {
   text-decoration: none;
   color: #2df9f4;
 }
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .navbar-link {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 766px) {
+  .navbar-link {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 420px) and (max-width: 599px) {
+  .navbar-link {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 419px) {
+  .navbar-link {
+    font-size: 20px;
+  }
+}
 
 /* ################### */
 /* general class settings */
-.item-center {
+.text-center {
   text-align: center;
+  justify-content: center;
 }
 
-.item-left {
+.text-left {
   text-align: left;
 }
 
@@ -48,10 +69,12 @@
 /* grid arrangement */
 .main-container {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-template-areas: "item1 item1 item2 item2 item2 item2 item2";
-  grid-gap: 40px;
+  gap: 0px 40px;
   padding: 20px 30px;
-  height: 700px;
+  height: 800px;
 }
 
 .item1 {
@@ -108,7 +131,27 @@ v .table-col8 {
 
 .table-body:nth-child(n) {
   padding: 5px 10px;
-  font-size: 14px;
+  font-size: 17px;
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .table-body:nth-child(n) {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 766px) {
+  .table-body:nth-child(n) {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 420px) and (max-width: 599px) {
+  .table-body:nth-child(n) {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 419px) {
+  .table-body:nth-child(n) {
+    font-size: 12px;
+  }
 }
 
 .table-body:nth-child(n) > * {
@@ -130,13 +173,57 @@ v .table-col8 {
 
 .table-head:nth-child(n) {
   background-color: #272D2D;
-  font-size: 17px;
+  font-size: 20px;
   color: #90FCF9;
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .table-head:nth-child(n) {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 766px) {
+  .table-head:nth-child(n) {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 420px) and (max-width: 599px) {
+  .table-head:nth-child(n) {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 419px) {
+  .table-head:nth-child(n) {
+    font-size: 14px;
+  }
 }
 
 .th-bookmark-icon {
   width: 30px;
   height: 30px;
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .th-bookmark-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 766px) {
+  .th-bookmark-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media screen and (min-width: 420px) and (max-width: 599px) {
+  .th-bookmark-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media screen and (max-width: 419px) {
+  .th-bookmark-icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .th-bookmark-active {
@@ -160,6 +247,30 @@ v .table-col8 {
   width: 25px;
   height: 25px;
   outline: none;
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .table-row-input-style {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 766px) {
+  .table-row-input-style {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media screen and (min-width: 420px) and (max-width: 599px) {
+  .table-row-input-style {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media screen and (max-width: 419px) {
+  .table-row-input-style {
+    width: 15px;
+    height: 15px;
+  }
 }
 
 .show-details {
@@ -191,15 +302,45 @@ v .table-col8 {
   height: 50px;
   border-radius: 5px;
 }
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .dog-breed-image img {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 766px) {
+  .dog-breed-image img {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 420px) and (max-width: 599px) {
+  .dog-breed-image img {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media screen and (max-width: 419px) {
+  .dog-breed-image img {
+    width: 30px;
+    height: 30px;
+  }
+}
 
 /* ################### */
 /* search form styling */
 .search-form-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 5px 5px;
-  grid-template-areas: "div1 div1 div2 div2 div2 div2" "div3 div3 div4 div4 div5 div5" "div6 div6 div7 div7 div8 div8" "div9 div9 div10 div10 div10 div10" ". . div11 div11 . .";
+  grid-template-areas: ". div0 div0 div0 div0 ." "div1 div1 div2 div2 div2 div2" "div3 div3 div4 div4 div5 div5" "div6 div6 div7 div7 div8 div8" "div9 div9 div10 div10 div10 div10" ". . div11 div11 . .";
+}
+
+.div0 {
+  grid-area: div0;
+  font-weight: 600;
+  text-align: center;
 }
 
 .div1 {
@@ -246,15 +387,68 @@ v .table-col8 {
   grid-area: div11;
 }
 
-.grid-element {
+.search-element {
   width: 100%;
   font-size: 17px;
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .search-element {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .search-element {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 766px) {
+  .search-element {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 420px) and (max-width: 599px) {
+  .search-element {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 419px) {
+  .search-element {
+    font-size: 12px;
+  }
 }
 
 .search-button {
   background-color: #272D2D;
   color: #90FCF9;
   border-radius: 5px;
+}
+.search-button:hover {
+  text-decoration: none;
+  color: #2df9f4;
+}
+
+.search-header {
+  font-size: 25px;
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .search-header {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 766px) {
+  .search-header {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 420px) and (max-width: 599px) {
+  .search-header {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 419px) {
+  .search-header {
+    font-size: 15px;
+  }
 }
 
 /* ################### */
@@ -331,6 +525,96 @@ idk why but when it changed as modal-contant its not working.. */
   grid-area: modal-line-left;
   font-weight: 600;
   font-size: 17px;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 0.5fr 0fr 4fr 0fr 0.5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: ". . item1 . ." "item2 item2 item2 item2 item2";
+    gap: 20px 0px;
+    padding: 20px 30px;
+  }
+
+  .item1 {
+    padding: 0px 0px 30px 0px;
+  }
+
+  .item2 {
+    height: 600px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 766px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr 0fr 3fr 0fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: ". . item1 . ." "item2 item2 item2 item2 item2";
+    gap: 20px 0px;
+    padding: 10px 20px;
+  }
+
+  .item2 {
+    height: 600px;
+  }
+}
+@media screen and (min-width: 420px) and (max-width: 599px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 0.5fr 0fr 4fr 0fr 0.5fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: ". . item1 . ." "item2 item2 item2 item2 item2";
+    gap: 10px 0px;
+    padding: 10px 20px;
+    height: 600px;
+  }
+
+  .item1 {
+    padding: 0px 0px 30px 0px;
+  }
+
+  .item2 {
+    height: 500px;
+  }
+}
+@media screen and (min-width: 350px) and (max-width: 419px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 0fr 0fr 5fr 0fr 0;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: ". . item1 . ." "item2 item2 item2 item2 item2";
+    gap: 10px 0px;
+    padding: 5px 5px;
+    height: 500px;
+  }
+
+  .item1 {
+    padding: 0px 0px 20px 0px;
+  }
+
+  .item2 {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 349px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 0fr 0fr 5fr 0fr 0;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: ". . item1 . ." "item2 item2 item2 item2 item2";
+    gap: 10px 0px;
+    padding: 20px 30px;
+    height: 350px;
+  }
+
+  .item1 {
+    padding: 0px 0px 0px 0px;
+  }
+
+  .item2 {
+    height: 300px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

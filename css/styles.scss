@@ -4,10 +4,13 @@ $light-color: #90FCF9;
 $main-bg-color: #EDF5FC;
 
 /* font sizes */
-$large-font: 30px;
-$big-font: 25px;
+$Xlarge-font: 30px;
+$large-font: 25px;
+$big-font: 20px;
 $middle-font: 17px;
+$Xmiddle-font: 15px;
 $small-font: 14px;
+$Xsmall-font: 12px;
 
 
 /* ################### */
@@ -26,22 +29,28 @@ $small-font: 14px;
 .navbar-link {
     color: $light-color;
     text-decoration: none;
-    font-size: $big-font;
+    font-size: $Xlarge-font;
 
     &:hover {
         text-decoration: none;
         color: darken($light-color, 20%);
     }
+
+    @media screen and (min-width: 767px) and (max-width: 1023px) {font-size: $large-font;}
+    @media screen and (min-width: 600px) and (max-width: 766px) {font-size: $large-font;}
+    @media screen and (min-width: 420px) and (max-width: 599px) {font-size: $big-font;}
+    @media screen and (max-width: 419px) {font-size: $big-font;}
 }
 
 
 /* ################### */
 /* general class settings */
-.item-center {
+.text-center {
     text-align: center;
+    justify-content: center;
 }
 
-.item-left {
+.text-left {
     text-align: left;
 }
 
@@ -62,12 +71,15 @@ $small-font: 14px;
 /* grid arrangement */
 .main-container {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas:
-        'item1 item1 item2 item2 item2 item2 item2';
-    grid-gap: 40px;
+    "item1 item1 item2 item2 item2 item2 item2";
+    gap: 0px 40px;
     padding: 20px 30px;
-    height: 700px;
+    height: 800px;
 }
+
 .item1 { 
     grid-area: item1; 
 }
@@ -79,6 +91,10 @@ $small-font: 14px;
 
 /* ################### */
 /* our main table styling */
+.table-outer {
+    
+}
+
 .table-row-container {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 1fr 1.5fr 1.5fr 5fr 1fr;
@@ -100,7 +116,12 @@ $small-font: 14px;
 
 .table-body:nth-child(n) {
     padding: 5px 10px;
-    font-size: $small-font;
+    font-size: $middle-font;
+
+    @media screen and (min-width: 767px) and (max-width: 1023px) {font-size: $small-font;}
+    @media screen and (min-width: 600px) and (max-width: 766px) {font-size: $small-font;}
+    @media screen and (min-width: 420px) and (max-width: 599px) {font-size: $Xsmall-font;}
+    @media screen and (max-width: 419px) {font-size: $Xsmall-font;}
 }
 
 .table-body:nth-child(n) > * {
@@ -123,13 +144,23 @@ $small-font: 14px;
 
 .table-head:nth-child(n) {
     background-color: $dark-color;
-    font-size: $middle-font;
+    font-size: $big-font;
     color: $light-color;
+
+    @media screen and (min-width: 767px) and (max-width: 1023px) {font-size: $middle-font;}
+    @media screen and (min-width: 600px) and (max-width: 766px) {font-size: $middle-font;}
+    @media screen and (min-width: 420px) and (max-width: 599px) {font-size: $Xmiddle-font;}
+    @media screen and (max-width: 419px) {font-size: $small-font;}
 }
 
 .th-bookmark-icon {
     width: 30px;
     height: 30px;
+
+    @media screen and (min-width: 767px) and (max-width: 1023px) {width: 25px;height: 25px;}
+    @media screen and (min-width: 600px) and (max-width: 766px) {width: 25px;height: 25px;}
+    @media screen and (min-width: 420px) and (max-width: 599px) {width: 20px;height: 20px;}
+    @media screen and (max-width: 419px) {width: 20px;height: 20px;}
 }
 
 .th-bookmark-active {
@@ -152,6 +183,11 @@ $small-font: 14px;
     width: 25px;
     height: 25px;
     outline: none;
+
+    @media screen and (min-width: 767px) and (max-width: 1023px) {width: 20px;height: 20px;}
+    @media screen and (min-width: 600px) and (max-width: 766px) {width: 20px;height: 20px;}
+    @media screen and (min-width: 420px) and (max-width: 599px) {width: 15px;height: 15px;}
+    @media screen and (max-width: 419px) {width: 15px;height: 15px;}
 }
 
 .show-details {
@@ -180,6 +216,11 @@ $small-font: 14px;
     width: 50px;
     height: 50px;
     border-radius: 5px;
+
+    @media screen and (min-width: 767px) and (max-width: 1023px) {width: 40px;height: 40px;}
+    @media screen and (min-width: 600px) and (max-width: 766px) {width: 40px;height: 40px;}
+    @media screen and (min-width: 420px) and (max-width: 599px) {width: 30px;height: 30px;}
+    @media screen and (max-width: 419px) {width: 30px;height: 30px;}
 }
 
 
@@ -188,9 +229,10 @@ $small-font: 14px;
 .search-form-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 5px 5px;
     grid-template-areas:
+      ". div0 div0 div0 div0 ."
       "div1 div1 div2 div2 div2 div2"
       "div3 div3 div4 div4 div5 div5"
       "div6 div6 div7 div7 div8 div8"
@@ -198,6 +240,11 @@ $small-font: 14px;
       ". . div11 div11 . .";
 }
   
+.div0 { 
+    grid-area: div0;
+    font-weight: 600;
+    text-align: center;
+}  
 .div1 { grid-area: div1; }  
 .div2 { grid-area: div2; }  
 .div3 { grid-area: div3; }  
@@ -209,15 +256,35 @@ $small-font: 14px;
 .div9 { grid-area: div9; }  
 .div10 { grid-area: div10; }  
 .div11 { grid-area: div11; }  
-.grid-element { 
+.search-element { 
     width: 100%;
     font-size: $middle-font;
+
+    @media screen and (min-width: 1025px) and (max-width: 1200px) {font-size: $Xmiddle-font;}
+    @media screen and (min-width: 767px) and (max-width: 1023px) {font-size: $Xmiddle-font;}
+    @media screen and (min-width: 600px) and (max-width: 766px) {font-size: $small-font;}
+    @media screen and (min-width: 420px) and (max-width: 599px) {font-size: $small-font;}
+    @media screen and (max-width: 419px) {font-size: $Xsmall-font;}
 }
 
 .search-button {
     background-color: $dark-color;
     color: $light-color;
     border-radius: 5px;
+
+    &:hover {
+        text-decoration: none;
+        color: darken($light-color, 20%);
+    }
+}
+
+.search-header {
+    font-size: $large-font;
+
+    @media screen and (min-width: 767px) and (max-width: 1023px) {font-size: $big-font;}
+    @media screen and (min-width: 600px) and (max-width: 766px) {font-size: $middle-font;}
+    @media screen and (min-width: 420px) and (max-width: 599px) {font-size: $Xmiddle-font;}
+    @media screen and (max-width: 419px) {font-size: $Xmiddle-font;}
 }
     
   
@@ -255,7 +322,7 @@ idk why but when it changed as modal-contant its not working.. */
     right: -10px;
     background: transparent;
     color: $dark-color;
-    font-size: $big-font;
+    font-size: $large-font;
     font-weight: bold;
 }
 
@@ -289,4 +356,107 @@ idk why but when it changed as modal-contant its not working.. */
     grid-area: modal-line-left; 
     font-weight: 600;
     font-size: $middle-font;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: 0.5fr 0fr 4fr 0fr 0.5fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+          ". . item1 . ."
+          "item2 item2 item2 item2 item2";
+        gap: 20px 0px;
+        padding: 20px 30px;
+    }
+    .item1 {
+        padding: 0px 0px 30px 0px;
+    }
+
+    .item2 {
+        height: 600px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 766px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr 0fr 3fr 0fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+          ". . item1 . ."
+          "item2 item2 item2 item2 item2";
+        gap: 20px 0px;
+        padding: 10px 20px;
+    }
+
+    .item2 {
+        height: 600px;
+    }
+}
+
+@media screen and (min-width: 420px) and (max-width: 599px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: 0.5fr 0fr 4fr 0fr 0.5fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+          ". . item1 . ."
+          "item2 item2 item2 item2 item2";
+        gap: 10px 0px;
+        padding: 10px 20px;
+        height: 600px;
+    }
+
+    .item1 {
+        padding: 0px 0px 30px 0px;
+    }
+    
+    .item2 {
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 350px) and (max-width: 419px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: 0fr 0fr 5fr 0fr 0;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+          ". . item1 . ."
+          "item2 item2 item2 item2 item2";
+        gap: 10px 0px;
+        padding: 5px 5px;
+        height: 500px;
+    }
+
+    .item1 {
+        padding: 0px 0px 20px 0px;
+    }
+    
+    .item2 {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 349px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: 0fr 0fr 5fr 0fr 0;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+          ". . item1 . ."
+          "item2 item2 item2 item2 item2";
+        gap: 10px 0px;
+        padding: 20px 30px;
+        height: 350px;
+    }
+
+    .item1 {
+        padding: 0px 0px 0px 0px;
+    }
+    
+    .item2 {
+        height: 300px;
+    }
 }
