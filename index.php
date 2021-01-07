@@ -11,6 +11,7 @@
         $smarty->assign('filteredCount', count($filtered));
     } else {
         $smarty->assign('dogBreeds',$dogBreedArray);
+        $smarty->assign('filteredCount', 0);
     }
     $smarty->assign('dogBreedDetails',$dogBreedDetails);
     $smarty->assign('invisibleDogBreed', $invisibleDogBreed);
