@@ -38,26 +38,27 @@
     }
 
     // show details if cookie exist
+    $dogBreedDetails = array();
+    $index0 = "";
     if (isset($_COOKIE['detailed-id'])) {
-        $index = "";
-        $index = $_COOKIE['detailed-id'];
+        $index0 = $_COOKIE['detailed-id'];
         for ($i = 0; $i < count($dogBreedArray); ++$i) {
-            if ($dogBreedArray[$i]['id'] == $index) {
+            if ($dogBreedArray[$i]['id'] == $index0) {
                 $dogBreedDetails = $dogBreedArray[$i];
             }
         }
     }
 
     // only show bookmarked elements
+    $index1 = 0;
     if (isset($_COOKIE['th-bookmark']) && $_COOKIE['th-bookmark'] == 'true') {
         if ($_COOKIE['bookmarks'] !== '[]' && $_COOKIE['bookmarks'] !== '') {
-            $index = 0;
             $bookmarkedIDs = json_decode($_COOKIE['bookmarks'], true);
             for ($j = 0; $j < count($bookmarkedIDs); ++$j) {
                 for ($k = 0; $k < count($dogBreedArray); ++$k) {
                     if ($dogBreedArray[$k]['id'] == $bookmarkedIDs[$j]) {
-                        $testArray[$index] = $dogBreedArray[$k];
-                        ++$index;
+                        $testArray[$index1] = $dogBreedArray[$k];
+                        ++$index1;
                     }
                 }
             }

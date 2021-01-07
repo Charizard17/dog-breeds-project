@@ -14,8 +14,6 @@
     }
     $smarty->assign('dogBreedDetails',$dogBreedDetails);
     $smarty->assign('invisibleDogBreed', $invisibleDogBreed);
-    $smarty->assign('userInput',$userInput);
-
 
 
     $smarty->display('layout_main.html');

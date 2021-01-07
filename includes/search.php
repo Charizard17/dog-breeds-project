@@ -17,14 +17,14 @@
 
     // we create 2 functions for filtering our array after search
     function hasContainWords($postValue, $dataArray, $cookieName) {
+        $index2 = 0;
         if ($_POST[$postValue]) {
             $dataArrayTemp = [];
-            $index = 0;
             if (is_array($dataArray)){
                 for ($i = 0; $i < count($dataArray); ++$i) {
                     if (strpos(strtolower($dataArray[$i][$postValue]), strtolower($_POST[$postValue])) !== false) {
-                        $dataArrayTemp[$index] = $dataArray[$i];
-                        ++$index;
+                        $dataArrayTemp[$index2] = $dataArray[$i];
+                        ++$index2;
                     }
                 }
             }
@@ -36,12 +36,12 @@
     function hasContainTerms($postValue, $dataArray, $dataArrayFirstIndex, $dataArraySecondIndex, $cookieName) {
         if ($_POST[$postValue]) {
             $dataArrayTemp = [];
-            $index = 0;
+            $index3 = 0;
             if (is_array($dataArray)){
                 for ($i = 0; $i < count($dataArray); ++$i) {
                     if ($_POST[$postValue] >= $dataArray[$i][$dataArrayFirstIndex] && $_POST[$postValue] <= $dataArray[$i][$dataArraySecondIndex]) {
-                        $dataArrayTemp[$index] = $dataArray[$i];
-                        ++$index;
+                        $dataArrayTemp[$index3] = $dataArray[$i];
+                        ++$index3;
                     }
                 }
             }
