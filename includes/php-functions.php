@@ -67,13 +67,8 @@
         }
     }
 
-    // sort by ID value low->high / high->low
-    if ($_COOKIE['th-id'] == 'true') {
-        // $index = 0;
-        // for ($m = count($dogBreedArray); $m > 0; --$m) {
-        //     $dogBreedArray[$index] = $dogBreedArray[$m];
-        //     ++$index;
-        // }
+    // sort names by alphabetical order / reverse
+    if ($_COOKIE['th-name'] == 'true') {
         $dogBreedArray = array_reverse($dogBreedArray);
     }
 

@@ -103,13 +103,13 @@ if (getCookie("th-bookmark") == "true") {
 
 // select table head elements by id
 var thBookmark = document.getElementById("th-bookmark");
-var thID = document.getElementById("th-id");
+var thName = document.getElementById("th-name");
 var thWeight = document.getElementById("th-weight");
 var thHeight = document.getElementById("th-height");
 
 // append onclick function to table head elements
 thBookmark.onclick = createAndUpdateCookie;
-thID.onclick = createAndUpdateCookie;
+thName.onclick = createAndUpdateCookie;
 thWeight.onclick = createAndUpdateCookie;
 thHeight.onclick = createAndUpdateCookie;
 
