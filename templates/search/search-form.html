@@ -15,10 +15,12 @@
     </div>
 </form>
 
-{if $filteredCount}
+{if $filteredCount != 0}
     {if $filteredCount != $dogBreedArrayCount}
-        <span class="search-element" >{$filteredCount} dog breeds found.</span>
+        <span class="search-element">{$filteredCount} dog breeds found.</span>
     {elseif $filteredCount = $dogBreedArrayCount}
-        <span class="search-element" >{$filteredCount} dog breeds found.</span>
+        <span class="search-element">{$filteredCount} dog breeds found.</span>
     {/if}
+{elseif $filteredCount == 0 && $dogBreeds == []}
+    <span class="search-element">Please review the search terms.</span>
 {/if}

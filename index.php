@@ -6,11 +6,11 @@
     include("includes/php-functions.php");
 
     $smarty->assign('dogBreedArrayCount', count($dogBreedArray));
-    if (empty($filtered)) {
-        $smarty->assign('dogBreeds',$dogBreedArray);
-    } else {
+    if ((isset($_POST['submit']) && empty($filtered)) || isset($_POST['submit']) && !empty($filtered)) {
         $smarty->assign('dogBreeds',$filtered);
         $smarty->assign('filteredCount', count($filtered));
+    } else {
+        $smarty->assign('dogBreeds',$dogBreedArray);
     }
     $smarty->assign('dogBreedDetails',$dogBreedDetails);
     $smarty->assign('invisibleDogBreed', $invisibleDogBreed);
