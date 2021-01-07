@@ -6,17 +6,17 @@
             {if $key == 'id' || $key == 'breed_name' || $key == 'image' || $key == 'weight' || $key == 'height' || $key == 'origin' || $key == 'life_span' || $key == 'temperament'|| $key == 'breed_group'|| $key == 'bred_for'}
                 {if $key == 'image'}
                     <div class="modal-line-container">
-                        <div class="modal-line-left">{$key|upper|replace:'_':' '}</div>
+                        <div class="modal-line-left">{$key|replace:'_':' '}</div>
                         <div class="modal-line-right modal-image">{html_image file=$item}</div>
                     </div>
                 {elseif $key == 'weight' || $key == 'height'}
                     <div class="modal-line-container">
-                        <div class="modal-line-left">{$key|upper|replace:'_':' '}</div>
+                        <div class="modal-line-left">{$key|replace:'_':' '}</div>
                         <div class="modal-line-right">{$item.metric}</div>
                     </div>
                 {else}
                     <div class="modal-line-container">
-                        <div class="modal-line-left">{$key|upper|replace:'_':' '}</div>
+                        <div class="modal-line-left">{$key|replace:'_':' '}</div>
                         <div class="modal-line-right">{$item}</div>
                     </div>
                 {/if}

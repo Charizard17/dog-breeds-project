@@ -606,6 +606,7 @@ idk why but when it changed as modal-contant its not working.. */
 .modal-line-left {
   grid-area: modal-line-left;
   font-weight: 600;
+  text-transform: uppercase;
 }
 
 .modal-line-container:nth-child(n) > * {
