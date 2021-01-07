@@ -7,7 +7,7 @@
                 {if $key == 'image'}
                     <div class="modal-line-container">
                         <div class="modal-line-left">{$key|upper|replace:'_':' '}</div>
-                        <div class="modal-line-right">{html_image file=$item width="200" height="200"}</div>
+                        <div class="modal-line-right modal-image">{html_image file=$item}</div>
                     </div>
                 {elseif $key == 'weight' || $key == 'height'}
                     <div class="modal-line-container">

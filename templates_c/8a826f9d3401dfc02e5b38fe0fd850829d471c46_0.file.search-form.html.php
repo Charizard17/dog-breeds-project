@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2021-01-05 14:44:42
+/* Smarty version 3.1.36, created on 2021-01-07 09:25:01
   from '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/search/search-form.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_5ff47b5a029b48_03072109',
+  'unifunc' => 'content_5ff6d36d71b880_08918871',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8a826f9d3401dfc02e5b38fe0fd850829d471c46' => 
     array (
       0 => '/Applications/XAMPP/xamppfiles/htdocs/My-Works/dog-breeds-project/templates/search/search-form.html',
-      1 => 1609857871,
+      1 => 1610011499,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ff47b5a029b48_03072109 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ff6d36d71b880_08918871 (Smarty_Internal_Template $_smarty_tpl) {
 ?><form action="index.php" method="POST">
     <div class="search-form-container">
         <div class="div0"><span class="search-header">Dog finder!</span></div>
@@ -40,13 +40,13 @@ function content_5ff47b5a029b48_03072109 (Smarty_Internal_Template $_smarty_tpl)
 
 <?php if ($_smarty_tpl->tpl_vars['filteredCount']->value) {?>
     <?php if ($_smarty_tpl->tpl_vars['filteredCount']->value != $_smarty_tpl->tpl_vars['dogBreedArrayCount']->value) {?>
-        <span><?php echo $_smarty_tpl->tpl_vars['filteredCount']->value;?>
+        <span class="search-element" ><?php echo $_smarty_tpl->tpl_vars['filteredCount']->value;?>
  dog breeds found.</span>
     <?php } else {
 $_prefixVariable1 = $_smarty_tpl->tpl_vars['dogBreedArrayCount']->value;
 $_smarty_tpl->_assignInScope('filteredCount', $_prefixVariable1);
 if ($_prefixVariable1) {?>
-        <span><?php echo $_smarty_tpl->tpl_vars['filteredCount']->value;?>
+        <span class="search-element" ><?php echo $_smarty_tpl->tpl_vars['filteredCount']->value;?>
  dog breeds found.</span>
     <?php }}
 }
