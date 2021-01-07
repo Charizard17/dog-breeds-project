@@ -38,7 +38,7 @@
     }
 
     // show details if cookie exist
-    if ($_COOKIE['detailed-id']) {
+    if (isset($_COOKIE['detailed-id'])) {
         $index = "";
         $index = $_COOKIE['detailed-id'];
         for ($i = 0; $i < count($dogBreedArray); ++$i) {
@@ -49,7 +49,7 @@
     }
 
     // only show bookmarked elements
-    if ($_COOKIE['th-bookmark'] == 'true') {
+    if (isset($_COOKIE['th-bookmark']) && $_COOKIE['th-bookmark'] == 'true') {
         if ($_COOKIE['bookmarks'] !== '[]' && $_COOKIE['bookmarks'] !== '') {
             $index = 0;
             $bookmarkedIDs = json_decode($_COOKIE['bookmarks'], true);
@@ -68,7 +68,7 @@
     }
 
     // sort names by alphabetical order / reverse
-    if ($_COOKIE['th-name'] == 'true') {
+    if (isset($_COOKIE['th-name']) && $_COOKIE['th-name'] == 'true') {
         $dogBreedArray = array_reverse($dogBreedArray);
     }
 
