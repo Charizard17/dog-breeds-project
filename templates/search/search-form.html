@@ -20,7 +20,9 @@
         <span class="search-element">{$filteredCount} dog breeds found.</span>
     {elseif $filteredCount = $dogBreedArrayCount}
         <span class="search-element">{$filteredCount} dog breeds found.</span>
+        <br>
+        <span class="search-element">Please review the search terms.</span>
     {/if}
-{elseif $filteredCount == 0 && $ifSubmit == 'true'}
+{elseif $filteredCount == 0 && $dogBreeds == []}
     <span class="search-element">Please review the search terms.</span>
 {/if}

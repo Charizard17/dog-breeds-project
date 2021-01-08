@@ -1,9 +1,6 @@
 <?php
     include("php-functions.php");
 
-    // set cookie for if submit button clicked
-    setcookie("ifSubmit", 'false');
-
     // Search filter
     if (isset($_POST['submit'])) {
 
@@ -15,8 +12,6 @@
         $filtered = hasContainTerms('minHeight', $filtered, 'minHeight', 'maxHeight', 'saveMinHeight');
         $filtered = hasContainTerms('maxHeight', $filtered, 'minHeight', 'maxHeight', 'saveMaxHeight');
         $filtered = hasContainWords('temperament', $filtered, 'saveTemperament');
-
-        setcookie("ifSubmit", 'true');
 
     }
 

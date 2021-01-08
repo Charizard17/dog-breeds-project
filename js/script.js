@@ -112,13 +112,6 @@ thName.onclick = createAndUpdateCookie;
 thWeight.onclick = createAndUpdateCookie;
 thHeight.onclick = createAndUpdateCookie;
 
-window.onload = function() {
-  thBookmark.onclick = createAndUpdateCookie;
-  thName.onclick = createAndUpdateCookie;
-  thWeight.onclick = createAndUpdateCookie;
-  thHeight.onclick = createAndUpdateCookie;
-};
-
 // create and update cookie by clicked element
 function createAndUpdateCookie(element) {
   elementID = element.path[0].id;
