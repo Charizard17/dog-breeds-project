@@ -62,8 +62,7 @@ for (var k = 0; k < searchInputArray.length; ++k) {
 
 //--------------------------------------//
 // for bookmark - create bookmark array if doesnt exist
-var ifBookmarksExist = document.cookie.indexOf('bookmarks=');
-if (ifBookmarksExist == -1) {
+if (document.cookie.indexOf('bookmarks=') == -1) {
   var bookmarks = new Array();
 } else {
   var cookieBookmark = getCookie("bookmarks");
@@ -113,18 +112,29 @@ thName.onclick = createAndUpdateCookie;
 thWeight.onclick = createAndUpdateCookie;
 thHeight.onclick = createAndUpdateCookie;
 
+window.onload = function() {
+  thBookmark.onclick = createAndUpdateCookie;
+  thName.onclick = createAndUpdateCookie;
+  thWeight.onclick = createAndUpdateCookie;
+  thHeight.onclick = createAndUpdateCookie;
+};
+
 // create and update cookie by clicked element
 function createAndUpdateCookie(element) {
   elementID = element.path[0].id;
+  // Check, if cookie already exists
   if (document.cookie.indexOf(elementID) == -1) {
-    var empty = "false"
-    document.cookie = elementID+"="+empty+"; path=/;";
-  }
-  let getcookie = getCookie(elementID);
-  if (getcookie == "false") {
-    document.cookie = elementID+"=true; path=/;";
-  } else {
+    // cookie doesn't exist
     document.cookie = elementID+"=false; path=/;";
+  } else {
+    // cookie exists
+    let getcookie = getCookie(elementID);
+    // turn around true/false of the cookie
+    if (getcookie == "false") {
+      document.cookie = elementID+"=true; path=/;";
+    } else {
+      document.cookie = elementID+"=false; path=/;";
+    }
   }
   window.location.reload();
 }

@@ -12,7 +12,9 @@
     } else {
         $smarty->assign('dogBreeds',$dogBreedArray);
         $smarty->assign('filteredCount', 0);
+        $smarty->assign('thBookmark', $_COOKIE['th-bookmark']);
     }
+    $smarty->assign('ifSubmit', $_COOKIE['ifSubmit']);
     $smarty->assign('dogBreedDetails',$dogBreedDetails);
     $smarty->assign('invisibleDogBreed', $invisibleDogBreed);
 
