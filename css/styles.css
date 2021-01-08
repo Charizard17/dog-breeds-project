@@ -91,10 +91,10 @@
 /* our main table styling */
 .table-row-container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1.5fr 1.5fr 5fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr 1fr 5fr 1fr;
   grid-template-rows: 1fr;
   gap: 0px 0px;
-  grid-template-areas: "table-col1 table-col2 table-col3 table-col4 table-col5 table-col6 table-col7";
+  grid-template-areas: "table-col1 table-col2 table-col3 table-col4 table-col5 table-col6";
   padding: 5px 0px;
 }
 
@@ -120,10 +120,6 @@
 
 .table-col6 {
   grid-area: table-col6;
-}
-
-.table-col7 {
-  grid-area: table-col7;
 }
 
 .table-body:nth-child(n) {
@@ -193,6 +189,9 @@
     font-size: 14px;
   }
 }
+.table-head:nth-child(n) * {
+  vertical-align: middle;
+}
 
 .th-bookmark-icon {
   width: 30px;
@@ -234,6 +233,36 @@
 
 .table-body:nth-child(2n) {
   background-color: #d3e6f8;
+}
+
+.table-head-svg {
+  width: 30px;
+  height: 30px;
+  fill: #90FCF9;
+}
+
+.table-head-unit {
+  font-size: 17px;
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .table-head-unit {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 766px) {
+  .table-head-unit {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 420px) and (max-width: 599px) {
+  .table-head-unit {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 419px) {
+  .table-head-unit {
+    font-size: 12px;
+  }
 }
 
 /* ################### */
@@ -292,36 +321,6 @@
 
 .favourite-star-active {
   background-image: url("../img/star-filled.png");
-}
-
-.dog-breed-image img {
-  width: 50px;
-  height: 50px;
-  border-radius: 5px;
-}
-@media screen and (min-width: 767px) and (max-width: 1023px) {
-  .dog-breed-image img {
-    width: 40px;
-    height: 40px;
-  }
-}
-@media screen and (min-width: 600px) and (max-width: 766px) {
-  .dog-breed-image img {
-    width: 40px;
-    height: 40px;
-  }
-}
-@media screen and (min-width: 420px) and (max-width: 599px) {
-  .dog-breed-image img {
-    width: 30px;
-    height: 30px;
-  }
-}
-@media screen and (max-width: 419px) {
-  .dog-breed-image img {
-    width: 30px;
-    height: 30px;
-  }
 }
 
 /* ################### */
