@@ -2,6 +2,7 @@
 /* font sizes */
 /* ################### */
 /* main page style */
+@import url("https://fonts.googleapis.com/css?family=Roboto|Sriracha&display=swap");
 .body {
   background-color: #EDF5FC;
 }
@@ -474,7 +475,6 @@
 /* modal content class name is modal-content2,
 idk why but when it changed as modal-contant its not working.. */
 .modal-content2 {
-  background-color: #EDF5FC;
   padding: 30px;
   border-radius: 5px;
   width: 500px;
@@ -533,35 +533,6 @@ idk why but when it changed as modal-contant its not working.. */
   }
 }
 
-.modal-image * {
-  width: 270px;
-  height: 270px;
-}
-@media screen and (min-width: 767px) and (max-width: 1023px) {
-  .modal-image * {
-    width: 220px;
-    height: 220px;
-  }
-}
-@media screen and (min-width: 600px) and (max-width: 766px) {
-  .modal-image * {
-    width: 200px;
-    height: 200px;
-  }
-}
-@media screen and (min-width: 420px) and (max-width: 599px) {
-  .modal-image * {
-    width: 180px;
-    height: 180px;
-  }
-}
-@media screen and (max-width: 419px) {
-  .modal-image * {
-    width: 130px;
-    height: 130px;
-  }
-}
-
 /* The Close Button of Modal*/
 .modal-close {
   position: relative;
@@ -580,57 +551,119 @@ idk why but when it changed as modal-contant its not working.. */
   text-decoration: none;
 }
 
-/* modal lines grid areas */
-.modal-line-container {
+.modal-line-vertical-container {
   display: grid;
-  grid-template-columns: 2fr 4fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "modal-line-top" "modal-line-bottom";
+}
+
+.modal-line-top {
+  grid-area: modal-line-top;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #03706d;
+}
+
+.modal-line-bottom {
+  grid-area: modal-line-bottom;
+}
+
+.modal-line-horizontal-container {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas: "modal-line-left modal-line-right";
-}
-
-.modal-line-right {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 7px 0px;
-  grid-template-areas: ". . ." ". . .";
-  grid-area: modal-line-right;
 }
 
 .modal-line-left {
   grid-area: modal-line-left;
   font-weight: 600;
   text-transform: uppercase;
+  color: #03706d;
 }
 
-.modal-line-container:nth-child(n) > * {
-  font-size: 17px;
+.modal-line-right {
+  grid-area: modal-line-right;
 }
-@media screen and (min-width: 1025px) and (max-width: 1200px) {
-  .modal-line-container:nth-child(n) > * {
-    font-size: 15px;
-  }
+
+#modal-card {
+  height: 500px;
+  width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  background: #EDF5FC;
+  position: relative;
+  box-shadow: 5px 5px 10px #048986;
 }
-@media screen and (min-width: 767px) and (max-width: 1023px) {
-  .modal-line-container:nth-child(n) > * {
-    font-size: 15px;
-  }
+#modal-card .modal-img {
+  height: 130px;
+  width: 130px;
+  background: url("../img/doge.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(4, 137, 134, 0.5);
+  transition: box-shadow 555ms;
+  cursor: pointer;
 }
-@media screen and (min-width: 600px) and (max-width: 766px) {
-  .modal-line-container:nth-child(n) > * {
-    font-size: 14px;
-  }
+#modal-card .modal-img:hover {
+  box-shadow: 15px 15px 10px rgba(4, 137, 134, 0.5);
 }
-@media screen and (min-width: 420px) and (max-width: 599px) {
-  .modal-line-container:nth-child(n) > * {
-    font-size: 12px;
-  }
+#modal-card .title {
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+  margin: 30px 0px 10px 20px;
+  padding: 0px 0px 0px 20px;
+  color: #048986;
 }
-@media screen and (max-width: 419px) {
-  .modal-line-container:nth-child(n) > * {
-    font-size: 12px;
-  }
+#modal-card .modal-line-infos {
+  width: 100%;
+  border-bottom: 1px solid #048986;
+  padding: 7px 15px;
+}
+#modal-card .modal-weight-and-height-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 40px);
+  margin-top: 7px;
+  width: 100%;
+}
+#modal-card .modal-weight-and-height-container .modal-line-vertical-container {
+  text-align: center;
+  width: 100px;
+  padding: 0px;
+  border-radius: 30px;
+}
+#modal-card footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #272D2D;
+  color: #90FCF9;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  padding: 13px 20px 0px 20px;
+  margin-left: -20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+#modal-card footer div {
+  display: flex;
+}
+#modal-card footer div p:first-child {
+  margin-right: 10px;
+  border-right: 4px solid white;
+  padding-right: 10px;
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
