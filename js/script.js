@@ -4,7 +4,6 @@
 // because of this error, i can't use jquery which start with $ dollar sign
 // i also tried to save jquery a local js file. but it didn't work also
 
-
 //--------------------------------------//
 // get cookie by name
 window.getCookie = function(cookieName) {
@@ -130,6 +129,17 @@ function createAndUpdateCookie(element) {
     }
   }
   window.location.reload();
+}
+
+
+var arrowUp = document.getElementById("th-name-arrow-up");
+var arrowDown = document.getElementById("th-name-arrow-down");
+if (getCookie("th-name") == "true") {
+  arrowUp.classList.remove("arrow-active");
+  arrowDown.classList.add("arrow-active");
+} else {
+  arrowDown.classList.remove("arrow-active");
+  arrowUp.classList.add("arrow-active");
 }
 
 

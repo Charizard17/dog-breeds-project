@@ -30,6 +30,7 @@ $Xsmall-font: 12px;
     color: $light-color;
     text-decoration: none;
     font-size: $Xlarge-font;
+    transition: color 500ms;
 
     &:hover {
         text-decoration: none;
@@ -86,14 +87,13 @@ $Xsmall-font: 12px;
 .item2 { 
     grid-area: item2;
     overflow-y: scroll;
-    border-bottom: 5px solid $dark-color;
+    border-bottom: 10px solid $dark-color;
 }
 
 
 /* ################### */
 /* our main table styling */
 .table-outer {
-
 }
 
 .table-row-container {
@@ -113,8 +113,11 @@ $Xsmall-font: 12px;
 .table-col5 { grid-area: table-col5; }
 .table-col6 { grid-area: table-col6; }
 
+.table-body {
+    padding: 5px 0px;
+}
+
 .table-body:nth-child(n) {
-    padding: 5px 10px;
     font-size: $middle-font;
 
     @media screen and (min-width: 767px) and (max-width: 1023px) {font-size: $small-font;}
@@ -128,6 +131,12 @@ $Xsmall-font: 12px;
     align-items: center;
 }
 
+.table-body:nth-child(n):hover {
+    background-color: darken($main-bg-color, 3%);
+}
+.table-body:nth-child(2n) {
+    background-color: darken($main-bg-color, 6%);
+}
 
 /* ################### */
 /* table head style */
@@ -159,11 +168,17 @@ $Xsmall-font: 12px;
 .th-bookmark-icon {
     width: 30px;
     height: 30px;
+    transition: filter 500ms;
 
     @media screen and (mdoain-width: 767px) and (max-width: 1023px) {width: 25px;height: 25px;}
     @media screen and (min-width: 600px) and (max-width: 766px) {width: 25px;height: 25px;}
     @media screen and (min-width: 420px) and (max-width: 599px) {width: 20px;height: 20px;}
     @media screen and (max-width: 419px) {width: 20px;height: 20px;}
+
+    &:hover {
+        -webkit-filter: drop-shadow(5px 5px 10px $light-color);
+        filter: drop-shadow(5px 5px 10px $light-color);
+    }
 }
 
 .th-bookmark-active {
@@ -171,11 +186,18 @@ $Xsmall-font: 12px;
     filter: drop-shadow(5px 5px 10px $light-color);
 }
 
-.table-body:nth-child(n):hover {
-    background-color: darken($main-bg-color, 3%);
+.arrow-up, .arrow-down {
+    width: 20px;
+    height: 20px;
+    fill: darken($light-color, 50%);
 }
-.table-body:nth-child(2n) {
-    background-color: darken($main-bg-color, 6%);
+
+.arrow-down {
+    margin-left: -11px;
+}
+
+.arrow-active {
+    fill: $light-color;
 }
 
 .table-head-svg {

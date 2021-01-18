@@ -17,6 +17,7 @@
   color: #90FCF9;
   text-decoration: none;
   font-size: 30px;
+  transition: color 500ms;
 }
 .navbar-link:hover {
   text-decoration: none;
@@ -85,7 +86,7 @@
 .item2 {
   grid-area: item2;
   overflow-y: scroll;
-  border-bottom: 5px solid #272D2D;
+  border-bottom: 10px solid #272D2D;
 }
 
 /* ################### */
@@ -123,8 +124,11 @@
   grid-area: table-col6;
 }
 
+.table-body {
+  padding: 5px 0px;
+}
+
 .table-body:nth-child(n) {
-  padding: 5px 10px;
   font-size: 17px;
 }
 @media screen and (min-width: 767px) and (max-width: 1023px) {
@@ -151,6 +155,14 @@
 .table-body:nth-child(n) > * {
   display: flex;
   align-items: center;
+}
+
+.table-body:nth-child(n):hover {
+  background-color: #e0eefa;
+}
+
+.table-body:nth-child(2n) {
+  background-color: #d3e6f8;
 }
 
 /* ################### */
@@ -197,6 +209,7 @@
 .th-bookmark-icon {
   width: 30px;
   height: 30px;
+  transition: filter 500ms;
 }
 @media screen and (mdoain-width: 767px) and (max-width: 1023px) {
   .th-bookmark-icon {
@@ -222,18 +235,28 @@
     height: 20px;
   }
 }
+.th-bookmark-icon:hover {
+  -webkit-filter: drop-shadow(5px 5px 10px #90FCF9);
+  filter: drop-shadow(5px 5px 10px #90FCF9);
+}
 
 .th-bookmark-active {
   -webkit-filter: drop-shadow(5px 5px 10px #90FCF9);
   filter: drop-shadow(5px 5px 10px #90FCF9);
 }
 
-.table-body:nth-child(n):hover {
-  background-color: #e0eefa;
+.arrow-up, .arrow-down {
+  width: 20px;
+  height: 20px;
+  fill: #048986;
 }
 
-.table-body:nth-child(2n) {
-  background-color: #d3e6f8;
+.arrow-down {
+  margin-left: -11px;
+}
+
+.arrow-active {
+  fill: #90FCF9;
 }
 
 .table-head-svg {
