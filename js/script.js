@@ -146,7 +146,7 @@ if (getCookie("th-name") == "true") {
 // random dog bark after clicking modal image
 var modalImg = document.getElementById("modal-img");
 modalImg.onclick = function() {
-  var barkSoundIndex = Math.floor(Math.random() * 4);
+  var barkSoundIndex = Math.floor(Math.random() * 7);
   var dogBark = new Audio("../sound/bark"+barkSoundIndex+".mp3");
   dogBark.play();
 }
