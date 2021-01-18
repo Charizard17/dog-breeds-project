@@ -557,6 +557,7 @@ idk why but when it changed as modal-contant its not working.. */
   grid-template-rows: 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas: "modal-line-top" "modal-line-bottom";
+  margin-bottom: 70px;
 }
 
 .modal-line-top {
@@ -590,7 +591,6 @@ idk why but when it changed as modal-contant its not working.. */
 }
 
 #modal-card {
-  height: 500px;
   width: 400px;
   padding: 20px;
   border-radius: 5px;

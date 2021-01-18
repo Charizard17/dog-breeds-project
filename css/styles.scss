@@ -344,16 +344,6 @@ idk why but when it changed as modal-contant its not working.. */
     @media screen and (max-width: 320px) { left: 40% }
 }
 
-// .modal-image * {
-//     width: 270px;
-//     height: 270px;
-
-//     @media screen and (min-width: 767px) and (max-width: 1023px) {width: 220px;height: 220px;}
-//     @media screen and (min-width: 600px) and (max-width: 766px) {width: 200px;height: 200px;}
-//     @media screen and (min-width: 420px) and (max-width: 599px) {width: 180px;height: 180px;}
-//     @media screen and (max-width: 419px) {width: 130px;height: 130px;}
-// }
-
 /* The Close Button of Modal*/
 .modal-close {
     position: relative;
@@ -381,6 +371,7 @@ idk why but when it changed as modal-contant its not working.. */
     grid-template-areas:
         "modal-line-top"
         "modal-line-bottom";
+    margin-bottom: 70px;
 }
 
 .modal-line-top { 
@@ -419,7 +410,7 @@ idk why but when it changed as modal-contant its not working.. */
 @import url('https://fonts.googleapis.com/css?family=Roboto|Sriracha&display=swap');
 
 #modal-card {
-  height: 500px;
+  //height: 500px;
   width: 400px;
   padding: 20px;
   border-radius: 5px;
