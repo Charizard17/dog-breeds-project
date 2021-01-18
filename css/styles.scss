@@ -167,8 +167,8 @@ $Xsmall-font: 12px;
 }
 
 .th-bookmark-active {
-    -webkit-filter: drop-shadow(2px 2px 10px white);
-    filter: drop-shadow(2px 2px 10px white);
+    -webkit-filter: drop-shadow(5px 5px 10px $light-color);
+    filter: drop-shadow(5px 5px 10px $light-color);
 }
 
 .table-body:nth-child(n):hover {

@@ -224,8 +224,8 @@
 }
 
 .th-bookmark-active {
-  -webkit-filter: drop-shadow(2px 2px 10px white);
-  filter: drop-shadow(2px 2px 10px white);
+  -webkit-filter: drop-shadow(5px 5px 10px #90FCF9);
+  filter: drop-shadow(5px 5px 10px #90FCF9);
 }
 
 .table-body:nth-child(n):hover {
