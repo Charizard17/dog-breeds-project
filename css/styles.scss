@@ -435,6 +435,16 @@ idk why but when it changed as modal-contant its not working.. */
 //test modal card
 @import url('https://fonts.googleapis.com/css?family=Roboto|Sriracha&display=swap');
 
+$randomNumber: random(5);
+  
+@function randomNum($min, $max) {
+    $rand: random();
+    $randomNum: $min + floor($rand * (($max - $min) + 1));
+  
+    @return $randomNum;
+  }
+  
+
 #modal-card {
   //height: 500px;
   width: 400px;
@@ -446,7 +456,7 @@ idk why but when it changed as modal-contant its not working.. */
   .modal-img {
     height: 130px;
     width: 130px;
-    background: url('../img/doge.png');
+    //background: url('../img/dog-images/dog-img-#{randomNum(1,6)}.png');
     background-size: cover;
     background-position: center;
     position: absolute;

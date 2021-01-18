@@ -150,3 +150,7 @@ modalImg.onclick = function() {
   var dogBark = new Audio("../sound/bark"+barkSoundIndex+".mp3");
   dogBark.play();
 }
+
+// random dog image to modal image
+var randomNumber = Math.floor(Math.random() * 9);
+document.getElementById("modal-img").style.backgroundImage = "url('../img/dog-images/dog-img-"+ randomNumber +".png')"

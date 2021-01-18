@@ -627,7 +627,6 @@ idk why but when it changed as modal-contant its not working.. */
 #modal-card .modal-img {
   height: 130px;
   width: 130px;
-  background: url("../img/doge.png");
   background-size: cover;
   background-position: center;
   position: absolute;
