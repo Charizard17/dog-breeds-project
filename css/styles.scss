@@ -39,8 +39,8 @@ $Xsmall-font: 12px;
 
     @media screen and (min-width: 767px) and (max-width: 1023px) {font-size: $large-font;}
     @media screen and (min-width: 600px) and (max-width: 766px) {font-size: $large-font;}
-    @media screen and (min-width: 420px) and (max-width: 599px) {font-size: $big-font;}
-    @media screen and (max-width: 419px) {font-size: $big-font;}
+    @media screen and (min-width: 414px) and (max-width: 599px) {font-size: $big-font;}
+    @media screen and (max-width: 413px) {font-size: $big-font;}
 }
 
 
@@ -79,15 +79,97 @@ $Xsmall-font: 12px;
     gap: 0px 40px;
     padding: 20px 30px;
     height: 800px;
+
+    @media screen and (min-width: 767px) and (max-width: 1023px) {
+        grid-template-columns: 1fr 0fr 3fr 0fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+          ". . item1 . ."
+          "item2 item2 item2 item2 item2";
+        gap: 20px 0px;
+        padding: 20px 30px;
+    }
+    @media screen and (min-width: 600px) and (max-width: 766px) {
+        grid-template-columns: 1fr 0fr 3fr 0fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+          ". . item1 . ."
+          "item2 item2 item2 item2 item2";
+        gap: 20px 0px;
+        padding: 10px 20px;
+    }
+    @media screen and (min-width: 414px) and (max-width: 599px) {
+    
+        grid-template-columns: 0.5fr 0fr 4fr 0fr 0.5fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+          ". . item1 . ."
+          "item2 item2 item2 item2 item2";
+        gap: 10px 0px;
+        padding: 10px 20px;
+        height: 600px;
+    }
+    @media screen and (min-width: 350px) and (max-width: 413px) {
+        grid-template-columns: 0fr 0fr 5fr 0fr 0;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+          ". . item1 . ."
+          "item2 item2 item2 item2 item2";
+        gap: 10px 0px;
+        padding: 5px 5px;
+        height: 500px;
+    }
+    @media screen and (max-width: 349px) {
+        grid-template-columns: 0fr 0fr 5fr 0fr 0;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+          ". . item1 . ."
+          "item2 item2 item2 item2 item2";
+        gap: 10px 0px;
+        padding: 20px 30px;
+        height: 350px;
+    }
 }
 
 .item1 { 
-    grid-area: item1; 
+    grid-area: item1;   
+ 
+
+    @media screen and (min-width: 767px) and (max-width: 1023px) {
+        padding: 0px 0px 30px 0px;
+    }
+    @media screen and (min-width: 600px) and (max-width: 766px) {}
+    @media screen and (min-width: 414px) and (max-width: 599px) {
+        padding: 0px 0px 30px 0px;
+    }
+    @media screen and (min-width: 350px) and (max-width: 413px) {
+        padding: 0px 0px 20px 0px;
+    }
+    @media screen and (max-width: 349px) {
+        padding: 0px 0px 0px 0px;
+    }
 }
 .item2 { 
     grid-area: item2;
     overflow-y: scroll;
     border-bottom: 10px solid $dark-color;
+    
+
+    @media screen and (min-width: 767px) and (max-width: 1023px) {
+        height: 600px;
+    }
+    @media screen and (min-width: 600px) and (max-width: 766px) {
+        height: 600px;
+    }
+    @media screen and (min-width: 414px) and (max-width: 599px) {
+        height: 500px;
+    }
+    @media screen and (min-width: 350px) and (max-width: 413px) {
+        height: 400px;
+    }
+    @media screen and (max-width: 349px) {
+        height: 300px;
+    }
 }
 
 
@@ -98,7 +180,7 @@ $Xsmall-font: 12px;
 
 .table-row-container {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr 5fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr 1fr 4fr 1fr;
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas:
@@ -122,8 +204,8 @@ $Xsmall-font: 12px;
 
     @media screen and (min-width: 767px) and (max-width: 1023px) {font-size: $small-font;}
     @media screen and (min-width: 600px) and (max-width: 766px) {font-size: $small-font;}
-    @media screen and (min-width: 420px) and (max-width: 599px) {font-size: $Xsmall-font;}
-    @media screen and (max-width: 419px) {font-size: $Xsmall-font;}
+    @media screen and (min-width: 414px) and (max-width: 599px) {font-size: $Xsmall-font;}
+    @media screen and (max-width: 413px) {font-size: $Xsmall-font;}
 }
 
 .table-body:nth-child(n) > * {
@@ -157,8 +239,8 @@ $Xsmall-font: 12px;
 
     @media screen and (min-width: 767px) and (max-width: 1023px) {font-size: $middle-font;}
     @media screen and (min-width: 600px) and (max-width: 766px) {font-size: $middle-font;}
-    @media screen and (min-width: 420px) and (max-width: 599px) {font-size: $Xmiddle-font;}
-    @media screen and (max-width: 419px) {font-size: $small-font;}
+    @media screen and (min-width: 414px) and (max-width: 599px) {font-size: $Xmiddle-font;}
+    @media screen and (max-width: 413px) {font-size: $small-font;}
 
     * {
         vertical-align: middle;
@@ -172,8 +254,8 @@ $Xsmall-font: 12px;
 
     @media screen and (mdoain-width: 767px) and (max-width: 1023px) {width: 25px;height: 25px;}
     @media screen and (min-width: 600px) and (max-width: 766px) {width: 25px;height: 25px;}
-    @media screen and (min-width: 420px) and (max-width: 599px) {width: 20px;height: 20px;}
-    @media screen and (max-width: 419px) {width: 20px;height: 20px;}
+    @media screen and (min-width: 414px) and (max-width: 599px) {width: 20px;height: 20px;}
+    @media screen and (max-width: 413px) {width: 20px;height: 20px;}
 
     &:hover {
         -webkit-filter: drop-shadow(5px 5px 10px $light-color);
@@ -201,17 +283,16 @@ $Xsmall-font: 12px;
 }
 
 .table-head-svg {
-    width: 30px;
-    height: 30px;
+    width: $Xlarge-font;
+    height: $Xlarge-font;
     fill: $light-color;
-}
-.table-head-unit {
-    font-size: $middle-font;
 
-    @media screen and (min-width: 767px) and (max-width: 1023px) {font-size: $Xmiddle-font;}
-    @media screen and (min-width: 600px) and (max-width: 766px) {font-size: $Xmiddle-font;}
-    @media screen and (min-width: 420px) and (max-width: 599px) {font-size: $small-font;}
-    @media screen and (max-width: 419px) {font-size: $Xsmall-font;}
+    width: $Xlarge-font; height: $Xlarge-font;
+
+    @media screen and (min-width: 767px) and (max-width: 1023px) {width: $large-font; height: $large-font;}
+    @media screen and (min-width: 600px) and (max-width: 766px) {width: $large-font; height: $large-font;}
+    @media screen and (min-width: 414px) and (max-width: 599px) {width: $big-font; height: $big-font; padding-bottom: 3px;}
+    @media screen and (max-width: 413px) {width: $big-font; height: $big-font; padding-bottom: 3px;}
 }
 
 /* ################### */
@@ -225,8 +306,8 @@ $Xsmall-font: 12px;
 
     @media screen and (min-width: 767px) and (max-width: 1023px) {width: 20px;height: 20px;}
     @media screen and (min-width: 600px) and (max-width: 766px) {width: 20px;height: 20px;}
-    @media screen and (min-width: 420px) and (max-width: 599px) {width: 15px;height: 15px;}
-    @media screen and (max-width: 419px) {width: 15px;height: 15px;}
+    @media screen and (min-width: 414px) and (max-width: 599px) {width: 15px;height: 15px;}
+    @media screen and (max-width: 413px) {width: 15px;height: 15px;}
 }
 
 .show-details {
@@ -290,8 +371,16 @@ $Xsmall-font: 12px;
     @media screen and (min-width: 1025px) and (max-width: 1200px) {font-size: $Xmiddle-font;}
     @media screen and (min-width: 767px) and (max-width: 1023px) {font-size: $Xmiddle-font;}
     @media screen and (min-width: 600px) and (max-width: 766px) {font-size: $small-font;}
-    @media screen and (min-width: 420px) and (max-width: 599px) {font-size: $small-font;}
-    @media screen and (max-width: 419px) {font-size: $Xsmall-font;}
+    @media screen and (min-width: 414px) and (max-width: 599px) {font-size: $small-font;}
+    @media screen and (max-width: 413px) {font-size: $Xsmall-font;}
+}
+
+.search-input {
+    background-color: darken($main-bg-color, 3%);
+    padding: 0px 10px;
+    border-radius: 3px;
+    border: 2px solid $dark-color;
+    color: $dark-color;
 }
 
 .search-button {
@@ -310,81 +399,249 @@ $Xsmall-font: 12px;
 
     @media screen and (min-width: 767px) and (max-width: 1023px) {font-size: $big-font;}
     @media screen and (min-width: 600px) and (max-width: 766px) {font-size: $middle-font;}
-    @media screen and (min-width: 420px) and (max-width: 599px) {font-size: $Xmiddle-font;}
-    @media screen and (max-width: 419px) {font-size: $Xmiddle-font;}
+    @media screen and (min-width: 414px) and (max-width: 599px) {font-size: $Xmiddle-font;}
+    @media screen and (max-width: 413px) {font-size: $Xmiddle-font;}
 }
     
   
 /* ################### */
 /* The Modal (background) */
 .modal-container {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding: 100px 200px;
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
 }
 
-/* ################### */
-/* Modal Content */
-/* modal content class name is modal-content2,
-idk why but when it changed as modal-contant its not working.. */
-.modal-content2 {
-    padding: 30px;
+  
+/* ###################### */
+// ___modal card styling___
+@import url('https://fonts.googleapis.com/css?family=Roboto|Sriracha&display=swap');
+.modal-card {
+    width: 400px;
+    padding: 20px;
     border-radius: 5px;
-    width: 500px;
-    position: absolute;
+    background: $main-bg-color;
+    box-shadow: 5px 5px 10px darken($light-color, 50%);
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    @media screen and (min-width: 1025px) and (max-width: 1200px) { width: 470px; }
-    @media screen and (min-width: 767px) and (max-width: 1023px) { width: 450px; }
-    @media screen and (min-width: 600px) and (max-width: 766px) { 
-        width: 400px; 
+
+
+    @media screen and (min-width: 767px) and (max-width: 1023px) {
+        width: 400px;
         padding: 20px;
     }
-    @media screen and (min-width: 420px) and (max-width: 599px) { 
-        width: 350px; 
+    @media screen and (min-width: 600px) and (max-width: 766px) {
+        width: 370px;
+        padding: 16px;
+    }
+    @media screen and (min-width: 414px) and (max-width: 599px) {
+        width: 320px;
+        padding: 13px;
+    }
+    @media screen and (min-width: 350px) and (max-width: 413px) {
+        width: 300px;
         padding: 10px;
     }
-    @media screen and (min-width: 350px) and (max-width: 419px) { 
-        width: 325px; 
-        padding: 10px;
+    @media screen and (max-width: 349px) {
+        width: 260px;
+        padding: 7px;
     }
-    @media screen and (max-width: 349px) { 
-        width: 300px; 
-        padding: 10px;
+
+    .modal-img {
+        height: 130px;
+        width: 130px;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: -40px;
+        left: -40px;
+        border-radius: 50%;
+        box-shadow: 5px 5px 10px rgba(darken($light-color, 50%), 0.5);
+        transition: box-shadow 555ms;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 15px 15px 10px rgba(darken($light-color, 50%), 0.5);
+        }
+
+        @media screen and (min-width: 767px) and (max-width: 1023px) {
+            height: 130px;
+            width: 130px;
+            top: -40px;
+            left: -40px;
+        }
+        @media screen and (min-width: 600px) and (max-width: 766px) {
+            height: 120px;
+            width: 120px;
+            top: -40px;
+            left: -40px;
+        }
+        @media screen and (min-width: 414px) and (max-width: 599px) {
+            height: 110px;
+            width: 110px;
+            top: -30px;
+            left: -30px;
+        }
+        @media screen and (min-width: 350px) and (max-width: 413px) {
+            height: 100px;
+            width: 100px;
+            top: -25px;
+            left: -20px;
+        }
+        @media screen and (max-width: 349px) {
+            height: 80px;
+            width: 80px;
+            top: -20px;
+            left: -20px;
+        }
+
     }
-    @media screen and (min-width: 351px) and (max-width: 380px) { left: 47% }
-    @media screen and (min-width: 321px) and (max-width: 350px) { left: 45% }
-    @media screen and (max-width: 320px) { left: 40% }
-}
 
-/* The Close Button of Modal*/
-.modal-close {
-    position: absolute;
-    float: right;
-    top: 11px;
-    right: 12px;
-}
 
-.modal-close-svg {
-    width: 15px;
-    height: 15px;
-    color: $dark-color;
-    cursor: pointer;
-    transition: fill 500ms, filter 500ms;
+    .modal-title {
+        //font-family: 'Sriracha', arial, sans-serif;
+        font-weight: 600;
+        font-size: $large-font;
+        text-align: center;
+        margin: 30px 0px 10px 25px;
+        padding: 0px 0px 0px 30px;
+        color: darken($light-color, 50%);
 
-    &:hover, &:focus {
-        fill: darken($light-color, 45%);
-        -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
-        filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+        @media screen and (min-width: 767px) and (max-width: 1023px) {font-size: $large-font;}
+        @media screen and (min-width: 600px) and (max-width: 766px) {font-size: $big-font;}
+        @media screen and (min-width: 414px) and (max-width: 599px) {font-size: $big-font;}
+        @media screen and (max-width: 413px) {font-size: $big-font;}
+    }
+
+
+    .modal-line-infos {
+        width: 100%;
+        border-bottom: 1px solid darken($light-color, 50%);
+        padding: 7px 15px 7px 15px;
+
+        @media screen and (min-width: 767px) and (max-width: 1023px) {
+            padding: 7px 15px 7px 15px;
+        }
+        @media screen and (min-width: 600px) and (max-width: 766px) {
+            padding: 6px 13px 6px 13px;
+        }
+        @media screen and (min-width: 414px) and (max-width: 599px) {
+            padding: 5px 10px 5px 5px;
+        }
+        @media screen and (min-width: 350px) and (max-width: 413px) {
+            padding: 3px 7px 3px 2px;
+        }
+        @media screen and (max-width: 349px) {
+            padding: 1px 7px 1px 0px;
+        }
+    }
+
+
+    .modal-weight-and-height-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: calc(100% - 40px);
+        margin-top: 7px;
+        width: 100%;
+
+        .modal-line-vertical-container {
+            text-align: center;
+            width: 100px;
+            padding: 0px;
+            border-radius: 30px;
+        }
+
+    }
+
+    .modal-line-infos, .modal-weight-and-height-container {
+        font-size: $middle-font;
+
+        @media screen and (min-width: 767px) and (max-width: 1023px) {font-size: $middle-font;}
+        @media screen and (min-width: 600px) and (max-width: 766px) {font-size: $Xmiddle-font;}
+        @media screen and (min-width: 414px) and (max-width: 599px) {font-size: $Xmiddle-font;}
+        @media screen and (max-width: 413px) {font-size: $small-font;}
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $dark-color;
+        color: $light-color;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        height: 50px;
+        padding: 16px 20px 0px 20px;
+        margin-left: -20px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+
+        @media screen and (min-width: 767px) and (max-width: 1023px) {
+            margin-left: -20px;
+        }
+        @media screen and (min-width: 600px) and (max-width: 766px) {
+            margin-left: -16px;
+            height: 45px;
+            padding: 17px 20px 0px 20px;
+        }
+        @media screen and (min-width: 414px) and (max-width: 599px) {
+            margin-left: -13px;
+            height: 40px;
+            padding: 17px 20px 0px 20px;
+        }
+        @media screen and (min-width: 350px) and (max-width: 413px) {
+            margin-left: -10px;
+            height:35px;
+            padding: 16px 20px 0px 20px;
+        }
+        @media screen and (max-width: 349px) {
+            margin-left: -7px;
+            height: 35px;
+            padding: 16px 20px 0px 20px;
+        }
+
+        
+        div {
+            display: flex;
+            justify-content: center;
+            font-size: $middle-font;
+            
+            p:first-child{
+                margin-right: 10px;
+                border-right: 4px solid $main-bg-color;
+                padding-right: 10px;
+
+                @media screen and (min-width: 767px) and (max-width: 1023px) {
+                    border-right: 4px solid $main-bg-color;
+                }
+                @media screen and (min-width: 600px) and (max-width: 766px) {
+                    border-right: 3px solid $main-bg-color;
+                }
+                @media screen and (min-width: 414px) and (max-width: 599px) {
+                    border-right: 2px solid $main-bg-color;
+                }
+                @media screen and (max-width: 413px) {
+                    border-right: 2px solid $main-bg-color;
+                }
+            }
+
+            @media screen and (min-width: 767px) and (max-width: 1023px) {font-size: $middle-font;}
+            @media screen and (min-width: 600px) and (max-width: 766px) {font-size: $Xmiddle-font;}
+            @media screen and (min-width: 414px) and (max-width: 599px) {font-size: $Xmiddle-font;}
+            @media screen and (max-width: 413px) {font-size: $small-font;}
+        }
     }
 }
 
@@ -417,224 +674,46 @@ idk why but when it changed as modal-contant its not working.. */
     grid-template-rows: 1fr;
     gap: 0px 0px;
     grid-template-areas:
-      "modal-line-left modal-line-right";
-  }
-  
-  .modal-line-left { 
-      grid-area: modal-line-left; 
-      font-weight: 600;
-      text-transform: uppercase;
-      color: darken($light-color, 55%);
-    }
-  
-  .modal-line-right { 
-      grid-area: modal-line-right; 
-    }
-  
+        "modal-line-left modal-line-right";
+}
 
-//test modal card
-@import url('https://fonts.googleapis.com/css?family=Roboto|Sriracha&display=swap');
-
-$randomNumber: random(5);
-  
-@function randomNum($min, $max) {
-    $rand: random();
-    $randomNum: $min + floor($rand * (($max - $min) + 1));
-  
-    @return $randomNum;
-  }
-  
-
-#modal-card {
-  //height: 500px;
-  width: 400px;
-  padding: 20px;
-  border-radius: 5px;
-  background: $main-bg-color;
-  position: relative;
-  box-shadow: 5px 5px 10px darken($light-color, 50%);
-  .modal-img {
-    height: 130px;
-    width: 130px;
-    //background: url('../img/dog-images/dog-img-#{randomNum(1,6)}.png');
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: -40px;
-    left: -40px;
-    border-radius: 50%;
-    box-shadow: 5px 5px 10px rgba(darken($light-color, 50%), 0.5);
-    transition: box-shadow 555ms;
-    cursor: pointer;
-
-    &:hover {
-        box-shadow: 15px 15px 10px rgba(darken($light-color, 50%), 0.5);
-    }
-  }
-  .title {
-    //font-family: 'Sriracha', arial, sans-serif;
+.modal-line-left { 
+    grid-area: modal-line-left; 
     font-weight: 600;
-    font-size: $large-font;
-    text-align: center;
-    margin: 30px 0px 10px 20px;
-    padding: 0px 0px 0px 20px;
-    color: darken($light-color, 50%);
-  }
-  .modal-line-infos{
-    width: 100%;
-    border-bottom: 1px solid darken($light-color, 50%);
-    //border-radius: 30px;
-    padding: 7px 15px;
-  }
-  .modal-weight-and-height-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: calc(100% - 40px);
-    margin-top: 7px;
-    width: 100%;
+    text-transform: uppercase;
+    color: darken($light-color, 55%);
+}
 
-    .modal-line-vertical-container {
-      text-align: center;
-      width: 100px;
-      padding: 0px;
-      // border: 1px solid darken($light-color, 50%);
-      border-radius: 30px;
-    //   &:hover {
-    //     background: $light-color;
-    //     color: $dark-color;
-    //     cursor: pointer;
-    //   }
-    }
-  }
+.modal-line-right {
+    grid-area: modal-line-right; 
+    padding-left: 10px;
+}
 
-  footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: $dark-color;
-    color: $light-color;
-    width: 100%;
+/* The Close Button of Modal*/
+.modal-close {
     position: absolute;
-    bottom: 0;
-    height: 50px;
-    padding: 13px 20px 0px 20px;
-    margin-left: -20px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    float: right;
+    top: 11px;
+    right: 12px;
+}
 
-    div {
-      display: flex;
-      p:first-child{
-        margin-right: 10px;
-        border-right: 4px solid white;
-        padding-right: 10px;
-      }
+.modal-close-svg {
+    width: 15px;
+    height: 15px;
+    color: $dark-color;
+    cursor: pointer;
+    transition: fill 500ms, filter 500ms;
+
+    &:hover, &:focus {
+        fill: darken($light-color, 45%);
+        -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+        filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
     }
-  }
 }
 
 
-// media queries for mobile responsiveness
-@media screen and (min-width: 767px) and (max-width: 1023px) {
-    .main-container {
-        display: grid;
-        grid-template-columns: 1fr 0fr 3fr 0fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-          ". . item1 . ."
-          "item2 item2 item2 item2 item2";
-        gap: 20px 0px;
-        padding: 20px 30px;
-    }
-    .item1 {
-        padding: 0px 0px 30px 0px;
-    }
-
-    .item2 {
-        height: 600px;
-    }
-}
-
-@media screen and (min-width: 600px) and (max-width: 766px) {
-    .main-container {
-        display: grid;
-        grid-template-columns: 1fr 0fr 3fr 0fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-          ". . item1 . ."
-          "item2 item2 item2 item2 item2";
-        gap: 20px 0px;
-        padding: 10px 20px;
-    }
-
-    .item2 {
-        height: 600px;
-    }
-}
-
-@media screen and (min-width: 420px) and (max-width: 599px) {
-    .main-container {
-        display: grid;
-        grid-template-columns: 0.5fr 0fr 4fr 0fr 0.5fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-          ". . item1 . ."
-          "item2 item2 item2 item2 item2";
-        gap: 10px 0px;
-        padding: 10px 20px;
-        height: 600px;
-    }
-
-    .item1 {
-        padding: 0px 0px 30px 0px;
-    }
-    
-    .item2 {
-        height: 500px;
-    }
-}
-
-@media screen and (min-width: 350px) and (max-width: 419px) {
-    .main-container {
-        display: grid;
-        grid-template-columns: 0fr 0fr 5fr 0fr 0;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-          ". . item1 . ."
-          "item2 item2 item2 item2 item2";
-        gap: 10px 0px;
-        padding: 5px 5px;
-        height: 500px;
-    }
-
-    .item1 {
-        padding: 0px 0px 20px 0px;
-    }
-    
-    .item2 {
-        height: 400px;
-    }
-}
-
-@media screen and (max-width: 349px) {
-    .main-container {
-        display: grid;
-        grid-template-columns: 0fr 0fr 5fr 0fr 0;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-          ". . item1 . ."
-          "item2 item2 item2 item2 item2";
-        gap: 10px 0px;
-        padding: 20px 30px;
-        height: 350px;
-    }
-
-    .item1 {
-        padding: 0px 0px 0px 0px;
-    }
-    
-    .item2 {
-        height: 300px;
-    }
-}
+@media screen and (min-width: 767px) and (max-width: 1023px) {}
+@media screen and (min-width: 600px) and (max-width: 766px) {}
+@media screen and (min-width: 414px) and (max-width: 599px) {}
+@media screen and (min-width: 350px) and (max-width: 413px) {}
+@media screen and (max-width: 349px) {}
