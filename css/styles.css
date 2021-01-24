@@ -1,10 +1,12 @@
 /* colors */
 /* font sizes */
+/* font-family import */
 /* ################### */
 /* main page style */
 @import url("https://fonts.googleapis.com/css?family=Roboto|Sriracha&display=swap");
 .body {
   background-color: #EDF5FC;
+  font-family: "Quicksand", sans-serif;
 }
 
 /* ################### */
@@ -67,6 +69,30 @@
   background: transparent;
 }
 
+.just-a-text {
+  font-size: 17px;
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .just-a-text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 766px) {
+  .just-a-text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 414px) and (max-width: 599px) {
+  .just-a-text {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 413px) {
+  .just-a-text {
+    font-size: 12px;
+  }
+}
+
 /* ################### */
 /* grid arrangement */
 .main-container {
@@ -76,7 +102,7 @@
   grid-template-areas: "item1 item1 item2 item2 item2 item2 item2";
   gap: 0px 40px;
   padding: 20px 30px;
-  height: 800px;
+  height: 92vh;
 }
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .main-container {
@@ -103,7 +129,6 @@
     grid-template-areas: ". . item1 . ." "item2 item2 item2 item2 item2";
     gap: 10px 0px;
     padding: 10px 20px;
-    height: 600px;
   }
 }
 @media screen and (min-width: 350px) and (max-width: 413px) {
@@ -113,7 +138,7 @@
     grid-template-areas: ". . item1 . ." "item2 item2 item2 item2 item2";
     gap: 10px 0px;
     padding: 5px 5px;
-    height: 500px;
+    height: 90vh;
   }
 }
 @media screen and (max-width: 349px) {
@@ -122,13 +147,14 @@
     grid-template-rows: 1fr 1fr;
     grid-template-areas: ". . item1 . ." "item2 item2 item2 item2 item2";
     gap: 10px 0px;
-    padding: 20px 30px;
-    height: 350px;
+    padding: 5px 5px;
+    height: 90vh;
   }
 }
 
 .item1 {
   grid-area: item1;
+  display: block;
 }
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .item1 {
@@ -153,6 +179,7 @@
 
 .item2 {
   grid-area: item2;
+  display: block;
   overflow-y: scroll;
   border-bottom: 10px solid #272D2D;
 }
@@ -161,24 +188,19 @@
     height: 600px;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 766px) {
-  .item2 {
-    height: 600px;
-  }
-}
 @media screen and (min-width: 414px) and (max-width: 599px) {
   .item2 {
-    height: 500px;
+    height: 380px;
   }
 }
 @media screen and (min-width: 350px) and (max-width: 413px) {
   .item2 {
-    height: 400px;
+    height: 330px;
   }
 }
-@media screen and (max-width: 349px) {
+@media screen and (min-width: 350px) and (max-width: 413px) and (min-height: 800px) {
   .item2 {
-    height: 300px;
+    height: 450px;
   }
 }
 
@@ -383,6 +405,35 @@
     width: 20px;
     height: 20px;
     padding-bottom: 3px;
+  }
+}
+
+.table-head-unit {
+  font-size: 17px;
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .table-head-unit {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .table-head-unit {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 766px) {
+  .table-head-unit {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 414px) and (max-width: 599px) {
+  .table-head-unit {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 413px) {
+  .table-head-unit {
+    font-size: 12px;
   }
 }
 
