@@ -12,10 +12,6 @@ $Xmiddle-font: 15px;
 $small-font: 14px;
 $Xsmall-font: 12px;
 
-/* font-family import */
-//@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
-
-
 /* ################### */
 /* main page style */
 .body {
@@ -57,6 +53,7 @@ $Xsmall-font: 12px;
 
 .text-left {
     text-align: left;
+    padding-left: 10px;
 }
 
 .invisible {
@@ -80,6 +77,10 @@ $Xsmall-font: 12px;
     @media screen and (max-width: 413px) {font-size: $Xsmall-font;}
 }
 
+.no-border {
+    border: none !important;
+}
+
 
 /* ################### */
 /* grid arrangement */
@@ -89,8 +90,8 @@ $Xsmall-font: 12px;
     grid-template-rows: 1fr;
     grid-template-areas:
     "item1 item1 item2 item2 item2 item2 item2";
-    gap: 0px 40px;
-    padding: 20px 30px;
+    gap: 0px 20px;
+    padding: 20px 20px;
     height: 92vh;
 
     @media screen and (min-width: 767px) and (max-width: 1023px) {
@@ -171,9 +172,9 @@ $Xsmall-font: 12px;
     @media screen and (min-width: 767px) and (max-width: 1023px) {
         height: 600px;
     }
-    // @media screen and (min-width: 600px) and (max-width: 766px) {
-    //     height: 600px;
-    // }
+    @media screen and (min-width: 600px) and (max-width: 766px) {
+        height: 450px;
+    }
     @media screen and (min-width: 414px) and (max-width: 599px) {
         height: 380px;
     }
@@ -184,9 +185,9 @@ $Xsmall-font: 12px;
             height: 450px;
         }
     }
-    // @media screen and (max-width: 349px) {
-    //     height: 300px;
-    // }
+    @media screen and (max-width: 349px) {
+        height: 265px;
+    }
 }
 
 
@@ -203,12 +204,17 @@ $Xsmall-font: 12px;
     grid-template-areas:
         "table-col1 table-col2 table-col3 table-col4 table-col5 table-col6";
     padding: 5px 0px;
+
+
+    @media screen and  (max-width: 599px) {
+        width: 550px;
+    }
 }
   
 .table-col1 { grid-area: table-col1; }
-.table-col2 { grid-area: table-col2; }
-.table-col3 { grid-area: table-col3; }
-.table-col4 { grid-area: table-col4; }
+.table-col2 { grid-area: table-col2; border-right: 1px solid darken($main-bg-color, 10%);}
+.table-col3 { grid-area: table-col3; border-right: 1px solid darken($main-bg-color, 10%);}
+.table-col4 { grid-area: table-col4; border-right: 1px solid darken($main-bg-color, 10%);}
 .table-col5 { grid-area: table-col5; }
 .table-col6 { grid-area: table-col6; }
 
@@ -244,7 +250,6 @@ $Xsmall-font: 12px;
     position: sticky;
     left:0;
     top:0px;
-    width:100%;
     margin-bottom: 10px;
     border-radius: 5x 5px 0px 0px;
 }
