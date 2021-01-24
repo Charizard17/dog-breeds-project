@@ -73,20 +73,47 @@
         $dogBreedArray = array_reverse($dogBreedArray);
     }
 
-    // sort by weight value low->high / high->low
-    // $weightArray = array();
-    // for ($t = 0; $t < count($dogBreedArray); ++$t) {
-    //     //if ($dogBreedArray[$t]['minWeight']) {
-    //         $weightArray[] = array($dogBreedArray[$t]['id'] => $dogBreedArray[$t]['minWeight']);
-    //     // } else {
-    //     //     $weightArray[] = array($dogBreedArray[$t]['id'] => $dogBreedArray[$t]['maxWeight']);
-    //     // }
-    // }
 
-    // if ($_COOKIE['th-weight'] == 'true') {
+    $dogBreedArray = array_map(function($element) {
+        return (object) $element;
+    }, $dogBreedArray);
 
-    //     // usort($dogBreedArray, function($first,$second){
-    //     //     return $first->number < $second->number;
-    //     // });
-    //     //var_dump($weightArray[0]);
-    // }
+
+    // main array sort by weight
+    if (isset($_COOKIE['th-weight']) && $_COOKIE['th-weight'] == 'minMinth-weight') {
+        usort($dogBreedArray, function($object1, $object2) {
+            return $object1->minWeight > $object2->minWeight; 
+        });
+    } elseif (isset($_COOKIE['th-weight']) && $_COOKIE['th-weight'] == 'minMaxth-weight') {
+        usort($dogBreedArray, function($object1, $object2) {
+            return $object1->minWeight < $object2->minWeight; 
+        });
+    } elseif (isset($_COOKIE['th-weight']) && $_COOKIE['th-weight'] == 'maxMinth-weight') {
+        usort($dogBreedArray, function($object1, $object2) {
+            return $object1->maxWeight > $object2->maxWeight; 
+        });
+    } elseif (isset($_COOKIE['th-weight']) && $_COOKIE['th-weight'] == 'maxMaxth-weight') {
+        usort($dogBreedArray, function($object1, $object2) {
+            return $object1->maxWeight < $object2->maxWeight; 
+        });
+    }
+
+
+    // main array sort by height
+    if (isset($_COOKIE['th-height']) && $_COOKIE['th-height'] == 'minMinth-height') {
+        usort($dogBreedArray, function($object1, $object2) {
+            return $object1->minHeight > $object2->minHeight; 
+        });
+    } elseif (isset($_COOKIE['th-height']) && $_COOKIE['th-height'] == 'minMaxth-height') {
+        usort($dogBreedArray, function($object1, $object2) {
+            return $object1->minHeight < $object2->minHeight; 
+        });
+    } elseif (isset($_COOKIE['th-height']) && $_COOKIE['th-height'] == 'maxMinth-height') {
+        usort($dogBreedArray, function($object1, $object2) {
+            return $object1->maxHeight > $object2->maxHeight; 
+        });
+    } elseif (isset($_COOKIE['th-height']) && $_COOKIE['th-height'] == 'maxMaxth-height') {
+        usort($dogBreedArray, function($object1, $object2) {
+            return $object1->maxHeight < $object2->maxHeight; 
+        });
+    }

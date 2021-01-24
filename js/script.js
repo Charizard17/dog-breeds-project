@@ -99,17 +99,15 @@ if (getCookie("th-bookmark") == "true") {
   document.getElementById("th-bookmark").classList.add("th-bookmark-active");
 }
 
+//////////////////////////////////////////////////////////
+
 // select table head elements by id
 var thBookmark = document.getElementById("th-bookmark");
 var thName = document.getElementById("th-name");
-var thWeight = document.getElementById("th-weight");
-var thHeight = document.getElementById("th-height");
 
 // append onclick function to table head elements
 thBookmark.onclick = createAndUpdateCookie;
 thName.onclick = createAndUpdateCookie;
-thWeight.onclick = createAndUpdateCookie;
-thHeight.onclick = createAndUpdateCookie;
 
 // create and update cookie by clicked element
 function createAndUpdateCookie(element) {
@@ -131,7 +129,47 @@ function createAndUpdateCookie(element) {
   window.location.reload();
 }
 
+//////////////////////////////////////////////////////////
 
+// select table head elements by id
+var thWeight = document.getElementById("th-weight");
+var thHeight = document.getElementById("th-height");
+
+// append onclick function to table head elements
+thWeight.onclick = createAndUpdateCookieByWeightAndHeight;
+thHeight.onclick = createAndUpdateCookieByWeightAndHeight;
+
+
+// create and update cookie by clicked elements weight and height
+function createAndUpdateCookieByWeightAndHeight(element) {
+  elementID = element.path[0].id;
+  // Check, if cookie already exists
+  if (document.cookie.indexOf(elementID) == -1) {
+    // cookie doesn't exist
+    document.cookie = elementID+"=false"+elementID+"; path=/;";
+  } else {
+    // cookie exists
+    let getcookie = getCookie(elementID);
+    // turn around true/false of the cookie
+    if (getcookie == "false"+elementID) {
+      document.cookie = elementID+"=true"+elementID+"; path=/;";
+    } else if (getcookie == "true"+elementID) {
+      document.cookie = elementID+"=minMin"+elementID+"; path=/;";
+    } else if (getcookie == "minMin"+elementID) {
+      document.cookie = elementID+"=minMax"+elementID+"; path=/;";
+    } else if (getcookie == "minMax"+elementID) {
+      document.cookie = elementID+"=maxMin"+elementID+"; path=/;";
+    } else if (getcookie == "maxMin"+elementID) {
+      document.cookie = elementID+"=maxMax"+elementID+"; path=/;";
+    } else if (getcookie == "maxMax"+elementID) {
+      document.cookie = elementID+"=false"+elementID+"; path=/;";
+    }
+  }
+  window.location.reload();
+}
+
+
+// change arrow up to down/down to up when sort function used
 var arrowUp = document.getElementById("th-name-arrow-up");
 var arrowDown = document.getElementById("th-name-arrow-down");
 if (getCookie("th-name") == "true") {
