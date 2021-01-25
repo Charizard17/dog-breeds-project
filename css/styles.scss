@@ -422,7 +422,8 @@ $Xsmall-font: 12px;
 
     &:hover {
         text-decoration: none;
-        color: darken($light-color, 20%);
+        color: darken($light-color, 30%);
+        background-color: lighten($dark-color, 5%);
     }
 }
 
@@ -488,7 +489,7 @@ $Xsmall-font: 12px;
         padding: 7px;
     }
 
-    .modal-img {
+    .modal-img img {
         height: 130px;
         width: 130px;
         background-size: cover;

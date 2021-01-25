@@ -621,7 +621,8 @@
 }
 .search-button:hover {
   text-decoration: none;
-  color: #2df9f4;
+  color: #06ede6;
+  background-color: #333b3b;
 }
 
 .search-header {
@@ -704,7 +705,7 @@
     padding: 7px;
   }
 }
-.modal-card .modal-img {
+.modal-card .modal-img img {
   height: 130px;
   width: 130px;
   background-size: cover;
@@ -717,11 +718,11 @@
   transition: box-shadow 555ms;
   cursor: pointer;
 }
-.modal-card .modal-img:hover {
+.modal-card .modal-img img:hover {
   box-shadow: 15px 15px 10px rgba(4, 137, 134, 0.5);
 }
 @media screen and (min-width: 767px) and (max-width: 1023px) {
-  .modal-card .modal-img {
+  .modal-card .modal-img img {
     height: 130px;
     width: 130px;
     top: -40px;
@@ -729,7 +730,7 @@
   }
 }
 @media screen and (min-width: 600px) and (max-width: 766px) {
-  .modal-card .modal-img {
+  .modal-card .modal-img img {
     height: 120px;
     width: 120px;
     top: -40px;
@@ -737,7 +738,7 @@
   }
 }
 @media screen and (min-width: 414px) and (max-width: 599px) {
-  .modal-card .modal-img {
+  .modal-card .modal-img img {
     height: 110px;
     width: 110px;
     top: -30px;
@@ -745,7 +746,7 @@
   }
 }
 @media screen and (min-width: 350px) and (max-width: 413px) {
-  .modal-card .modal-img {
+  .modal-card .modal-img img {
     height: 100px;
     width: 100px;
     top: -25px;
@@ -753,7 +754,7 @@
   }
 }
 @media screen and (max-width: 349px) {
-  .modal-card .modal-img {
+  .modal-card .modal-img img {
     height: 80px;
     width: 80px;
     top: -20px;
