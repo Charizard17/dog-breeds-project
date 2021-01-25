@@ -73,7 +73,10 @@
     if (isset($_COOKIE['th-name']) && $_COOKIE['th-name'] == 'true') {
         $dogBreedArray = array_reverse($dogBreedArray);
     }
+    
 
+    // before sorting by weight and height, we need to change
+    // type of our main array ///////////////////////////////
     // turning our array of arrays to array of objects
     $dogBreedArray = array_map(function($element) {
         return (object) $element;
@@ -99,7 +102,6 @@
         });
     }
 
-
     // main array sort by height
     if (isset($_COOKIE['th-height']) && $_COOKIE['th-height'] == 'minMinth-height') {
         usort($dogBreedArray, function($object1, $object2) {
@@ -119,6 +121,8 @@
         });
     }
 
+    // after sorting by weight and height, we need to change
+    // type of our main array again ////////////////////////
     // turning back our array of objects to array of arrays
     $dogBreedArray = array_map(function($element) {
         return (array) $element;
