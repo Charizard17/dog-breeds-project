@@ -15,20 +15,66 @@
 }
 
 .navbar-link {
+    vertical-align: middle;
+    display: inline-block;
+    height: 65px;
     color: $light-color;
+    fill: $light-color;
     text-decoration: none;
     font-size: $Xlarge-font;
-    transition: color 500ms;
+    transition: color 500ms, fill 500ms;
+    padding: 5px 0px 5px 15px;
+    cursor: pointer;
+
 
     &:hover {
         text-decoration: none;
         color: darken($light-color, 20%);
+        fill: darken($light-color, 20%);
     }
 
-    @media screen and (min-width: 767px) and (max-width: 1023px) {font-size: $large-font;}
-    @media screen and (min-width: 600px) and (max-width: 766px) {font-size: $large-font;}
-    @media screen and (min-width: 414px) and (max-width: 599px) {font-size: $big-font;}
-    @media screen and (max-width: 413px) {font-size: $big-font;}
+    @media screen and (min-width: 767px) and (max-width: 1023px) {
+        font-size: $large-font;
+        height: 55px;
+        padding: 5px 0px 5px 15px;
+    }
+    @media screen and (min-width: 600px) and (max-width: 766px) {
+        font-size: $large-font;
+        height: 55px;
+        padding: 5px 0px 5px 15px;
+    }
+    @media screen and (min-width: 414px) and (max-width: 599px) {
+        font-size: $big-font;
+        height: 45px;
+        padding: 2px 0px 5px 8px;
+    }
+    @media screen and (max-width: 413px) {
+        font-size: $big-font;
+        height: 45px;
+        padding: 2px 0px 5px 8px;
+    }
+}
+
+.navbar-icon, .navbar-text {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.navbar-icon {
+    width: $Xlarge-font*1.5;
+
+    @media screen and (min-width: 767px) and (max-width: 1023px) {
+        width: $Xlarge-font*1.3;
+    }
+    @media screen and (min-width: 600px) and (max-width: 766px) {
+        width: $Xlarge-font*1.3;
+    }
+    @media screen and (min-width: 414px) and (max-width: 599px) {
+        width: $Xlarge-font*1.1;
+    }
+    @media screen and (max-width: 413px) {
+        width: $Xlarge-font*1.1;
+    }
 }
 
 
@@ -297,8 +343,6 @@
     width: $Xlarge-font;
     height: $Xlarge-font;
     fill: $light-color;
-
-    width: $Xlarge-font; height: $Xlarge-font;
 
     @media screen and (min-width: 767px) and (max-width: 1023px) {width: $large-font; height: $large-font;}
     @media screen and (min-width: 600px) and (max-width: 766px) {width: $large-font; height: $large-font;}

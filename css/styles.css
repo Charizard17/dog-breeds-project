@@ -15,33 +15,77 @@
 }
 
 .navbar-link {
+  vertical-align: middle;
+  display: inline-block;
+  height: 65px;
   color: #90FCF9;
+  fill: #90FCF9;
   text-decoration: none;
   font-size: 30px;
-  transition: color 500ms;
+  transition: color 500ms, fill 500ms;
+  padding: 5px 0px 5px 15px;
+  cursor: pointer;
 }
 .navbar-link:hover {
   text-decoration: none;
   color: #2df9f4;
+  fill: #2df9f4;
 }
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .navbar-link {
     font-size: 25px;
+    height: 55px;
+    padding: 5px 0px 5px 15px;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 766px) {
   .navbar-link {
     font-size: 25px;
+    height: 55px;
+    padding: 5px 0px 5px 15px;
   }
 }
 @media screen and (min-width: 414px) and (max-width: 599px) {
   .navbar-link {
     font-size: 20px;
+    height: 45px;
+    padding: 2px 0px 5px 8px;
   }
 }
 @media screen and (max-width: 413px) {
   .navbar-link {
     font-size: 20px;
+    height: 45px;
+    padding: 2px 0px 5px 8px;
+  }
+}
+
+.navbar-icon, .navbar-text {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.navbar-icon {
+  width: 45px;
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .navbar-icon {
+    width: 39px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 766px) {
+  .navbar-icon {
+    width: 39px;
+  }
+}
+@media screen and (min-width: 414px) and (max-width: 599px) {
+  .navbar-icon {
+    width: 33px;
+  }
+}
+@media screen and (max-width: 413px) {
+  .navbar-icon {
+    width: 33px;
   }
 }
 
@@ -400,8 +444,6 @@
   width: 30px;
   height: 30px;
   fill: #90FCF9;
-  width: 30px;
-  height: 30px;
 }
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .table-head-svg {
