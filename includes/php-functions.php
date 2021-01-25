@@ -74,7 +74,7 @@
         $dogBreedArray = array_reverse($dogBreedArray);
     }
 
-
+    // turning our array of arrays to array of objects
     $dogBreedArray = array_map(function($element) {
         return (object) $element;
     }, $dogBreedArray);
@@ -118,3 +118,8 @@
             return $object1->maxHeight < $object2->maxHeight; 
         });
     }
+
+    // turning back our array of objects to array of arrays
+    $dogBreedArray = array_map(function($element) {
+        return (array) $element;
+    }, $dogBreedArray);
