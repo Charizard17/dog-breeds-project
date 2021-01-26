@@ -209,6 +209,82 @@ modalImg.onclick = function() {
   dogBark.play();
 }
 
-// random dog image to modal image
-// var randomNumber = Math.floor(Math.random() * 9);
-// document.getElementById("modal-img").style.backgroundImage = "url('../img/dog-images/dog-img-"+ randomNumber +".png')"
+
+// get content of temperament class elements
+//ar temp = document.getElementsByClassName("temperament");
+
+// 
+// var test = temp[0].innerHTML.split(', ');
+
+// temp[0].onclick = function() {
+//   console.log(test);
+//   console.log(test[0]);
+// }
+
+
+// $(".clickable").click(function(e) {
+//   s = window.getSelection();
+//   var range = s.getRangeAt(0);
+//   var node = s.anchorNode;
+//   while (range.toString().indexOf(' ') != 0) {
+//     range.setStart(node, (range.startOffset - 1));
+//   }
+//   range.setStart(node, range.startOffset + 1);
+//   do {
+//     range.setEnd(node, range.endOffset + 1);
+
+//   }
+//   while (range.toString().indexOf(' ') == -1 && range.toString().trim() != '');
+//   var str = range.toString().trim();
+//   console.log(str);
+// });
+
+
+// autoSelectText = () => {
+//   const s = window.getSelection();
+//   var range = s.getRangeAt(0);
+//   var node = s.anchorNode;
+
+//   while (range.toString().indexOf(' ') != 0) {
+//     range.setStart(node, range.startOffset - 1);
+//   }
+
+//   range.setStart(node, range.startOffset + 1);
+
+//   while (
+//     range.toString().indexOf(' ') == -1 &&
+//     range.toString().trim() != '' &&
+//     range.endOffset + 1 < s.baseNode.wholeText.length
+//   ) {
+//     range.setEnd(node, range.endOffset + 1);
+//   }
+
+//   // remove extra space
+//   range.setEnd(node, range.endOffset - 1);
+
+//   // remove last selection if is not letter or number
+//   const lastChar = range.toString().charAt(range.toString().length - 1);
+//   if (!/^[a-zA-Z0-9]*$/.test(lastChar)) {
+//     range.setEnd(node, range.endOffset - 1);
+//   }
+//   return range.toString().trim();
+// };
+
+var temperamentArray = [];
+
+// find elements
+$(function () {
+  $('.temperament').each(function (index, ele) {
+      $(ele).html($(ele).text().split(', ').map(function (word) {
+          return ['<span class=\'clickable\'>', word, '</span>'].join('')
+      }).join(',&nbsp;'))
+
+  })
+  $('.clickable').click(function (e) {
+      //console.log(this.innerHTML);
+      temperamentArray.unshift(this.innerHTML);
+      console.log(temperamentArray);
+      document.getElementById("temperament").value = temperamentArray;
+  })
+})
+

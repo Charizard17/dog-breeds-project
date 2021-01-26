@@ -87,7 +87,7 @@
 
 .text-left {
     text-align: left;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 .invisible {
@@ -394,6 +394,20 @@
 
 .favourite-star-active {
     background-image: url("../img/star-filled.png");
+}
+
+.temperament {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.clickable {
+    cursor: pointer;
+    
+    &:hover {
+        background-color: lighten($light-color, 10%);
+    }
 }
 
 /* ################### */
