@@ -78,14 +78,19 @@ function myFavourite(elem) {
     elem.classList.remove("favourite-star-active");
     alertify.error('Dog breed removed from favourites.');
     }
+    elem.title="Add to favourites";
   } else {
     bookmarks.unshift(myID);
     elem.classList.add("favourite-star-active");
     alertify.success('Dog breed added to favourites.');
+    elem.title="Remove from favourites";
   }
   bookmarks.sort(function(a, b){return a-b});
   cookieBookmark = JSON.stringify(bookmarks);
   document.cookie = "bookmarks="+cookieBookmark+"; path=/;";
+
+  console.log(elem);
+  console.log(myID);
 }
 // to bookmark - change background image if bookmark array include from the beginning
 for (var j = 0; j < bookmarks.length; ++j) {
