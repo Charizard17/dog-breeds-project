@@ -174,7 +174,7 @@ function createAndUpdateCookieByWeightAndHeight(element) {
 }
 
 
-// change arrow up to down/down to up when sort function used
+// change arrow up to down/down to up when sort function used in name
 var arrowUp = document.getElementById("th-name-arrow-up");
 var arrowDown = document.getElementById("th-name-arrow-down");
 if (getCookie("th-name") == "true") {
@@ -184,6 +184,21 @@ if (getCookie("th-name") == "true") {
   arrowDown.classList.remove("arrow-active");
   arrowUp.classList.add("arrow-active");
 }
+
+// change arrow up to down/down to up when sort function used in weight and height
+function changeArrowWeightAndHeight(elem) {
+  var arrowUp = document.getElementById("th-"+ elem +"-arrow-up");
+  var arrowDown = document.getElementById("th-"+ elem +"-arrow-down");
+  if ((getCookie("th-"+ elem) == "minMinth-"+ elem) || (getCookie("th-"+ elem) == "maxMinth-"+ elem)) {
+    arrowUp.classList.remove("arrow-active");
+    arrowDown.classList.add("arrow-active");
+  } else if ((getCookie("th-"+ elem) == "minMaxth-"+ elem) || (getCookie("th-"+ elem) == "maxMaxth-"+ elem)) {
+    arrowDown.classList.remove("arrow-active");
+    arrowUp.classList.add("arrow-active");
+  }
+}
+changeArrowWeightAndHeight("weight");
+changeArrowWeightAndHeight("height");
 
 
 // random dog bark after clicking modal image

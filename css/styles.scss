@@ -350,16 +350,6 @@
     @media screen and (max-width: 413px) {width: $big-font; height: $big-font; padding-bottom: 3px;}
 }
 
-.table-head-unit {
-    font-size: $middle-font;
-
-    @media screen and (min-width: 1025px) and (max-width: 1200px) {font-size: $Xmiddle-font;}
-    @media screen and (min-width: 767px) and (max-width: 1023px) {font-size: $Xmiddle-font;}
-    @media screen and (min-width: 600px) and (max-width: 766px) {font-size: $small-font;}
-    @media screen and (min-width: 414px) and (max-width: 599px) {font-size: $small-font;}
-    @media screen and (max-width: 413px) {font-size: $Xsmall-font;}
-}
-
 /* ################### */
 /* table row image style */
 .table-row-input-style {
