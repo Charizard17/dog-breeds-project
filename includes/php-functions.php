@@ -42,6 +42,7 @@
         }
     }
 
+
     // show details if cookie exist
     $dogBreedDetails = array();
     $index0 = "";
