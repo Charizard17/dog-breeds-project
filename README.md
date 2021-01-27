@@ -1,4 +1,4 @@
 # dog-breeds-project
 
 # run live
-https://dog-breedss.herokuapp.com/
+https://dogbreedss.herokuapp.com/
