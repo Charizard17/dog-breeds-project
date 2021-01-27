@@ -283,8 +283,8 @@ $(function () {
   $('.clickable').click(function (e) {
       //console.log(this.innerHTML);
       temperamentArray.unshift(this.innerHTML);
-      console.log(temperamentArray);
-      document.getElementById("temperament").value = temperamentArray;
+      //console.log(temperamentArray);
+      document.getElementById("temperament").value = temperamentArray[0];
   })
 })
 
