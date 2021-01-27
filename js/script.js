@@ -88,9 +88,6 @@ function myFavourite(elem) {
   bookmarks.sort(function(a, b){return a-b});
   cookieBookmark = JSON.stringify(bookmarks);
   document.cookie = "bookmarks="+cookieBookmark+"; path=/;";
-
-  console.log(elem);
-  console.log(myID);
 }
 // to bookmark - change background image if bookmark array include from the beginning
 for (var j = 0; j < bookmarks.length; ++j) {
@@ -210,69 +207,10 @@ modalImg.onclick = function() {
 }
 
 
-// get content of temperament class elements
-//ar temp = document.getElementsByClassName("temperament");
-
-// 
-// var test = temp[0].innerHTML.split(', ');
-
-// temp[0].onclick = function() {
-//   console.log(test);
-//   console.log(test[0]);
-// }
-
-
-// $(".clickable").click(function(e) {
-//   s = window.getSelection();
-//   var range = s.getRangeAt(0);
-//   var node = s.anchorNode;
-//   while (range.toString().indexOf(' ') != 0) {
-//     range.setStart(node, (range.startOffset - 1));
-//   }
-//   range.setStart(node, range.startOffset + 1);
-//   do {
-//     range.setEnd(node, range.endOffset + 1);
-
-//   }
-//   while (range.toString().indexOf(' ') == -1 && range.toString().trim() != '');
-//   var str = range.toString().trim();
-//   console.log(str);
-// });
-
-
-// autoSelectText = () => {
-//   const s = window.getSelection();
-//   var range = s.getRangeAt(0);
-//   var node = s.anchorNode;
-
-//   while (range.toString().indexOf(' ') != 0) {
-//     range.setStart(node, range.startOffset - 1);
-//   }
-
-//   range.setStart(node, range.startOffset + 1);
-
-//   while (
-//     range.toString().indexOf(' ') == -1 &&
-//     range.toString().trim() != '' &&
-//     range.endOffset + 1 < s.baseNode.wholeText.length
-//   ) {
-//     range.setEnd(node, range.endOffset + 1);
-//   }
-
-//   // remove extra space
-//   range.setEnd(node, range.endOffset - 1);
-
-//   // remove last selection if is not letter or number
-//   const lastChar = range.toString().charAt(range.toString().length - 1);
-//   if (!/^[a-zA-Z0-9]*$/.test(lastChar)) {
-//     range.setEnd(node, range.endOffset - 1);
-//   }
-//   return range.toString().trim();
-// };
-
+// create temperament array to use it in our function
 var temperamentArray = [];
 
-// find elements
+// split temperament string and create it in spans from beginning
 $(function () {
   $('.temperament').each(function (index, ele) {
       $(ele).html($(ele).text().split(', ').map(function (word) {
@@ -280,10 +218,11 @@ $(function () {
       }).join(',&nbsp;'))
 
   })
+
+  // clicked element will add into temperament array
+  // then it will shown in temperament input on search form
   $('.clickable').click(function (e) {
-      //console.log(this.innerHTML);
       temperamentArray.unshift(this.innerHTML);
-      //console.log(temperamentArray);
       document.getElementById("temperament").value = temperamentArray[0];
   })
 })
